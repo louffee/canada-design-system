@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/lerna.json",
+  "packages": ["packages/*"],
+  "version": "0.0.0",
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "command": {
+    "publish": {
+      "ignoreChanges": "package.json",
+      "registry": "https://registry.npmjs.org",
+      "access": "public"
+    }
+  },
+  "useNx": true
+}
