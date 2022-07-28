@@ -1,0 +1,10 @@
+{
+  "name": "@louffee/eslint-config",
+  "version": "0.1.0",
+  "description": "The ESLint config used to make the code more reliable @ Louffee.",
+  "main": ".eslintrc.js",
+  "repository": "git@github.com:louffee/canada-design-system.git",
+  "author": "Louffee Dev. Team <team@louffee.dev>",
+  "license": "MIT",
+  "private": false
+}
