@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base", ":dependencyDashboard"],
+  "prHeader": "Update Request | Renovate Bot",
+  "commitMessagePrefix": "chore:",
+  "commitMessageTopic": "dependency {{depName}}",
+  "commitMessageAction": "update",
+  "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}} {{{commitMessageExtra}}} {{{commitMessageSuffix}}}",
+  "addLabels": ["dependencies"],
+  "assignees": ["renovatebot"],
+  "reviewersFromCodeOwners": true,
+  "rangeStrategy": "replace"
+}
