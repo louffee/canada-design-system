@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json",
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/vscode-extension/**",
+    "**/.git/**",
+    ".vscode",
+    "megalinter",
+    "package-lock.json",
+    "report"
+  ],
+  "language": "en",
+  "noConfigSearch": true,
+  "words": [
+    "Autobuild",
+    "buildscript",
+    "cacheable",
+    "camelcase",
+    "codeql",
+    "commitlint",
+    "docgen",
+    "forin",
+    "immed",
+    "isnan",
+    "latedef",
+    "linebreak",
+    "louffee",
+    "mrlemoos",
+    "newcap",
+    "noarg",
+    "noempty",
+    "nonbsp",
+    "quotmark",
+    "renovatebot",
+    "SEMIBOLD",
+    "stylelint",
+    "stylelintrc"
+  ],
+  "version": "0.2"
+}
