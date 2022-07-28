@@ -1,0 +1,28 @@
+{
+  "name": "@louffee/typography",
+  "version": "0.1.0",
+  "description": "The typography system designed and used @ Louffee.",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
+  "types": "build/types/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "repository": "git@github.com:louffee/canada-design-system.git",
+  "author": "Louffee Dev. Team <team@louffee.dev>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15"
+  },
+  "peerDependencies": {
+    "@louffee/style-system": "*"
+  },
+  "scripts": {
+    "build": "rollup -c ../../rollup.config.js",
+    "build:task": "gulp build"
+  }
+}
