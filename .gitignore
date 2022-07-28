@@ -1,0 +1,17 @@
+# Dependencies-related
+node_modules
+yarn-error*
+lerna-debug*
+
+# Build-related folders
+build
+dist
+
+# macOS-specific folders
+.DS_Store
+
+# Environment variables
+.env.local
+.env.development
+.env.production
+megalinter-reports/
