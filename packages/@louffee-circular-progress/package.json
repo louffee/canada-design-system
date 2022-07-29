@@ -25,6 +25,6 @@
     "@louffee/style-system": "*"
   },
   "scripts": {
-    "build": "rollup -c ../../rollup.config.js"
+    "build": "rimraf build && rollup -c ../../rollup.config.js"
   }
 }
