@@ -10,9 +10,10 @@
     "outDir": "./dist",
     "preserveConstEnums": true,
     "target": "es5",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "types": ["node", "jest", "@testing-library/jest-dom"],
   },
   "exclude": [
     "node_modules"
-  ]
+  ],
 }
