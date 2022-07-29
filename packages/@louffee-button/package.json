@@ -23,7 +23,8 @@
   },
   "peerDependencies": {
     "@louffee/style-system": "*",
-    "@louffee/typography": "*"
+    "@louffee/typography": "*",
+    "@louffee/circular-progress": "*"
   },
   "scripts": {
     "build": "rollup -c ../../rollup.config.js"
