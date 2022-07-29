@@ -13,6 +13,7 @@
   "noConfigSearch": true,
   "words": [
     "Autobuild",
+    "Behaviour",
     "buildscript",
     "cacheable",
     "camelcase",
