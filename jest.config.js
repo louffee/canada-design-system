@@ -3,12 +3,12 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   verbose: true,
-  testMatch: ['**/tests/**/*.spec.(tsx|ts)'],
+  testMatch: ['**/__tests__/**/*.spec.(tsx|ts)'],
   detectOpenHandles: true,
   transform: {
     '^.+\\.(ts|tsx|js)?$': 'babel-jest',
   },
   coverageDirectory: 'coverage',
-  collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx}', '!src/**/*.d.ts'],
-  setupFilesAfterEnv: ['<rootDir>/tests/setup.ts'],
+  collectCoverageFrom: ['packages/**/src/*.{ts,tsx,js,jsx}', '!*.d.ts'],
+  setupFilesAfterEnv: ['<rootDir>/__tests__/setup.ts'],
 }
