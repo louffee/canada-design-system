@@ -5,14 +5,9 @@ import { useDeveloperChecks } from '@louffee/global-hooks'
 import Typography from '@louffee/typography'
 import CircularProgress from '@louffee/circular-progress'
 
-import type ButtonSize from '../ButtonSize'
-import type SoftButtonProps from './SoftButtonProps'
+import computeButtonGenericStyles from '../computeButtonGenericStyles'
 
-const HEIGHT_PER_SIZE: { [K in ButtonSize]: string } = {
-  small: toRem(24),
-  medium: toRem(32),
-  large: toRem(40),
-}
+import type SoftButtonProps from './SoftButtonProps'
 
 const START_ICON_CLASS_NAME = 'louffee-soft-button-start-icon'
 const END_ICON_CLASS_NAME = 'louffee-soft-button-end-icon'
@@ -21,19 +16,8 @@ const StyledButton = styled('button')<SoftButtonProps>(({ theme, disabled, size,
   color: theme.colors.primary.main,
   backgroundColor: theme.colors.primary[90],
   border: `${toRem(1)} solid ${theme.colors.primary[90]}`,
-  borderRadius: theme.radii.small,
 
-  minWidth: 140,
-
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-
-  transition: 'all 300ms ease-in-out',
-
-  paddingInline: toRem(16),
-  paddingBlock: toRem(10),
-  height: HEIGHT_PER_SIZE[size],
+  ...computeButtonGenericStyles(theme, { size, disabled }),
 
   fontWeight: theme.typography.fontWeightMedium,
 
@@ -41,23 +25,17 @@ const StyledButton = styled('button')<SoftButtonProps>(({ theme, disabled, size,
     color: theme.colors.grey[0],
     backgroundColor: theme.colors.grey[90],
     borderColor: theme.colors.grey[90],
-    cursor: 'not-allowed',
   }),
 
-  ...((isLoading || disabled) && {
-    pointerEvents: 'none',
-
-    '&:hover': {
-      cursor: 'wait !important',
-    },
-  }),
+  ...(isLoading && { pointerEvents: 'none' }),
 
   ...(!(isLoading && disabled) && {
+    cursor: 'pointer',
+
     '&:hover': {
+      boxShadow: theme.shadows.slight,
       backgroundColor: theme.colors.primary[100],
       borderColor: theme.colors.primary[100],
-      cursor: 'pointer',
-      boxShadow: theme.shadows.slight,
     },
   }),
 
