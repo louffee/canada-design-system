@@ -15,6 +15,7 @@ interface ButtonProps extends HTMLButtonElementAttributes {
   size?: ButtonSize
 
   disabled?: boolean
+  fullWidth?: boolean
 
   startIcon?: React.ReactNode
   endIcon?: React.ReactNode

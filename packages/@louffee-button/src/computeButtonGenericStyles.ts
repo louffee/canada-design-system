@@ -11,13 +11,20 @@ const HEIGHT_PER_SIZE: { [K in ButtonSize]: string } = {
 
 type Theme = typeof LouTheme
 
-const computeButtonGenericStyles = (theme: Theme, { size, disabled }: Pick<ButtonProps, 'size' | 'disabled'>) => ({
+const computeButtonGenericStyles = (
+  theme: Theme,
+  { size, disabled, fullWidth }: Pick<ButtonProps, 'size' | 'disabled' | 'fullWidth'>
+) => ({
   borderWidth: 1,
   borderRadius: theme.radii.small,
 
   cursor: 'pointer',
 
   minWidth: '140px',
+
+  ...(fullWidth && {
+    width: '100%',
+  }),
 
   display: 'inline-flex',
   alignItems: 'center',

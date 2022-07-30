@@ -12,10 +12,10 @@ import computeButtonGenericStyles from '../computeButtonGenericStyles'
 
 import type SoftButtonProps from './SoftButtonProps'
 
-const StyledButton = styled('button')<SoftButtonProps>(({ theme, disabled, size, isLoading = false, color }) => {
+const StyledButton = styled('button')<SoftButtonProps>(({ theme, disabled, size, isLoading, color, fullWidth }) => {
   const { disabled: disabledStyle, enabled: enabledStyle, hover: hoverStyle } = getSoftButtonThemeColors(theme)[color]
 
-  const genericStyles = computeButtonGenericStyles(theme, { size, disabled })
+  const genericStyles = computeButtonGenericStyles(theme, { size, disabled, fullWidth })
 
   return {
     ...genericStyles,
@@ -55,6 +55,7 @@ const SoftButton: React.FC<SoftButtonProps> = ({
   endIcon,
   color = 'primary',
   isLoading = false,
+  fullWidth = false,
   ...props
 }) => {
   useDeveloperChecks({ children, className, disabled, size, startIcon, endIcon }, (componentProps) => {
@@ -94,6 +95,7 @@ const SoftButton: React.FC<SoftButtonProps> = ({
       className={`louffee-soft-button ${className}`}
       color={color}
       size={size}
+      fullWidth={fullWidth}
       disabled={disabled}
       aria-disabled={disabled}>
       <Typography

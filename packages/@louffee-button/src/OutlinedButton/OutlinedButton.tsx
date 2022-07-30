@@ -12,8 +12,8 @@ import type OutlinedButtonProps from './OutlinedButtonProps'
 // the OutlinedButtonProps we couldn't solve yet.
 // todo: fix this somehow =/
 // @ts-expect-error
-const StyledButton = styled('button')<OutlinedButtonProps>(({ theme, size, disabled }) => {
-  const genericStyles = computeButtonGenericStyles(theme, { size, disabled })
+const StyledButton = styled('button')<OutlinedButtonProps>(({ theme, size, disabled, fullWidth }) => {
+  const genericStyles = computeButtonGenericStyles(theme, { size, disabled, fullWidth })
 
   return {
     ...genericStyles,
@@ -45,6 +45,7 @@ const OutlinedButton: React.FC<OutlinedButtonProps> = ({
   className = '',
   startIcon,
   endIcon,
+  fullWidth = false,
   ...props
 }) => (
   <StyledButton
@@ -52,6 +53,7 @@ const OutlinedButton: React.FC<OutlinedButtonProps> = ({
     {...props}
     className={`louffee-outlined-button ${className}`}
     size={size}
+    fullWidth={fullWidth}
     disabled={disabled}
     aria-disabled={disabled}>
     <Typography variant="bodySmall" aria-label={children?.toString()}>

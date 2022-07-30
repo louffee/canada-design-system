@@ -12,8 +12,8 @@ import type NeutralButtonProps from './NeutralButtonProps'
 // the OutlinedButtonProps we couldn't solve yet.
 // todo: fix this somehow =/
 // @ts-expect-error
-const StyledButton = styled('button')<NeutralButtonProps>(({ theme, size, disabled }) => {
-  const genericStyles = computeButtonGenericStyles(theme, { size, disabled })
+const StyledButton = styled('button')<NeutralButtonProps>(({ theme, size, disabled, fullWidth }) => {
+  const genericStyles = computeButtonGenericStyles(theme, { size, disabled, fullWidth })
 
   return {
     ...genericStyles,
@@ -44,12 +44,17 @@ const NeutralButton: React.FC<NeutralButtonProps> = ({
   className = '',
   startIcon,
   endIcon,
+  fullWidth = false,
+  disabled = false,
   ...props
 }) => (
   <StyledButton
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...props}
     size={size}
+    fullWidth={fullWidth}
+    disabled={disabled}
+    aria-disabled={disabled}
     className={`louffee-neutral-button ${className}`}>
     <Typography variant="bodySmall" aria-label={children?.toString()}>
       <i className={buttonConstants.START_ICON_CLASS_NAME}>{startIcon}</i>
