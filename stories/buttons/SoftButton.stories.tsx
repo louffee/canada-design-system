@@ -3,10 +3,10 @@ import * as React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { ThemeProvider } from '@louffee/style-system'
 
-import SoftButton from '../packages/@louffee-button/src/SoftButton/SoftButton'
+import SoftButton from '../../packages/@louffee-button/src/SoftButton/SoftButton'
 
 export default {
-  title: 'Components/Button',
+  title: 'Components/Buttons/SoftButton',
   decorators: [
     (Story) => (
       <ThemeProvider>
@@ -49,7 +49,7 @@ SoftBehaviourWithBothStartAndEndIcons.args = {
 }
 
 export const NonParentSoftBehaviour: ComponentStory<typeof SoftButton> = SoftTemplate.bind({})
-NonParentSoftBehaviour.storyName = 'soft behaviour without children'
+NonParentSoftBehaviour.storyName = 'Soft behaviour without children'
 NonParentSoftBehaviour.args = {
   children: undefined,
 }
@@ -58,4 +58,10 @@ export const SoftBehaviourWithLoading: ComponentStory<typeof SoftButton> = SoftT
 SoftBehaviourWithLoading.storyName = 'Soft behaviour with loading'
 SoftBehaviourWithLoading.args = {
   isLoading: true,
+}
+
+export const SoftSecondaryColor: ComponentStory<typeof SoftButton> = SoftTemplate.bind({})
+SoftSecondaryColor.storyName = 'Soft with secondary color'
+SoftSecondaryColor.args = {
+  color: 'secondary',
 }
