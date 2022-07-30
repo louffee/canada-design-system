@@ -8,17 +8,7 @@
     "megalinter",
     "package-lock.json",
     "report",
-    "**.js"
-  ],
-  "patterns": [
-    {
-      "pattern": "packages/**.tsx",
-      "name": "typescriptreact"
-    },
-    {
-      "pattern": "packages/**.ts",
-      "name": "typescript"
-    }
+    "!packages/**/src/**"
   ],
   "language": "en",
   "noConfigSearch": true,
