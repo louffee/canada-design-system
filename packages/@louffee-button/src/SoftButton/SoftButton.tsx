@@ -5,6 +5,8 @@ import { useDeveloperChecks } from '@louffee/global-hooks'
 import Typography from '@louffee/typography'
 import CircularProgress from '@louffee/circular-progress'
 
+import getSoftButtonThemeColors from './getSoftButtonThemeColors'
+
 import computeButtonGenericStyles from '../computeButtonGenericStyles'
 
 import type SoftButtonProps from './SoftButtonProps'
@@ -12,41 +14,39 @@ import type SoftButtonProps from './SoftButtonProps'
 const START_ICON_CLASS_NAME = 'louffee-soft-button-start-icon'
 const END_ICON_CLASS_NAME = 'louffee-soft-button-end-icon'
 
-const StyledButton = styled('button')<SoftButtonProps>(({ theme, disabled, size, isLoading = false }) => ({
-  color: theme.colors.primary.main,
-  backgroundColor: theme.colors.primary[90],
-  border: `${toRem(1)} solid ${theme.colors.primary[90]}`,
+const StyledButton = styled('button')<SoftButtonProps>(({ theme, disabled, size, isLoading = false, color }) => {
+  const { disabled: disabledStyle, enabled: enabledStyle, hover: hoverStyle } = getSoftButtonThemeColors(theme)[color]
 
-  ...computeButtonGenericStyles(theme, { size, disabled }),
+  const genericStyles = computeButtonGenericStyles(theme, { size, disabled })
 
-  fontWeight: theme.typography.fontWeightMedium,
+  return {
+    ...genericStyles,
+    ...enabledStyle,
 
-  ...(disabled && {
-    color: theme.colors.grey[0],
-    backgroundColor: theme.colors.grey[90],
-    borderColor: theme.colors.grey[90],
-  }),
+    borderStyle: 'solid',
+    borderWidth: toRem(1),
 
-  ...(isLoading && { pointerEvents: 'none' }),
+    fontWeight: theme.typography.fontWeightMedium,
 
-  ...(!(isLoading && disabled) && {
-    cursor: 'pointer',
+    ...(disabled && { ...disabledStyle }),
 
-    '&:hover': {
-      boxShadow: theme.shadows.slight,
-      backgroundColor: theme.colors.primary[100],
-      borderColor: theme.colors.primary[100],
+    ...(isLoading && { pointerEvents: 'none' }),
+
+    ...(!(isLoading && disabled) && {
+      '&:hover': {
+        ...hoverStyle,
+      },
+    }),
+
+    [`.${START_ICON_CLASS_NAME}`]: {
+      marginRight: theme.spacing.small,
     },
-  }),
 
-  [`.${START_ICON_CLASS_NAME}`]: {
-    marginRight: theme.spacing.small,
-  },
-
-  [`.${END_ICON_CLASS_NAME}`]: {
-    marginLeft: theme.spacing.small,
-  },
-}))
+    [`.${END_ICON_CLASS_NAME}`]: {
+      marginLeft: theme.spacing.small,
+    },
+  }
+})
 
 const SoftButton: React.FC<SoftButtonProps> = ({
   children,
@@ -55,6 +55,7 @@ const SoftButton: React.FC<SoftButtonProps> = ({
   size = 'medium',
   startIcon,
   endIcon,
+  color = 'primary',
   isLoading = false,
   ...props
 }) => {
@@ -92,6 +93,7 @@ const SoftButton: React.FC<SoftButtonProps> = ({
     <StyledButton
       {...props}
       className={`louffee-soft-button ${className}`}
+      color={color}
       size={size}
       disabled={disabled}
       aria-disabled={disabled}>

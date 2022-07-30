@@ -1,4 +1,4 @@
-import { css, toRem, LouTheme } from '@louffee/style-system'
+import { toRem, LouTheme } from '@louffee/style-system'
 
 import type ButtonSize from './ButtonSize'
 import type ButtonProps from './ButtonProps'
@@ -11,28 +11,28 @@ const HEIGHT_PER_SIZE: { [K in ButtonSize]: string } = {
 
 type Theme = typeof LouTheme
 
-function computeButtonGenericStyles(theme: Theme, { size, disabled }: Pick<ButtonProps, 'size' | 'disabled'>) {
-  return css({
-    borderWidth: 1,
-    borderRadius: theme.radii.small,
+const computeButtonGenericStyles = (theme: Theme, { size, disabled }: Pick<ButtonProps, 'size' | 'disabled'>) => ({
+  borderWidth: 1,
+  borderRadius: theme.radii.small,
 
-    minWidth: '140px',
+  cursor: 'pointer',
 
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+  minWidth: '140px',
 
-    transition: 'all 300ms ease-in-out',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 
-    paddingInline: toRem(16),
-    paddingBlock: toRem(10),
-    height: HEIGHT_PER_SIZE[size],
+  transition: 'all 300ms ease-in-out',
 
-    ...(disabled && {
-      cursor: 'not-allowed',
-      pointerEvents: 'none',
-    }),
-  })
-}
+  paddingInline: toRem(16),
+  paddingBlock: toRem(10),
+  height: HEIGHT_PER_SIZE[size],
+
+  ...(disabled && {
+    cursor: 'not-allowed',
+    pointerEvents: 'none',
+  }),
+})
 
 export default computeButtonGenericStyles
