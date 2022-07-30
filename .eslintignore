@@ -10,3 +10,5 @@ rollup.config.js
 build
 node_modules
 scripts
+
+__tests__/setup.ts
