@@ -9,3 +9,6 @@ export { default as SoftButton } from './SoftButton/SoftButton'
 
 export { default as OutlinedButton } from './OutlinedButton/OutlinedButton'
 export { default as OutlinedButtonProps } from './OutlinedButton/OutlinedButtonProps'
+
+export { default as NeutralButton } from './NeutralButton/NeutralButton'
+export { default as NeutralButtonProps } from './NeutralButton/NeutralButtonProps'
