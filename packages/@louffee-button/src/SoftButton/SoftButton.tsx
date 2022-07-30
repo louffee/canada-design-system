@@ -7,12 +7,10 @@ import CircularProgress from '@louffee/circular-progress'
 
 import getSoftButtonThemeColors from './getSoftButtonThemeColors'
 
+import buttonConstants from '../buttonConstants'
 import computeButtonGenericStyles from '../computeButtonGenericStyles'
 
 import type SoftButtonProps from './SoftButtonProps'
-
-const START_ICON_CLASS_NAME = 'louffee-soft-button-start-icon'
-const END_ICON_CLASS_NAME = 'louffee-soft-button-end-icon'
 
 const StyledButton = styled('button')<SoftButtonProps>(({ theme, disabled, size, isLoading = false, color }) => {
   const { disabled: disabledStyle, enabled: enabledStyle, hover: hoverStyle } = getSoftButtonThemeColors(theme)[color]
@@ -38,11 +36,11 @@ const StyledButton = styled('button')<SoftButtonProps>(({ theme, disabled, size,
       },
     }),
 
-    [`.${START_ICON_CLASS_NAME}`]: {
+    [`.${buttonConstants.START_ICON_CLASS_NAME}`]: {
       marginRight: theme.spacing.small,
     },
 
-    [`.${END_ICON_CLASS_NAME}`]: {
+    [`.${buttonConstants.END_ICON_CLASS_NAME}`]: {
       marginLeft: theme.spacing.small,
     },
   }
@@ -98,15 +96,17 @@ const SoftButton: React.FC<SoftButtonProps> = ({
       size={size}
       disabled={disabled}
       aria-disabled={disabled}>
-      <Typography variant={size === 'small' ? 'bodySmall' : 'labelMedium'} aria-label={children?.toString()}>
-        <i className={START_ICON_CLASS_NAME}>{startIcon}</i>
+      <Typography
+        variant={size === 'small' || disabled ? 'bodySmall' : 'labelMedium'}
+        aria-label={children?.toString()}>
+        <i className={buttonConstants.START_ICON_CLASS_NAME}>{startIcon}</i>
         {isLoading && (
-          <i className={START_ICON_CLASS_NAME}>
+          <i className={buttonConstants.START_ICON_CLASS_NAME}>
             <CircularProgress size={12} radii={5} thickness={2} />
           </i>
         )}
         {children}
-        <i className={END_ICON_CLASS_NAME}>{endIcon}</i>
+        <i className={buttonConstants.END_ICON_CLASS_NAME}>{endIcon}</i>
       </Typography>
     </StyledButton>
   )

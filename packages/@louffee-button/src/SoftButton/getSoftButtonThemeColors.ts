@@ -11,9 +11,9 @@ type GetSoftButtonThemeColorsReturnType = {
 const getSoftButtonThemeColors = ({ colors, shadows }: LouThemeSchema): GetSoftButtonThemeColorsReturnType => ({
   primary: {
     disabled: {
-      color: colors.grey[0],
-      backgroundColor: colors.grey[90],
-      borderColor: colors.grey[90],
+      color: colors.grey[80],
+      backgroundColor: colors.grey[95],
+      borderColor: colors.grey[95],
     },
 
     enabled: {
