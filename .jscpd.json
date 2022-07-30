@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/jscpd.json",
   "threshold": 0,
   "reporters": ["html", "markdown"],
   "ignore": [
@@ -11,5 +12,6 @@
     "**/.idea/**",
     "**/report/**",
     "**/*.svg"
-  ]
+  ],
+  "ignorePattern": ["**/node_modules/**", "**.json"]
 }
