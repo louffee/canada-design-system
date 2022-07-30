@@ -43,9 +43,11 @@
     "noarg",
     "noempty",
     "nonbsp",
+    "oxsecurity",
     "quotmark",
     "renovatebot",
     "SEMIBOLD",
+    "stefanzweifel",
     "stylelint",
     "stylelintrc"
   ],
