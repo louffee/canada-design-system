@@ -6,8 +6,9 @@ import elementsPerVariantMap from './elementsPerVariantMap'
 
 import type TypographyProps from './TypographyProps'
 
-const InnerTypography = styled('span')<Required<Pick<TypographyProps, 'variant'>>>(({ variant, theme }) => ({
+const Span = styled('span')<Required<Pick<TypographyProps, 'variant' | 'color'>>>(({ variant, theme, color }) => ({
   ...theme.typography.variants[variant],
+  color,
 }))
 
 const Typography = React.memo<TypographyProps>(({ variant, children, className = '', color = 'inherit', ...props }) => {
@@ -17,9 +18,15 @@ const Typography = React.memo<TypographyProps>(({ variant, children, className =
   )
 
   return (
-    <InnerTypography {...props} variant={variant} as={elementType}>
+    <Span
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
+      variant={variant}
+      as={elementType}
+      className={`louffee-typography-${variant} ${className}`}
+      color={color}>
       {children}
-    </InnerTypography>
+    </Span>
   )
 })
 
