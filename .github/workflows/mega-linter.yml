@@ -27,6 +27,7 @@ jobs:
       # Git Checkout
       - name: Checkout Code
         uses: actions/checkout@v3
+        run: "yarn"
         with:
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
           fetch-depth: 0
