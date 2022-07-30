@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json
+
 # Configuration file for MegaLinter
 # See all available variables at https://oxsecurity.github.io/megalinter/configuration/ and in linters documentation
 
@@ -10,3 +12,19 @@ APPLY_FIXES: all # all, none, or list of linter keys
 SHOW_ELAPSED_TIME: true
 FILEIO_REPORTER: false
 # DISABLE_ERRORS: true # Uncomment if you want MegaLinter to detect errors but not block CI to pass
+
+DISABLE:
+  - JAVASCRIPT
+  - REPOSITORY
+  - JSON
+  - HTML
+  - CSS
+  - JSX
+
+TSX_ESLINT_CONFIG_FILE: .eslintrc.js
+SPELL_CSPELL_CONFIG_FILE: .cspell.json
+MARKDOWN_MARKDOWNLINT_CONFIG_FILE: .markdownlint.json
+JSX_ESLINT_CONFIG_FILE: .eslintrc.js
+COPYPASTE_JSCPD_CONFIG_FILE: .jscpd.json
+TYPESCRIPT_ES_CONFIG_FILE: .eslintrc.js
+TYPESCRIPT_PRETTIER_CONFIG_FILE: .prettierrc.js
