@@ -1,6 +1,6 @@
 import type TypographyVariant from './TypographyVariant'
 
-const elementsPerVariantMap: { [K in TypographyVariant]: React.ElementType<any> } = {
+const elementsPerVariantMap: { [K in TypographyVariant]: React.ElementType } = {
   bodyLarge: 'p',
   bodyMedium: 'p',
   bodySmall: 'small',
