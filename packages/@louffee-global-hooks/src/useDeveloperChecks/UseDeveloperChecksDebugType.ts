@@ -1,3 +1,3 @@
-type UseDeveloperChecksDebugType = 'error' | 'warn' | 'log' | 'info' | 'debug' | 'trace'
+type UseDeveloperChecksDebugType = 'error' | 'warn' | 'trace'
 
 export default UseDeveloperChecksDebugType
