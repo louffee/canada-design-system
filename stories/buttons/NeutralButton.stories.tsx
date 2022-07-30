@@ -22,7 +22,7 @@ export default {
   },
 } as ComponentMeta<typeof NeutralButton>
 
-const OutlinedTemplate: ComponentStory<typeof NeutralButton> = ({
+const NeutralTemplate: ComponentStory<typeof NeutralButton> = ({
   children,
   type,
   disabled,
@@ -36,5 +36,5 @@ const OutlinedTemplate: ComponentStory<typeof NeutralButton> = ({
   </NeutralButton>
 )
 
-export const OutlinedBehaviour: ComponentStory<typeof NeutralButton> = OutlinedTemplate.bind({})
-OutlinedBehaviour.storyName = 'Neutral behaviour'
+export const NeutralBehaviour: ComponentStory<typeof NeutralButton> = NeutralTemplate.bind({})
+NeutralBehaviour.storyName = 'Neutral behaviour'
