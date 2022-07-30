@@ -1,3 +1,5 @@
+import type { CSSObject } from '@emotion/react'
+
 import LouTheme from './LouTheme'
 import ThemeProvider from './ThemeProvider'
 import CacheProvider from './CacheProvider'
@@ -15,4 +17,16 @@ declare module '@emotion/react' {
   interface DefaultTheme extends LouThemeSchema {}
 }
 
-export { LouTheme, ThemeProvider, CacheProvider, keyframes, styled, useTheme, withTheme, css, toRem }
+export {
+  LouTheme,
+  ThemeProvider,
+  CacheProvider,
+  keyframes,
+  styled,
+  useTheme,
+  withTheme,
+  css,
+  toRem,
+  CSSObject,
+  LouThemeSchema,
+}
