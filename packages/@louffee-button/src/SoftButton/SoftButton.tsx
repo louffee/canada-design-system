@@ -91,6 +91,7 @@ const SoftButton: React.FC<SoftButtonProps> = ({
 
   return (
     <StyledButton
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
       className={`louffee-soft-button ${className}`}
       color={color}
