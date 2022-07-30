@@ -19,7 +19,8 @@
     "bootstrap": "npx lerna bootstrap && npx lerna link",
     "commit": "git-cz",
     "ci": "yarn run commit",
-    "test": "jest"
+    "test": "jest",
+    "install:lint-dependencies": "node ./scripts/install-lint-related-dependencies.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.9",
