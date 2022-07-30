@@ -10,7 +10,7 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx packages/**/*",
+    "lint": "eslint --ext .ts,.tsx packages/**/src/**/*.{ts,tsx}",
     "build": "npx lerna run build",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006 --ci",
     "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
