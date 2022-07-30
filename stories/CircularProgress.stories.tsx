@@ -21,7 +21,9 @@ export default {
   },
 } as ComponentMeta<typeof CircularProgress>
 
-const Template: ComponentStory<typeof CircularProgress> = (args) => <CircularProgress {...args} />
+const Template: ComponentStory<typeof CircularProgress> = ({ thickness, size, radii }) => (
+  <CircularProgress thickness={thickness} size={size} radii={radii} />
+)
 
 export const Default: ComponentStory<typeof CircularProgress> = Template.bind({})
 Default.storyName = 'Default behaviour'

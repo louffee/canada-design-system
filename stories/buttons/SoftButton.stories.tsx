@@ -22,8 +22,28 @@ export default {
   },
 } as ComponentMeta<typeof SoftButton>
 
-const SoftTemplate: ComponentStory<typeof SoftButton> = ({ children, ...args }) => (
-  <SoftButton {...args}>{children}</SoftButton>
+const SoftTemplate: ComponentStory<typeof SoftButton> = ({
+  children,
+  type,
+  disabled,
+  size,
+  color,
+  startIcon,
+  endIcon,
+  onClick,
+  isLoading,
+}) => (
+  <SoftButton
+    type={type}
+    disabled={disabled}
+    size={size}
+    color={color}
+    startIcon={startIcon}
+    endIcon={endIcon}
+    onClick={onClick}
+    isLoading={isLoading}>
+    {children}
+  </SoftButton>
 )
 
 export const SoftBehaviour: ComponentStory<typeof SoftButton> = SoftTemplate.bind({})
