@@ -7,7 +7,18 @@
     ".vscode",
     "megalinter",
     "package-lock.json",
-    "report"
+    "report",
+    "**.js"
+  ],
+  "patterns": [
+    {
+      "pattern": "packages/**.tsx",
+      "name": "typescriptreact"
+    },
+    {
+      "pattern": "packages/**.ts",
+      "name": "typescript"
+    }
   ],
   "language": "en",
   "noConfigSearch": true,
