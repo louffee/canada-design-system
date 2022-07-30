@@ -20,6 +20,7 @@ DISABLE:
   - HTML
   - CSS
   - JSX
+  - COPYPASTE
 
 TSX_ESLINT_CONFIG_FILE: .eslintrc.js
 SPELL_CSPELL_CONFIG_FILE: .cspell.json
