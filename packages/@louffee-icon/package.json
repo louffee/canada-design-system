@@ -23,8 +23,7 @@
     "@types/react": "^18.0.15"
   },
   "peerDependencies": {
-    "@louffee/style-system": "*",
-    "@louffee/react-utils": "*"
+    "@louffee/global-hooks": "*"
   },
   "bundledDependencies": [
     "react-icons"
