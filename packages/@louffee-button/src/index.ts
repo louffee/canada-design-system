@@ -12,3 +12,6 @@ export { default as OutlinedButtonProps } from './OutlinedButton/OutlinedButtonP
 
 export { default as NeutralButton } from './NeutralButton/NeutralButton'
 export { default as NeutralButtonProps } from './NeutralButton/NeutralButtonProps'
+
+export { default as ButtonGroup } from './ButtonGroup/ButtonGroup'
+export { default as ButtonGroupProps } from './ButtonGroup/ButtonGroupProps'
