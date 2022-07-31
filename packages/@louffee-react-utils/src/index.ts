@@ -1,0 +1,6 @@
+export { default as isReactClassComponent } from './isReactClassComponent'
+export { default as isReactComponent } from './isReactComponent'
+export { default as isReactCompositeElement } from './isReactCompositeElement'
+export { default as isReactDOMTypeElement } from './isReactDOMTypeElement'
+export { default as isReactElement } from './isReactElement'
+export { default as isReactFunctionComponent } from './isReactFunctionComponent'
