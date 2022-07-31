@@ -3,7 +3,7 @@ import type FormHandleSubmitFunction from './FormHandleSubmitFunction'
 import type FormValidateFunction from './FormValidateFunction'
 
 interface FormProps<V extends object> {
-  handleSubmit: FormHandleSubmitFunction<V>
+  onSubmit: FormHandleSubmitFunction<V>
   validate?: FormValidateFunction<V>
 
   children: FormRenderFunction<V>
