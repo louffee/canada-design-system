@@ -8,6 +8,7 @@ import type TypographyProps from './TypographyProps'
 
 const Span = styled('span')<Required<Pick<TypographyProps, 'variant' | 'color'>>>(({ variant, theme, color }) => ({
   ...theme.typography.variants[variant],
+  fontFamily: theme.typography.fontFamily,
   color,
 }))
 
