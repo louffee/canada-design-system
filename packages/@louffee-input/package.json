@@ -1,0 +1,33 @@
+{
+  "name": "@louffee/input",
+  "version": "0.1.0",
+  "description": "The input component related to the form package used @ Louffee.",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
+  "types": "build/types/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "repository": "git@github.com:louffee/canada-design-system.git",
+  "author": "Louffee Dev. Team <team@louffee.dev>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@emotion/cache": "^11.9.3",
+    "@emotion/css": "^11.9.0",
+    "@emotion/react": "^11.9.3",
+    "formik": "^2.2.9",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15"
+  },
+  "peerDependencies": {
+    "@louffee/global-hooks": "*",
+    "@louffee/typography": "*",
+    "@louffee/react-utils": "*"
+  },
+  "scripts": {
+    "build": "rimraf build && rollup -c ../../rollup.config.js"
+  }
+}
