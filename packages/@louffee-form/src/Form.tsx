@@ -9,7 +9,7 @@ import type FormProps from './FormProps'
 const Form = <V extends object>({
   children,
   onSubmit,
-  initialValues,
+  initialValues = {},
   validate,
 }: FormProps<V>): React.ReactElement | null => {
   useDeveloperChecks({ children }, (componentProps) => {
