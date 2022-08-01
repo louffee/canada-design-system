@@ -2,10 +2,10 @@ import * as React from 'react'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import useField from '../packages/@louffee-form/src/useField/useField'
-import Form from '../packages/@louffee-form/src/Form'
+import useField from '../../packages/@louffee-form/src/useField/useField'
+import Form from '../../packages/@louffee-form/src/Form'
 
-import type FormErrorSchema from '../packages/@louffee-form/src/FormErrorSchema'
+import type FormErrorSchema from '../../packages/@louffee-form/src/FormErrorSchema'
 
 interface Values {
   firstName: string
@@ -34,7 +34,7 @@ function validate(values: Values): FormErrorSchema<Values> {
 }
 
 export default {
-  title: 'Components/Form',
+  title: 'Components/Forms/Form',
   component: Form,
   decorators: [
     (Story) => (
