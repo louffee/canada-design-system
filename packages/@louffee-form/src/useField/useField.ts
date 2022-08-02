@@ -16,7 +16,7 @@ function useField<FieldValue>(
   const [field, meta] = useFormikField<FieldValue>({ name: fieldName, ...attributes })
 
   return {
-    attributes: field as GeneratedFieldProps,
+    attributes: field as unknown as GeneratedFieldProps,
     meta: {
       touched: meta.touched,
       value: meta.value,

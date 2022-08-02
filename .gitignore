@@ -7,7 +7,6 @@ lerna-debug*
 build
 dist
 storybook-static
-
 # macOS-specific folders
 .DS_Store
 

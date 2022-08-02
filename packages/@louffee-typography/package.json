@@ -22,7 +22,7 @@
     "@louffee/style-system": "*"
   },
   "scripts": {
-    "build": "rollup -c ../../rollup.config.js",
-    "build:task": "gulp build"
-  }
+    "build": "rollup -c ../../rollup.config.js"
+  },
+  "dependencyLevel": 2
 }
