@@ -70,7 +70,7 @@
     "lerna": "^5.0.0",
     "lint-staged": "^13.0.3",
     "markdownlint": "^0.26.1",
-    "nx": "14.5.1",
+    "nx": "14.5.2",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "react-docgen": "^5.4.3",
