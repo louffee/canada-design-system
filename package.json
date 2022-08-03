@@ -74,6 +74,7 @@
     "markdownlint": "^0.26.1",
     "nx": "14.5.1",
     "postcss": "^8.4.14",
+    "postcss-syntax": "^0.36.2",
     "prettier": "^2.7.1",
     "react-docgen": "^5.4.3",
     "react-dom": "^18.2.0",
