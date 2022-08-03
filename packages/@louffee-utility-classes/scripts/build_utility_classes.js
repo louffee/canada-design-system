@@ -278,6 +278,14 @@ function buildMeasurements() {
 buildMeasurements()
 
 function buildInsetEdges() {
+  compileStyles('Margin auto', '.margin-auto { margin: auto; }')
+  compileStyles('Margin x auto', '.margin-x-auto { margin-left: auto; margin-right: auto; }')
+  compileStyles('Margin y auto', '.margin-y-auto { margin-top: auto; margin-bottom: auto; }')
+
+  compileStyles('Padding auto', '.padding-auto { padding: auto; }')
+  compileStyles('Padding x auto', '.padding-x-auto { padding-left: auto; padding-right: auto; }')
+  compileStyles('Padding y auto', '.padding-y-auto { padding-top: auto; padding-bottom: auto; }')
+
   /**
    * @param {string} orientation
    * @param {number} value
@@ -305,6 +313,13 @@ function buildInsetEdges() {
       buildMargin(orientation, i)
       buildPadding(orientation, i)
     })
+
+    compileStyles('Padding', `.padding-x-${i}, px-${i} { padding-left: ${toRem(i)}; padding-right: ${toRem(i)}; }`)
+    compileStyles('Padding', `.padding-y-${i}, py-${i} { padding-top: ${toRem(i)}; padding-bottom: ${toRem(i)}; }`)
+    compileStyles('Margin', `.margin-x-${i}, mx-${i} { margin-left: ${toRem(i)}; margin-right: ${toRem(i)}; }`)
+    compileStyles('Margin', `.margin-y-${i}, my-${i} { margin-top: ${toRem(i)}; margin-bottom: ${toRem(i)}; }`)
+    compileStyles('Padding', `.padding-${i}, .p-${i} { padding: ${toRem(i)}; }`)
+    compileStyles('Margin', `.margin-${i}, .m-${i} { margin: ${toRem(i)}; }`)
   }
 }
 buildInsetEdges()
