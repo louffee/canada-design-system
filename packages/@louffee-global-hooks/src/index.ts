@@ -26,3 +26,5 @@ export { default as MutableRefObject } from './useRef/MutableRefObject'
 export { default as useFirstMountState } from './useFirstMountState/useFirstMountState'
 
 export { default as useMount } from './useMount/useMount'
+
+export { default as useLatest } from './useLatest/useLatest'
