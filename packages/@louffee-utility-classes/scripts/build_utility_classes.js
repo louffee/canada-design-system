@@ -7,12 +7,147 @@ const INSET_EDGES_RANGE = 100
 const RADII_RANGE = 50
 const BORDER_WIDTH_RANGE = 30
 const INSET_RANGE = 1000
+const FLEX_RANGE = 1000
 
 let output = []
 
 function compileStyles(title, styles) {
   output.push(`/* ${title} */`, styles)
 }
+
+function generateFlex() {
+  compileStyles(
+    'Flex utilities',
+    `
+    .flex {
+      display: flex;
+    }
+
+    ${[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => `.flex-${i} { flex: ${i}; }`).join('\n')}
+
+    .flex-column {
+      flex-direction: column;
+    }
+
+    .flex-row {
+      flex-direction: row;
+    }
+
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .flex-nowrap {
+      flex-wrap: nowrap;
+    }
+
+    .justify-start {
+      justify-content: flex-start;
+    }
+
+    .justify-end {
+      justify-content: flex-end;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .justify-around {
+      justify-content: space-around;
+    }
+
+    .align-start {
+      align-items: flex-start;
+    }
+
+    .align-end {
+      align-items: flex-end;
+    }
+
+    .align-center {
+      align-items: center;
+    }
+
+    .align-baseline {
+      align-items: baseline;
+    }
+
+    .align-stretch {
+      align-items: stretch;
+    }
+
+    .align-content-start {
+      align-content: flex-start;
+    }
+
+    .align-content-end {
+      align-content: flex-end;
+    }
+
+    .align-content-center {
+      align-content: center;
+    }
+
+    .align-content-between {
+      align-content: space-between;
+    }
+
+    .align-content-around {
+      align-content: space-around;
+    }
+
+    .align-content-stretch {
+      align-content: stretch;
+    }
+
+    .flex-grow {
+      flex-grow: 1;
+    }
+
+    .flex-shrink {
+      flex-shrink: 1;
+    }
+
+    .flex-basis {
+      flex-basis: auto;
+    }
+
+    .flex-basis-0 {
+      flex-basis: 0;
+    }
+
+    .flex-basis-100 {
+      flex-basis: 100%;
+    }
+
+    .flex-basis-auto {
+      flex-basis: auto;
+    }
+
+    .flex-basis-content {
+      flex-basis: content;
+    }
+
+    .flex-basis-max-content {
+      flex-basis: max-content;
+    }
+
+    .flex-basis-min-content {
+      flex-basis: min-content;
+    }
+
+    .flex-basis-fit-content {
+      flex-basis: fit-content;
+    }
+  `
+  )
+}
+generateFlex()
 
 function generatePageNormalization() {
   compileStyles(
