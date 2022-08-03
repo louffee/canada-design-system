@@ -1,0 +1,17 @@
+{
+  "name": "@louffee/utility-classes",
+  "version": "0.1.0",
+  "description": "The utility classes used to build wonderful layouts @ Louffee.",
+  "main": "index.css",
+  "files": [
+    "index.css"
+  ],
+  "repository": "git@github.com:louffee/canada-design-system.git",
+  "author": "Louffee Dev. Team <team@louffee.dev>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "node ./scripts/build_utility_classes.js > ./index.css"
+  },
+  "dependencyLevel": 1
+}
