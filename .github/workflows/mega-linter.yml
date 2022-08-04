@@ -31,8 +31,6 @@ jobs:
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
-      - run: yarn run install:lint-dependencies
-
       # MegaLinter
       - name: MegaLinter
         id: ml
