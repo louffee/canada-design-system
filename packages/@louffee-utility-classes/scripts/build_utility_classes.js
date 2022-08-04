@@ -7,7 +7,6 @@ const INSET_EDGES_RANGE = 100
 const RADII_RANGE = 50
 const BORDER_WIDTH_RANGE = 30
 const INSET_RANGE = 1000
-const FLEX_RANGE = 1000
 
 let output = []
 
@@ -175,6 +174,15 @@ function generatePageNormalization() {
     }
     `
   )
+
+  let styles = ''
+  for (let i = 0; i < 1000; i += 1) {
+    const className = [`.gap-${i}`, `.g-${i}`]
+
+    const classContent = `gap: ${toRem(i)};`
+    styles += `${className.join(',')} { ${classContent} }`
+  }
+  compileStyles('Gap', styles)
 }
 generatePageNormalization()
 
@@ -426,7 +434,7 @@ function buildInsetEdges() {
    * @param {number} value
    */
   function buildMargin(orientation, value) {
-    const classNames = [`.margin-${orientation}-${value}`, `.m${orientation.charAt(0).toLowerCase()}-${value}`]
+    const classNames = [`.margin-${orientation}-${value}`, `.m-${orientation.charAt(0).toLowerCase()}-${value}`]
 
     const classContent = `margin-${orientation}: ${toRem(value)};`
     compileStyles(`Margin ${orientation}`, `${classNames.join(',')} { ${classContent} }`)
@@ -437,7 +445,7 @@ function buildInsetEdges() {
    * @param {number} value
    */
   function buildPadding(orientation, value) {
-    const classNames = [`.padding-${orientation}-${value}`, `.p${orientation.charAt(0).toLowerCase()}-${value}`]
+    const classNames = [`.padding-${orientation}-${value}`, `.p-${orientation.charAt(0).toLowerCase()}-${value}`]
 
     const classContent = `padding-${orientation}: ${toRem(value)};`
     compileStyles(`Padding ${orientation}`, `${classNames.join(',')} { ${classContent} }`)
@@ -494,6 +502,17 @@ function buildBorderWidth() {
   }
 }
 buildBorderWidth()
+
+function buildBorderStyles() {
+  const borderStyles = ['solid', 'dashed', 'dotted', 'double']
+
+  borderStyles.forEach((borderStyle) => {
+    const classNames = [`.border-${borderStyle}`, `.b-${borderStyle}`]
+
+    compileStyles(`Border style ${borderStyle}`, `${classNames.join(',')} { border-style: ${borderStyle}; }`)
+  })
+}
+buildBorderStyles()
 
 function buildInsets() {
   for (let i = 1; i <= INSET_RANGE; i++) {
