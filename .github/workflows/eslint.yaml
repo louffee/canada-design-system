@@ -1,0 +1,29 @@
+name: ESLint
+
+on:
+  push:
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+   name: ESLint Check
+   runs-on: ubuntu-latest
+   steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+
+    - name: Lint
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - run: yarn run install:lint-dependencies
+    - run: yarn run lint
