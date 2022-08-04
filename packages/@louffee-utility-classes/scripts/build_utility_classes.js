@@ -1,5 +1,6 @@
 // @ts-check
 const { LouTheme, toRem } = require('@louffee/style-system')
+const { range } = require('quebec')
 
 const MEASURE_RANGE = 1000
 const VIEW_PORT_RANGE = 100
@@ -22,7 +23,9 @@ function generateFlex() {
       display: flex;
     }
 
-    ${[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => `.flex-${i} { flex: ${i}; }`).join('\n')}
+    ${range(1, 10)
+      .map((i) => `.flex-${i} { flex: ${i}; }`)
+      .join('\n')}
 
     .flex-column {
       flex-direction: column;
