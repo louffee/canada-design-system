@@ -28,3 +28,10 @@ export { default as useFirstMountState } from './useFirstMountState/useFirstMoun
 export { default as useMount } from './useMount/useMount'
 
 export { default as useLatest } from './useLatest/useLatest'
+
+export { default as useEvent } from './useEvent/useEvent'
+
+export { default as useDocumentEvent } from './useDocumentEvent/useDocumentEvent'
+export { default as UseDocumentEventOptions } from './useDocumentEvent/UseDocumentEventOptions'
+export { default as DocumentEventListener } from './useDocumentEvent/DocumentEventListener'
+export { default as DocumentEventName } from './useDocumentEvent/DocumentEventName'
