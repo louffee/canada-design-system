@@ -15,7 +15,7 @@ const InputWrapper = styled('div')<Pick<InputProps, 'size'> & { shouldPadLeft: b
 
     backgroundColor: theme.colors.white,
     borderWidth: toRem(2),
-    borderRadius: theme.radii.small,
+    borderRadius: theme.radii.medium,
     borderStyle: 'solid',
     borderColor: theme.colors.grey[99],
 
