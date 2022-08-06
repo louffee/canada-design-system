@@ -27,7 +27,7 @@ function generateFlex() {
       .map((i) => `.flex-${i} { flex: ${i}; }`)
       .join('\n')}
 
-    .flex-column {
+    .flex-column, .flex-col {
       flex-direction: column;
     }
 
