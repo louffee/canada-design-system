@@ -27,7 +27,8 @@
     "@louffee/react-utils": "*",
     "@louffee/style-system": "*",
     "@louffee/typography": "*",
-    "@louffee/form": "*"
+    "@louffee/form": "*",
+    "@louffee/icon": "*"
   },
   "scripts": {
     "build": "rimraf build && rollup -c ../../rollup.config.js"
