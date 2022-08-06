@@ -57,6 +57,7 @@ const Input: React.FC<InputProps> = ({
   name,
   label,
   size = 'medium',
+  className = '',
   ...props
 }) => {
   const wrapperRef = React.useRef<HTMLDivElement>()
@@ -82,13 +83,14 @@ const Input: React.FC<InputProps> = ({
   return (
     <>
       {typeof label === 'string' ? (
-        <label>
+        <label htmlFor={name}>
           <Typography variant="labelMedium">{label}</Typography>
         </label>
       ) : (
         label
       )}
       <InputWrapper
+        className={['louffee-input', className].join(' ')}
         ref={wrapperRef}
         size={size}
         shouldPadLeft={typeof startAdornment === 'string' || isReactElement(startAdornment)}
