@@ -51,12 +51,8 @@ export default {
 } as ComponentMeta<typeof Form>
 
 export const Default: ComponentStory<typeof Form> = () => {
-  const firstNameField = useField('firstName', {
-    value: '',
-  })
-  const lastNameField = useField('lastName', {
-    value: '',
-  })
+  const firstNameField = useField('firstName')
+  const lastNameField = useField('lastName')
 
   return (
     <div>
