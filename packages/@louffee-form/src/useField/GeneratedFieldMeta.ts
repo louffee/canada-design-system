@@ -1,8 +1,6 @@
-interface GeneratedFieldMeta<FieldValue> {
-  value: FieldValue
+interface GeneratedFieldMeta {
   error?: string
   touched: boolean
-  initialValue?: FieldValue
 }
 
 export default GeneratedFieldMeta

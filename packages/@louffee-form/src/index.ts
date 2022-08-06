@@ -10,7 +10,11 @@ import useFormState from './useFormState/useFormState'
 
 import type GeneratedFieldMeta from './useField/GeneratedFieldMeta'
 import type GeneratedFieldProps from './useField/GeneratedFieldProps'
+import type UseFieldConfiguration from './useField/UseFieldConfiguration'
+import type UseFieldReturnType from './useField/UseFieldReturnType'
 import useField from './useField/useField'
+
+import createValidation from './createValidation'
 
 export {
   FormErrorSchema,
@@ -22,7 +26,10 @@ export {
   useFormState,
   GeneratedFieldMeta,
   GeneratedFieldProps,
+  UseFieldConfiguration,
+  UseFieldReturnType,
   useField,
+  createValidation,
 }
 
 export default Form

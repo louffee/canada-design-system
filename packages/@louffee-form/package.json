@@ -16,8 +16,9 @@
     "@emotion/cache": "^11.9.3",
     "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.9.3",
-    "formik": "^2.2.9",
-    "react": "^18.2.0"
+    "final-form": "^4.20.7",
+    "react": "^18.2.0",
+    "react-final-form": "^6.5.9"
   },
   "devDependencies": {
     "@types/react": "^18.0.15"
@@ -26,7 +27,8 @@
     "@louffee/global-hooks": "*"
   },
   "bundledDependencies": [
-    "formik"
+    "final-form",
+    "react-final-form"
   ],
   "scripts": {
     "build": "rimraf build && rollup -c ../../rollup.config.js"

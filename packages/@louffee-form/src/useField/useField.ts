@@ -1,28 +1,22 @@
-import * as React from 'react'
-
-import { useField as useFormikField } from 'formik'
+import { useField as useFinalField } from 'react-final-form'
 
 import type UseFieldReturnType from './UseFieldReturnType'
 import type GeneratedFieldProps from './GeneratedFieldProps'
 import type GeneratedFieldMeta from './GeneratedFieldMeta'
+import type UseFieldConfiguration from './UseFieldConfiguration'
 
 function useField<FieldValue>(
   fieldName: string,
-  attributes:
-    | React.InputHTMLAttributes<HTMLInputElement>
-    | React.InputHTMLAttributes<HTMLTextAreaElement>
-    | React.InputHTMLAttributes<HTMLSelectElement> = {}
-): UseFieldReturnType<FieldValue> {
-  const [field, meta] = useFormikField<FieldValue>({ name: fieldName, ...attributes })
+  configuration: UseFieldConfiguration<FieldValue> = {}
+): UseFieldReturnType {
+  const { input, meta } = useFinalField<FieldValue>(fieldName, configuration)
 
   return {
-    attributes: field as unknown as GeneratedFieldProps,
+    attributes: input as unknown as GeneratedFieldProps,
     meta: {
       touched: meta.touched,
-      value: meta.value,
       error: meta.error,
-      initialValue: meta.initialValue,
-    } as GeneratedFieldMeta<FieldValue>,
+    } as GeneratedFieldMeta,
   }
 }
 

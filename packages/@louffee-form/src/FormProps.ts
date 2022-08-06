@@ -9,6 +9,8 @@ interface FormProps<V extends object> {
   children: FormRenderFunction<V>
 
   initialValues?: Partial<V>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  initialValuesDependencies?: any[]
 }
 
 export default FormProps

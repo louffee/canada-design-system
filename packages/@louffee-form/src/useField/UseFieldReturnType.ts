@@ -1,9 +1,9 @@
 import type GeneratedFieldProps from './GeneratedFieldProps'
 import type GeneratedFieldMeta from './GeneratedFieldMeta'
 
-interface UseFieldReturnType<FieldValue> {
+interface UseFieldReturnType {
   attributes: GeneratedFieldProps
-  meta: GeneratedFieldMeta<FieldValue>
+  meta: GeneratedFieldMeta
 }
 
 export default UseFieldReturnType
