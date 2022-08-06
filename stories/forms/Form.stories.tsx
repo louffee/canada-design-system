@@ -2,10 +2,14 @@ import * as React from 'react'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import useField from '../../packages/@louffee-form/src/useField/useField'
-import Form from '../../packages/@louffee-form/src/Form'
+import '@louffee/utility-classes'
+import { ThemeProvider } from '@louffee/style-system'
 
-import type FormErrorSchema from '../../packages/@louffee-form/src/FormErrorSchema'
+import useField from '../../packages/@louffee-form/src/useField/useField'
+import createValidation from '../../packages/@louffee-form/src/createValidation'
+import errorSchema from '../../packages/@louffee-form/src/errorSchema'
+import Form from '../../packages/@louffee-form/src/Form'
+import TextField from '../../packages/@louffee-text-field/src/TextField'
 
 interface Values {
   firstName: string
@@ -19,33 +23,35 @@ async function handleSubmit(values: Values) {
   })
 }
 
-function validate(values: Values): FormErrorSchema<Values> {
-  const errors: FormErrorSchema<Values> = {}
+const validate = createValidation<Values>((values) => {
+  const errors = errorSchema<Values>()
 
   if (!values.firstName) {
-    errors.firstName = 'First name is required'
+    errors.firstName = 'The first name is required'
   }
 
   if (!values.lastName) {
-    errors.lastName = 'Last name is required'
+    errors.lastName = 'The last name is required'
   }
 
   return errors
-}
+})
 
 export default {
   title: 'Components/Forms/Form',
   component: Form,
   decorators: [
     (Story) => (
-      <Form onSubmit={handleSubmit} validate={validate}>
-        {({ values }) => (
-          <>
-            <Story />
-            <code>{JSON.stringify({ ...values })}</code>
-          </>
-        )}
-      </Form>
+      <ThemeProvider>
+        <Form onSubmit={handleSubmit} validate={validate}>
+          {({ values }) => (
+            <>
+              <Story />
+              <code>{JSON.stringify({ ...values })}</code>
+            </>
+          )}
+        </Form>
+      </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Form>
@@ -67,3 +73,14 @@ export const Default: ComponentStory<typeof Form> = () => {
     </div>
   )
 }
+
+export const PersonForm: ComponentStory<typeof Form> = () => (
+  <div>
+    <div>
+      <TextField name="firstName" label="First name" placeholder="John e.g." />
+    </div>
+    <div>
+      <TextField name="lastName" label="Last name" placeholder="Doe e.g." />
+    </div>
+  </div>
+)
