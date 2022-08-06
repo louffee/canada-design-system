@@ -7,7 +7,7 @@ const scanPackages = async (callback) => {
   const baseFolderPath = `${process.cwd()}/packages`
   const metaPathname = `${baseFolderPath}/{{PACKAGE_META_NAME}}/package.json`
 
-  console.log('🎁 Scanning packages')
+  console.log('🧭 Scanning packages...')
 
   filesystem.readdir(baseFolderPath, (err, folderPackageNames) => {
     if (err) {
@@ -67,7 +67,7 @@ const scanPackages = async (callback) => {
 const buildPackage = async ({ folderPackageName, packageName } = {}) => {
   return new Promise((resolve) => {
     if (folderPackageName && packageName) {
-      console.log(`🎁 Building ${packageName} package`)
+      console.log(`\n🎁 Building ${packageName} package...`)
 
       exec(`yarn workspace ${packageName} run build`, (err) => {
         if (err) {
@@ -86,7 +86,7 @@ const buildPackages = async () => {
 
   if (dependencyLevels.length === 0) {
     console.log(
-      '🪣 No package could have been found inside the "packages" folder. Was the function scanPackages() invoked? We need it :/'
+      '\n🪣 No package could have been found inside the "packages" folder. Was the function scanPackages() invoked? We need it :/'
     )
     return
   }
