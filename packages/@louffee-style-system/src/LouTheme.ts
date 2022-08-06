@@ -58,6 +58,8 @@ const LouTheme = {
     },
     error: {
       main: '#BA1A1A',
+      light: '#FFE5E5',
+      dark: '#A92A2A',
     },
     white: '#fefefe',
     black: '#141414',
