@@ -15,6 +15,7 @@ import type UseFieldReturnType from './useField/UseFieldReturnType'
 import useField from './useField/useField'
 
 import createValidation from './createValidation'
+import errorSchema from './errorSchema'
 
 export {
   FormErrorSchema,
@@ -30,6 +31,7 @@ export {
   UseFieldReturnType,
   useField,
   createValidation,
+  errorSchema,
 }
 
 export default Form
