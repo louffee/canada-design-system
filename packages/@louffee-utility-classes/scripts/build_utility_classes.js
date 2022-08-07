@@ -597,4 +597,14 @@ const buildPositions = () => {
 }
 buildPositions()
 
+const buildOverflow = () => {
+  ;['auto', 'hidden', 'scroll', 'visible'].forEach((overflow) => {
+    const classNames = [`.overflow-${overflow}`, `.ov-${overflow}`]
+
+    const classContent = `overflow: ${overflow};`
+    compileStyles(`Overflow ${overflow}`, `${classNames.join(',')} { ${classContent} }`)
+  })
+}
+buildOverflow()
+
 console.log(output.join('\n'))
