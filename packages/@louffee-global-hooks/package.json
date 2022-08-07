@@ -13,13 +13,13 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "react": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.15"
   },
   "peerDependencies": {
-    "@louffee/canada-global-hooks": "*"
+    "@louffee/canada-global-hooks": "*",
+    "react": "^18.2.0"
   },
   "scripts": {
     "build": "rimraf build && rollup -c ../../rollup.config.js"

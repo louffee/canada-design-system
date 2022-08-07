@@ -17,14 +17,14 @@
     "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.9.3",
     "final-form": "^4.20.7",
-    "react": "^18.2.0",
     "react-final-form": "^6.5.9"
   },
   "devDependencies": {
     "@types/react": "^18.0.15"
   },
   "peerDependencies": {
-    "@louffee/canada-global-hooks": "*"
+    "@louffee/canada-global-hooks": "*",
+    "react": "^18.2.0"
   },
   "bundledDependencies": [
     "final-form",
