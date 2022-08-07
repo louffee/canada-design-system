@@ -13,5 +13,5 @@
   "scripts": {
     "build": "node ./scripts/build_utility_classes.js > ./index.css"
   },
-  "dependencyLevel": 1
+  "dependencyLevel": 2
 }
