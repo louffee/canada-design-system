@@ -4,6 +4,7 @@ on: [push]
 
 jobs:
   publish:
+   environment: Production
    name: Publish
    runs-on: ubuntu-latest
    steps:
@@ -18,7 +19,7 @@ jobs:
        node-version: 18
     - name: Inject NPM_TOKEN
       run: |
-        echo "//registry.npmjs.org/:_authToken=\${{ secrets.NPM_TOKEN }}" > .npmrc
+        echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
     - name: Install dependencies
       run: |
         yarn install --frozen-lockfile && yarn run bootstrap
