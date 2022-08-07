@@ -39,6 +39,7 @@
     "noarg",
     "noempty",
     "nonbsp",
+    "npmjs",
     "npmrc",
     "oxsecurity",
     "pageview",
