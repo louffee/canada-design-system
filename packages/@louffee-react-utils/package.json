@@ -21,5 +21,8 @@
   "scripts": {
     "build": "rimraf build && rollup -c ../../rollup.config.js"
   },
-  "dependencyLevel": 1
+  "dependencyLevel": 1,
+  "publishConfig": {
+    "access": "public"
+  }
 }

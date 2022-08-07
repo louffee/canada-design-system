@@ -29,5 +29,8 @@
   "scripts": {
     "build": "rollup -c ../../rollup.config.js"
   },
-  "dependencyLevel": 3
+  "dependencyLevel": 3,
+  "publishConfig": {
+    "access": "public"
+  }
 }
