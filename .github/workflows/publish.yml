@@ -12,12 +12,19 @@ jobs:
       with:
        token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
        fetch-depth: 0
-    - name: Build
+    - name: Setup NodeJS
       uses: actions/setup-node@v3
       with:
        node-version: 18
-    - run: ${{ secrets.NPM_TOKEN }} > .npmrc
-    - run: yarn install --frozen-lockfile
-    - run: yarn run bootstrap
-    - run: yarn run build
-    - run: npx lerna publish from-package --yes
+    - name: Inject NPM_TOKEN
+      run: |
+        echo "//registry.npmjs.org/:_authToken=\${{ secrets.NPM_TOKEN }}" > .npmrc
+    - name: Install dependencies
+      run: |
+        yarn install --frozen-lockfile && yarn run bootstrap
+    - name: Build
+      run: |
+        yarn run build
+    - name: Publish
+      run: |
+        npx lerna publish from-package --yes
