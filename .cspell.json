@@ -39,6 +39,7 @@
     "noarg",
     "noempty",
     "nonbsp",
+    "npmrc",
     "oxsecurity",
     "pageview",
     "phonelink",
