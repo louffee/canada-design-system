@@ -2,8 +2,8 @@ import * as React from 'react'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { ThemeProvider } from '@louffee/style-system'
-import Icon from '@louffee/icon'
+import { ThemeProvider } from '@louffee/canada-style-system'
+import Icon from '@louffee/canada-icon'
 
 import Input from '../../packages/@louffee-input/src/Input'
 

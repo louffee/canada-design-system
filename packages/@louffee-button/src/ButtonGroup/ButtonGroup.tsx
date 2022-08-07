@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-import { styled, toRem } from '@louffee/style-system'
-import { useDeveloperChecks } from '@louffee/global-hooks'
+import { styled, toRem } from '@louffee/canada-style-system'
+import { useDeveloperChecks } from '@louffee/canada-global-hooks'
 
 import SoftButton from '../SoftButton/SoftButton'
 import OutlinedButton from '../OutlinedButton/OutlinedButton'

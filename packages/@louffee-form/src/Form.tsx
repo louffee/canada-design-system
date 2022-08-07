@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Form as FinalForm } from 'react-final-form'
 
-import { useDeveloperChecks } from '@louffee/global-hooks'
+import { useDeveloperChecks } from '@louffee/canada-global-hooks'
 
 import type FormProps from './FormProps'
 import type FormErrorSchema from './FormErrorSchema'

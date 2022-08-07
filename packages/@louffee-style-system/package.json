@@ -1,5 +1,5 @@
 {
-  "name": "@louffee/style-system",
+  "name": "@louffee/canada-style-system",
   "version": "0.1.0",
   "description": "The system for handling the Styles @ Louffee.",
   "main": "build/cjs/index.js",

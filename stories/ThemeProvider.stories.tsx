@@ -1,4 +1,4 @@
-// @louffee/style-system -> ThemeProvider
+// @louffee/canada-style-system -> ThemeProvider
 import * as React from 'react'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'

@@ -1,5 +1,5 @@
 {
-  "name": "@louffee/eslint-config",
+  "name": "@louffee/canada-eslint-config",
   "version": "0.1.0",
   "description": "The ESLint config used to make the code more reliable @ Louffee.",
   "main": ".eslintrc.js",

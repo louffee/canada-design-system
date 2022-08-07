@@ -1,8 +1,8 @@
 import * as React from 'react'
 
-import { styled, toRem } from '@louffee/style-system'
-import { isReactElement } from '@louffee/react-utils'
-import Typography from '@louffee/typography'
+import { styled, toRem } from '@louffee/canada-style-system'
+import { isReactElement } from '@louffee/canada-react-utils'
+import Typography from '@louffee/canada-typography'
 
 import inputConstants from './inputConstants'
 

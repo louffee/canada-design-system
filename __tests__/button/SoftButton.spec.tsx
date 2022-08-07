@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { render, fireEvent } from '@testing-library/react'
 
-import { ThemeProvider, LouTheme, toRem } from '@louffee/style-system'
+import { ThemeProvider, LouTheme, toRem } from '@louffee/canada-style-system'
 
 import SoftButton from '../../packages/@louffee-button/src/SoftButton/SoftButton'
 

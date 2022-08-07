@@ -1,5 +1,5 @@
 {
-  "name": "@louffee/form",
+  "name": "@louffee/canada-form",
   "version": "0.1.0",
   "description": "The form strategy designed and used @ Louffee.",
   "main": "build/cjs/index.js",
@@ -24,7 +24,7 @@
     "@types/react": "^18.0.15"
   },
   "peerDependencies": {
-    "@louffee/global-hooks": "*"
+    "@louffee/canada-global-hooks": "*"
   },
   "bundledDependencies": [
     "final-form",

@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-import { ThemeProvider } from '@louffee/style-system'
-import Form from '@louffee/form'
+import { ThemeProvider } from '@louffee/canada-style-system'
+import Form from '@louffee/canada-form'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 

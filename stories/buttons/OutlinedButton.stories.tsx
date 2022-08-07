@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { ThemeProvider } from '@louffee/style-system'
+import { ThemeProvider } from '@louffee/canada-style-system'
 
 import OutlinedButton from '../../packages/@louffee-button/src/OutlinedButton/OutlinedButton'
 

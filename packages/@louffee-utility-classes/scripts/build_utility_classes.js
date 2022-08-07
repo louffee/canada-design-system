@@ -1,5 +1,5 @@
 // @ts-check
-const { LouTheme, toRem } = require('@louffee/style-system')
+const { LouTheme, toRem } = require('@louffee/canada-style-system')
 const { range } = require('quebec')
 
 const MEASURE_RANGE = 1000

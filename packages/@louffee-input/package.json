@@ -1,5 +1,5 @@
 {
-  "name": "@louffee/input",
+  "name": "@louffee/canada-input",
   "version": "0.1.0",
   "description": "The input component related to the form package used @ Louffee.",
   "main": "build/cjs/index.js",
@@ -23,9 +23,9 @@
     "@types/react": "^18.0.15"
   },
   "peerDependencies": {
-    "@louffee/global-hooks": "*",
-    "@louffee/typography": "*",
-    "@louffee/react-utils": "*"
+    "@louffee/canada-global-hooks": "*",
+    "@louffee/canada-typography": "*",
+    "@louffee/canada-react-utils": "*"
   },
   "scripts": {
     "build": "rimraf build && rollup -c ../../rollup.config.js"

@@ -1,5 +1,5 @@
 {
-  "name": "@louffee/global-hooks",
+  "name": "@louffee/canada-global-hooks",
   "version": "0.1.0",
   "description": "The hooks which are globally used @ Louffee.",
   "main": "build/cjs/index.js",
@@ -19,7 +19,7 @@
     "@types/react": "^18.0.15"
   },
   "peerDependencies": {
-    "@louffee/global-hooks": "*"
+    "@louffee/canada-global-hooks": "*"
   },
   "scripts": {
     "build": "rimraf build && rollup -c ../../rollup.config.js"

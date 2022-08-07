@@ -1,4 +1,4 @@
-import { toRem } from '@louffee/style-system'
+import { toRem } from '@louffee/canada-style-system'
 
 import type InputSize from './InputSize'
 

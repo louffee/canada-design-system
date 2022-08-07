@@ -1,4 +1,4 @@
-import { LouTheme } from '@louffee/style-system'
+import { LouTheme } from '@louffee/canada-style-system'
 import ButtonProps from '../ButtonProps'
 
 interface SoftButtonProps extends ButtonProps {

@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-import { styled } from '@louffee/style-system'
-import Typography from '@louffee/typography'
+import { styled } from '@louffee/canada-style-system'
+import Typography from '@louffee/canada-typography'
 
 import buttonConstants from '../buttonConstants'
 import computeButtonGenericStyles from '../computeButtonGenericStyles'

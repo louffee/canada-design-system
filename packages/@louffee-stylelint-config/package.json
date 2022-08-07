@@ -1,5 +1,5 @@
 {
-  "name": "@louffee/stylelint-config",
+  "name": "@louffee/canada-stylelint-config",
   "version": "0.1.0",
   "description": "The StyleLint config used to make the code more reliable @ Louffee.",
   "main": ".stylelintrc.js",

@@ -1,4 +1,4 @@
-import { toRem, LouTheme } from '@louffee/style-system'
+import { toRem, LouTheme } from '@louffee/canada-style-system'
 
 import type ButtonSize from './ButtonSize'
 import type ButtonProps from './ButtonProps'

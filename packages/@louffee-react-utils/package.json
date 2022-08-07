@@ -1,5 +1,5 @@
 {
-  "name": "@louffee/react-utils",
+  "name": "@louffee/canada-react-utils",
   "version": "0.1.0",
   "description": "Util package for React used @ Louffee.",
   "main": "build/cjs/index.js",

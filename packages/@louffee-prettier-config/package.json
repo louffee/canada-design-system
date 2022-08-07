@@ -1,5 +1,5 @@
 {
-  "name": "@louffee/prettier-config",
+  "name": "@louffee/canada-prettier-config",
   "version": "0.1.0",
   "description": "The Prettier config used to make the code look nice @ Louffee.",
   "main": ".prettierrc.js",

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { useDeveloperChecks } from '@louffee/global-hooks'
+import { useDeveloperChecks } from '@louffee/canada-global-hooks'
 
 import { render } from '@testing-library/react'
 

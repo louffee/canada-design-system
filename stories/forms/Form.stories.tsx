@@ -2,8 +2,8 @@ import * as React from 'react'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import '@louffee/utility-classes'
-import { ThemeProvider } from '@louffee/style-system'
+import '@louffee/canada-utility-classes'
+import { ThemeProvider } from '@louffee/canada-style-system'
 
 import useField from '../../packages/@louffee-form/src/useField/useField'
 import createValidation from '../../packages/@louffee-form/src/createValidation'

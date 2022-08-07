@@ -1,5 +1,5 @@
 {
-  "name": "@louffee/button",
+  "name": "@louffee/canada-button",
   "version": "0.1.0",
   "description": "The button component designed and used @ Louffee.",
   "main": "build/cjs/index.js",
@@ -22,9 +22,9 @@
     "@types/react": "^18.0.15"
   },
   "peerDependencies": {
-    "@louffee/style-system": "*",
-    "@louffee/typography": "*",
-    "@louffee/circular-progress": "*"
+    "@louffee/canada-style-system": "*",
+    "@louffee/canada-typography": "*",
+    "@louffee/canada-circular-progress": "*"
   },
   "scripts": {
     "build": "rollup -c ../../rollup.config.js"

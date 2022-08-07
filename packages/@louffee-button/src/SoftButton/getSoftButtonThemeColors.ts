@@ -1,4 +1,4 @@
-import { type CSSObject, type LouThemeSchema } from '@louffee/style-system'
+import { type CSSObject, type LouThemeSchema } from '@louffee/canada-style-system'
 
 import type SoftButtonProps from './SoftButtonProps'
 

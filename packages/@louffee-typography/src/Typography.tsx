@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { styled } from '@louffee/style-system'
+import { styled } from '@louffee/canada-style-system'
 
 import elementsPerVariantMap from './elementsPerVariantMap'
 

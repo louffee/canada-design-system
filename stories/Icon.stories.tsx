@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { styled, ThemeProvider } from '@louffee/style-system'
+import { styled, ThemeProvider } from '@louffee/canada-style-system'
 
 import Icon from '../packages/@louffee-icon/src/Icon'
 import icons from '../packages/@louffee-icon/src/icons'

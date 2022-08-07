@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { ThemeProvider } from '@louffee/style-system'
+import { ThemeProvider } from '@louffee/canada-style-system'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 

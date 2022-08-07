@@ -1,11 +1,11 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react'
 
-import { useField } from '@louffee/form'
-import { useTheme } from '@louffee/style-system'
-import Icon from '@louffee/icon'
-import Typography from '@louffee/typography'
-import Input from '@louffee/input'
+import { useField } from '@louffee/canada-form'
+import { useTheme } from '@louffee/canada-style-system'
+import Icon from '@louffee/canada-icon'
+import Typography from '@louffee/canada-typography'
+import Input from '@louffee/canada-input'
 
 import type TextFieldProps from './TextFieldProps'
 

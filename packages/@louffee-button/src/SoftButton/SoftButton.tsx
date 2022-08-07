@@ -1,9 +1,9 @@
 import * as React from 'react'
 
-import { styled, toRem } from '@louffee/style-system'
-import { useDeveloperChecks } from '@louffee/global-hooks'
-import Typography from '@louffee/typography'
-import CircularProgress from '@louffee/circular-progress'
+import { styled, toRem } from '@louffee/canada-style-system'
+import { useDeveloperChecks } from '@louffee/canada-global-hooks'
+import Typography from '@louffee/canada-typography'
+import CircularProgress from '@louffee/canada-circular-progress'
 
 import getSoftButtonThemeColors from './getSoftButtonThemeColors'
 

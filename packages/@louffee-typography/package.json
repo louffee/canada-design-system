@@ -1,5 +1,5 @@
 {
-  "name": "@louffee/typography",
+  "name": "@louffee/canada-typography",
   "version": "0.1.0",
   "description": "The typography system designed and used @ Louffee.",
   "main": "build/cjs/index.js",
@@ -19,7 +19,7 @@
     "@types/react": "^18.0.15"
   },
   "peerDependencies": {
-    "@louffee/style-system": "*"
+    "@louffee/canada-style-system": "*"
   },
   "scripts": {
     "build": "rollup -c ../../rollup.config.js"

@@ -1,5 +1,5 @@
 {
-  "name": "@louffee/icon",
+  "name": "@louffee/canada-icon",
   "version": "0.1.0",
   "description": "The icon component designed and used @ Louffee.",
   "main": "build/cjs/index.js",
@@ -23,7 +23,7 @@
     "@types/react": "^18.0.15"
   },
   "peerDependencies": {
-    "@louffee/global-hooks": "*"
+    "@louffee/canada-global-hooks": "*"
   },
   "bundledDependencies": [
     "react-icons"

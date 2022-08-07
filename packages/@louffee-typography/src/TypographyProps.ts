@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { LouTheme } from '@louffee/style-system'
+import { LouTheme } from '@louffee/canada-style-system'
 
 export default interface TypographyProps
   extends Omit<React.HTMLAttributes<HTMLElement>, 'style' | 'className' | 'color' | 'children'> {
