@@ -17,5 +17,6 @@ jobs:
       with:
        node-version: 18
     - run: yarn install --frozen-lockfile
+    - run: yarn run bootstrap
     - run: yarn run build
     - run: npx lerna publish from-git
