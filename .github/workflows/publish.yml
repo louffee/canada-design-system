@@ -28,4 +28,4 @@ jobs:
         yarn run build
     - name: Publish
       run: |
-        npx lerna publish from-package --yes --access=public
+        npx lerna publish from-package --yes
