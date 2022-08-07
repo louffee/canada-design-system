@@ -16,5 +16,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
        node-version: 18
+    - run: yarn install --frozen-lockfile
     - run: yarn run build
     - run: npx lerna publish from-git
