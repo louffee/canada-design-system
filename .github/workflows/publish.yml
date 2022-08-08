@@ -1,6 +1,11 @@
 name: Publish
 
-on: [push]
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+      - development
 
 jobs:
   publish:
