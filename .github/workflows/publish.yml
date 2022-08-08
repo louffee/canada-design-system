@@ -28,8 +28,8 @@ jobs:
         yarn run build
     - name: Version and Publish
       run: |
-        git config user.name "{{ github.actor }}"
-        git config user.email "{{ github.actor }}@users.noreply.github.com"
+        git config --global user.name "{{ github.actor }}"
+        git config --global user.email "{{ github.actor }}@users.noreply.github.com"
 
         if [ ${{ github.base_ref }} = development ]; then
           npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
@@ -37,4 +37,4 @@ jobs:
           npx lerna version --conventional-commits --conventional-graduate --yes
         fi
 
-        npx lerna publish from-package --yes 
+        npx lerna publish from-package --yes --force-publish
