@@ -35,3 +35,6 @@ export { default as useDocumentEvent } from './useDocumentEvent/useDocumentEvent
 export { default as UseDocumentEventOptions } from './useDocumentEvent/UseDocumentEventOptions'
 export { default as DocumentEventListener } from './useDocumentEvent/DocumentEventListener'
 export { default as DocumentEventName } from './useDocumentEvent/DocumentEventName'
+
+export { default as useWindowSize } from './useWindowSize/useWindowSize'
+export { default as UseWindowSizeReturnType } from './useWindowSize/UseWindowSizeReturnType'
