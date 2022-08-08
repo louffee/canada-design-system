@@ -1,6 +1,6 @@
 {
   "name": "@louffee/canada-eslint-config",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The ESLint config used to make the code more reliable @ Louffee.",
   "main": ".eslintrc.js",
   "repository": "git@github.com:louffee/canada-design-system.git",

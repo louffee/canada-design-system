@@ -1,6 +1,6 @@
 {
   "name": "@louffee/canada-text-field",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The text-field (based on input) component related to the form package used @ Louffee.",
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",
@@ -21,13 +21,13 @@
     "@types/react": "^18.0.15"
   },
   "peerDependencies": {
+    "@louffee/canada-form": "*",
     "@louffee/canada-global-hooks": "*",
+    "@louffee/canada-icon": "*",
     "@louffee/canada-input": "*",
     "@louffee/canada-react-utils": "*",
     "@louffee/canada-style-system": "*",
     "@louffee/canada-typography": "*",
-    "@louffee/canada-form": "*",
-    "@louffee/canada-icon": "*",
     "react": "^18.2.0"
   },
   "scripts": {

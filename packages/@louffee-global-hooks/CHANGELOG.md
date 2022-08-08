@@ -1,0 +1,15 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# 0.2.0 (2022-08-08)
+
+
+### Features
+
+* add a bunch of hooks ([28f0eaf](https://github.com/louffee/canada-design-system/commit/28f0eafedfa6c45843bd0262d114e3d4b2d47667))
+* add useDocumentEvent hook ([5e31f95](https://github.com/louffee/canada-design-system/commit/5e31f95aa8c15bf9b61f6f685c1a22a9fe6dae59))
+* add useEvent hook to create events with useCallback ([1986252](https://github.com/louffee/canada-design-system/commit/1986252faea6bc41178a163db16103c6c46ec030))
+* **global-hooks:** add useLatest hook ([199a40d](https://github.com/louffee/canada-design-system/commit/199a40d0925366e5eea151b3e1449f1235ed8f46))
+* **global-hooks:** create a package responsible for controlling all hooks ([8f783ab](https://github.com/louffee/canada-design-system/commit/8f783ab1a10fa797808c66df9cf0de590dbf12ee))

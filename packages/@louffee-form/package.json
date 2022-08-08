@@ -1,6 +1,6 @@
 {
   "name": "@louffee/canada-form",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The form strategy designed and used @ Louffee.",
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",

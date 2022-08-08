@@ -1,6 +1,6 @@
 {
   "name": "@louffee/canada-stylelint-config",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The StyleLint config used to make the code more reliable @ Louffee.",
   "main": ".stylelintrc.js",
   "repository": "git@github.com:louffee/canada-design-system.git",
