@@ -1,6 +1,6 @@
 {
   "name": "@louffee/canada-typography",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "The typography system designed and used @ Louffee.",
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",

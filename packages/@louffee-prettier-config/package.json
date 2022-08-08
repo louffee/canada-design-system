@@ -1,6 +1,6 @@
 {
   "name": "@louffee/canada-prettier-config",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "The Prettier config used to make the code look nice @ Louffee.",
   "main": ".prettierrc.js",
   "repository": "git@github.com:louffee/canada-design-system.git",

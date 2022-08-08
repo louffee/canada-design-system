@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/louffee/canada-design-system/compare/v0.2.0...v0.3.0) (2022-08-08)
+
+
+### Features
+
+* **global-hooks:** create useWindowSize hook to watch the dimensions of the window ([036793e](https://github.com/louffee/canada-design-system/commit/036793ec3eca620da0660311e8b63d4b4f9c2a36))
+
+
+
+
+
 # 0.2.0 (2022-08-08)
 
 
