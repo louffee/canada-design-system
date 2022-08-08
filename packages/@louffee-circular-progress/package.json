@@ -1,6 +1,6 @@
 {
   "name": "@louffee/canada-circular-progress",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The circular progress component designed and used @ Louffee.",
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",
@@ -12,7 +12,6 @@
   "author": "Louffee Dev. Team <team@louffee.dev>",
   "license": "MIT",
   "private": false,
-  "dependencies": {},
   "devDependencies": {
     "@types/react": "^18.0.15"
   },
