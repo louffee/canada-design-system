@@ -9,6 +9,9 @@
       "ignoreChanges": "package.json",
       "registry": "https://registry.npmjs.org",
       "access": "public"
+    },
+    "version": {
+      "ignoreChanges": "package.json"
     }
   },
   "useNx": true
