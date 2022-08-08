@@ -1,5 +1,5 @@
-import type UseStateDispatch from './UseStateDispatch'
+import type * as React from 'react'
 
-type UseStateTuple<TStateValue> = [TStateValue, UseStateDispatch<TStateValue>]
+type UseStateTuple<TStateValue> = [TStateValue, React.Dispatch<React.SetStateAction<TStateValue>>]
 
 export default UseStateTuple

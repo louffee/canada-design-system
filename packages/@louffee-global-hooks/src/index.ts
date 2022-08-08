@@ -15,7 +15,6 @@ export { default as EffectCallback } from './EffectCallback'
 export { default as useMemo } from './useMemo/useMemo'
 
 export { default as useState } from './useState/useState'
-export { default as UseStateDispatch } from './useState/UseStateDispatch'
 export { default as UseStateTuple } from './useState/UseStateTuple'
 
 export { default as useReducer } from './useReducer/useReducer'
@@ -38,3 +37,6 @@ export { default as DocumentEventName } from './useDocumentEvent/DocumentEventNa
 
 export { default as useWindowSize } from './useWindowSize/useWindowSize'
 export { default as UseWindowSizeReturnType } from './useWindowSize/UseWindowSizeReturnType'
+
+export { default as useLocale } from './useLocale/useLocale'
+export { default as SupportedLocale } from './useLocale/SupportedLocale'
