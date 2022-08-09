@@ -17,7 +17,7 @@ const TextField = React.memo<TextFieldProps>(
     } = useTheme()
 
     return (
-      <div className="louffee-text-field flex flex-col g-3">
+      <div className='louffee-text-field flex flex-col g-3'>
         <Input
           {...props}
           {...attributes}
@@ -28,19 +28,19 @@ const TextField = React.memo<TextFieldProps>(
           endAdornment={endAdornment}
         />
         {typeof meta.error === 'string' && meta.error.length > 1 && (
-          <div className="flex align-center radii-6 mt-3 bg-error-light px-6 per-width-100 left--2 relative">
-            <div className="mx-3 flex align-center justify-center p-3 m-4 radii-5 bg-primary-100">
-              <Icon name="lock" color={error.main} />
+          <div className='flex align-center radii-6 mt-3 bg-error-light px-6 per-width-100 left--2 relative'>
+            <div className='mx-3 flex align-center justify-center p-3 m-4 radii-5 bg-primary-100'>
+              <Icon name='lock' color={error.main} />
             </div>
 
-            <Typography variant="bodySmall" color={error.main}>
+            <Typography variant='bodySmall' color={error.main}>
               {meta.error}
             </Typography>
           </div>
         )}
       </div>
     )
-  }
+  },
 )
 
 TextField.displayName = 'TextField'
