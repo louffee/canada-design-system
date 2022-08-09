@@ -40,3 +40,6 @@ export { default as UseWindowSizeReturnType } from './useWindowSize/UseWindowSiz
 
 export { default as useLocale } from './useLocale/useLocale'
 export { default as SupportedLocale } from './useLocale/SupportedLocale'
+
+export { default as useDocumentTitle } from './useDocumentTitle/useDocumentTitle'
+export { default as UseDocumentTitleProps } from './useDocumentTitle/UseDocumentTitleProps'
