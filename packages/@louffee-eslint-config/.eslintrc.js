@@ -1,3 +1,5 @@
+const prettierConfig = require('@louffee/canada-prettier-config')
+
 const ERROR = 'error'
 const WARN = 'warn'
 const DISABLED = 'off'
@@ -8,7 +10,18 @@ const ALWAYS = 'always'
 const NEVER = 'never'
 
 module.exports = {
-  plugins: ['react', 'react-native', '@typescript-eslint', 'react-hooks', 'import', 'jest', 'promise', 'prettier'],
+  plugins: [
+    'react',
+    'react-native',
+    '@typescript-eslint',
+    'react-hooks',
+    'import',
+    'jest',
+    'promise',
+    'prettier',
+    'jsx-a11y',
+  ],
+  extends: ['plugin:compat/recommended'],
 
   rules: {
     // Jest
@@ -194,6 +207,24 @@ module.exports = {
     '@typescript-eslint/await-thenable': ERROR,
     '@typescript-eslint/no-floating-promises': ERROR,
     '@typescript-eslint/no-unused-vars': ERROR,
+
+    // Prettier
+    'prettier/prettier': [ERROR, prettierConfig],
+
+    // A11y
+    'react/prop-types': 'off',
+    'jsx-a11y/alt-text': [
+      'warn',
+      {
+        elements: ['img'],
+        img: ['Image'],
+      },
+    ],
+    'jsx-a11y/aria-props': 'warn',
+    'jsx-a11y/aria-proptypes': 'warn',
+    'jsx-a11y/aria-unsupported-elements': 'warn',
+    'jsx-a11y/role-has-required-aria-props': 'warn',
+    'jsx-a11y/role-supports-aria-props': 'warn',
   },
 
   // Environment
