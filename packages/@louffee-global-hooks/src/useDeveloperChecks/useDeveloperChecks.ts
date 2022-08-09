@@ -8,15 +8,18 @@ function useDeveloperChecks<P extends object>(componentProps: P, validate: UseDe
 
     if (validation) {
       switch (validation.type) {
-        case 'error':
+        case 'error': {
           console.error(validation.message)
           break
-        case 'warn':
+        }
+        case 'warn': {
           console.warn(validation.message)
           break
-        case 'trace':
+        }
+        case 'trace': {
           console.trace(validation.message)
           break
+        }
         default:
           break
       }
