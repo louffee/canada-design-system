@@ -38,30 +38,34 @@ const StyledButton = styled('button')<NeutralButtonProps>(({ theme, size, disabl
   }
 })
 
-const NeutralButton: React.FC<NeutralButtonProps> = ({
-  children,
-  size = 'medium',
-  className = '',
-  startIcon,
-  endIcon,
-  fullWidth = false,
-  disabled = false,
-  ...props
-}) => (
-  <StyledButton
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    {...props}
-    size={size}
-    fullWidth={fullWidth}
-    disabled={disabled}
-    aria-disabled={disabled}
-    className={`louffee-neutral-button ${className}`}>
-    <Typography variant='bodySmall' aria-label={children?.toString()}>
-      <i className={buttonConstants.START_ICON_CLASS_NAME}>{startIcon}</i>
-      {children}
-      <i className={buttonConstants.END_ICON_CLASS_NAME}>{endIcon}</i>
-    </Typography>
-  </StyledButton>
+const NeutralButton = React.memo<NeutralButtonProps>(
+  ({
+    children,
+    size = 'medium',
+    className = '',
+    startIcon,
+    endIcon,
+    fullWidth = false,
+    disabled = false,
+    ...props
+  }) => (
+    <StyledButton
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
+      size={size}
+      fullWidth={fullWidth}
+      disabled={disabled}
+      aria-disabled={disabled}
+      className={`louffee-neutral-button ${className}`}>
+      <Typography variant='bodySmall' aria-label={children?.toString()}>
+        <i className={buttonConstants.START_ICON_CLASS_NAME}>{startIcon}</i>
+        {children}
+        <i className={buttonConstants.END_ICON_CLASS_NAME}>{endIcon}</i>
+      </Typography>
+    </StyledButton>
+  ),
 )
+
+NeutralButton.displayName = 'NeutralButton'
 
 export default NeutralButton
