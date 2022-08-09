@@ -7,4 +7,4 @@ updates:
     assignees:
       - "mrlemoos"
     schedule:
-      interval: daily
+      interval: monthly
