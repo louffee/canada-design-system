@@ -6,11 +6,11 @@ import multiChannelLocaleSearch from './multiChannelLocaleSearch'
 import type SupportedLocale from './SupportedLocale'
 import type UseLocaleProps from './UseLocaleProps'
 
-function useLocale({ localeSearchAlgorithm }: UseLocaleProps = {}) {
+function useLocale({ localeSearchAlgorithm = multiChannelLocaleSearch }: UseLocaleProps = {}) {
   const [locale, setLocale] = useState<SupportedLocale>('en_CA')
 
   useMemo(() => {
-    const result = (localeSearchAlgorithm ?? multiChannelLocaleSearch)()
+    const result = localeSearchAlgorithm()
 
     if (result) {
       setLocale(result)
