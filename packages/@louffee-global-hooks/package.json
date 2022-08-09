@@ -1,6 +1,6 @@
 {
   "name": "@louffee/canada-global-hooks",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "The hooks which are globally used @ Louffee.",
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",
