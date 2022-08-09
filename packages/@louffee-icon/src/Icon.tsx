@@ -6,7 +6,7 @@ import icons from './icons'
 
 import type IconProps from './IconProps'
 
-const Icon: React.FC<IconProps> = ({ name, size, color }) => {
+const Icon = React.memo<IconProps>(({ name, size, color }) => {
   const Component = icons[name]
 
   useDeveloperChecks({ name }, (componentProps) => {
@@ -23,6 +23,8 @@ const Icon: React.FC<IconProps> = ({ name, size, color }) => {
   }
 
   return <Component aria-label={name} color={color} size={size} />
-}
+})
+
+Icon.displayName = 'Icon'
 
 export default Icon
