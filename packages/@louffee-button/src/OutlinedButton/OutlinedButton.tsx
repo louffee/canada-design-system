@@ -38,30 +38,34 @@ const StyledButton = styled('button')<OutlinedButtonProps>(({ theme, size, disab
   }
 })
 
-const OutlinedButton: React.FC<OutlinedButtonProps> = ({
-  children,
-  size = 'medium',
-  disabled = false,
-  className = '',
-  startIcon,
-  endIcon,
-  fullWidth = false,
-  ...props
-}) => (
-  <StyledButton
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    {...props}
-    className={`louffee-outlined-button ${className}`}
-    size={size}
-    fullWidth={fullWidth}
-    disabled={disabled}
-    aria-disabled={disabled}>
-    <Typography variant="bodySmall" aria-label={children?.toString()}>
-      <i className={buttonConstants.START_ICON_CLASS_NAME}>{startIcon}</i>
-      {children}
-      <i className={buttonConstants.END_ICON_CLASS_NAME}>{endIcon}</i>
-    </Typography>
-  </StyledButton>
+const OutlinedButton = React.memo<OutlinedButtonProps>(
+  ({
+    children,
+    size = 'medium',
+    disabled = false,
+    className = '',
+    startIcon,
+    endIcon,
+    fullWidth = false,
+    ...props
+  }) => (
+    <StyledButton
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
+      className={`louffee-outlined-button ${className}`}
+      size={size}
+      fullWidth={fullWidth}
+      disabled={disabled}
+      aria-disabled={disabled}>
+      <Typography variant='bodySmall' aria-label={children?.toString()}>
+        <i className={buttonConstants.START_ICON_CLASS_NAME}>{startIcon}</i>
+        {children}
+        <i className={buttonConstants.END_ICON_CLASS_NAME}>{endIcon}</i>
+      </Typography>
+    </StyledButton>
+  ),
 )
+
+OutlinedButton.displayName = 'OutlinedButton'
 
 export default OutlinedButton
