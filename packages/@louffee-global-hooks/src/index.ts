@@ -40,3 +40,6 @@ export { default as UseWindowSizeReturnType } from './useWindowSize/UseWindowSiz
 
 export { default as useLocale } from './useLocale/useLocale'
 export { default as SupportedLocale } from './useLocale/SupportedLocale'
+
+export { default as useLifecycle } from './useLifecycle/useLifecycle'
+export { default as MountLifecycleFunction } from './useLifecycle/MountLifecycleFunction'
