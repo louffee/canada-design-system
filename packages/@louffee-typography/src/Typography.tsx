@@ -15,7 +15,7 @@ const Span = styled('span')<Required<Pick<TypographyProps, 'variant' | 'color'>>
 const Typography = React.memo<TypographyProps>(({ variant, children, className = '', color = 'inherit', ...props }) => {
   const elementType = React.useMemo<React.ElementType>(
     () => elementsPerVariantMap[variant] as React.ElementType,
-    [variant]
+    [variant],
   )
 
   return (
