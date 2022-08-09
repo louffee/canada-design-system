@@ -16,6 +16,16 @@ const TextField = React.memo<TextFieldProps>(
       colors: { error },
     } = useTheme()
 
+    const shouldRenderError = React.useMemo<boolean>(
+      () =>
+        // Checks whether the user has interacted with the field
+        meta.touched &&
+        // Checks whether the field has an error able to be rendered
+        typeof meta.error === 'string' &&
+        meta.error.length > 1,
+      [meta.touched, meta.error],
+    )
+
     return (
       <div className='louffee-text-field flex flex-col g-3'>
         <Input
@@ -27,7 +37,7 @@ const TextField = React.memo<TextFieldProps>(
           startAdornment={startAdornment}
           endAdornment={endAdornment}
         />
-        {typeof meta.error === 'string' && meta.error.length > 1 && (
+        {shouldRenderError && (
           <div className='flex align-center radii-6 mt-3 bg-error-light px-6 per-width-100 left--2 relative'>
             <div className='mx-3 flex align-center justify-center p-3 m-4 radii-5 bg-primary-100'>
               <Icon name='lock' color={error.main} />
