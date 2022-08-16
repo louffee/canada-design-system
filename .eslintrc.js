@@ -1,3 +1,1 @@
-const eslintConfig = require("./packages/@louffee-eslint-config");
-
-module.exports = eslintConfig;
+module.exports = require('eslint-config-louffee')
