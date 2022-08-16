@@ -16,13 +16,12 @@
     "@types/react": "^18.0.15"
   },
   "peerDependencies": {
-    "@louffee/canada-global-hooks": "*",
     "react": "^18.2.0"
   },
   "scripts": {
     "build": "rimraf build && rollup -c ../../rollup.config.js"
   },
-  "dependencyLevel": 1,
+  "dependencyLevel": 2,
   "publishConfig": {
     "access": "public"
   }
