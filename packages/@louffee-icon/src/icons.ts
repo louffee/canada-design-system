@@ -1,5 +1,7 @@
 import * as MaterialIcon from 'react-icons/md'
 
+import Louffee from './custom/Louffee/Louffee'
+
 const icons = {
   accessibility: MaterialIcon.MdAccessibilityNew,
   'account-balance': MaterialIcon.MdAccountBalance,
@@ -232,6 +234,7 @@ const icons = {
   power: MaterialIcon.MdPower,
   'power-input': MaterialIcon.MdPowerInput,
   'power-settings': MaterialIcon.MdPowerSettingsNew,
+  'louffee-logo': Louffee,
 }
 
 export default icons
