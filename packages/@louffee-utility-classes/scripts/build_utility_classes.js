@@ -146,7 +146,7 @@ function generateFlex() {
     .flex-basis-fit-content {
       flex-basis: fit-content;
     }
-  `
+  `,
   )
 }
 generateFlex()
@@ -175,7 +175,7 @@ function generatePageNormalization() {
       border: none;
       background: transparent;
     }
-    `
+    `,
   )
 
   let styles = ''
@@ -606,5 +606,45 @@ const buildOverflow = () => {
   })
 }
 buildOverflow()
+
+const buildCursor = () => {
+  ;[
+    'auto',
+    'default',
+    'pointer',
+    'text',
+    'wait',
+    'help',
+    'move',
+    'not-allowed',
+    'context-menu',
+    'progress',
+    'no-drop',
+    'col-resize',
+    'row-resize',
+    'n-resize',
+    'e-resize',
+    's-resize',
+    'w-resize',
+    'ne-resize',
+    'nw-resize',
+    'se-resize',
+    'sw-resize',
+    'ew-resize',
+    'ns-resize',
+    'nesw-resize',
+    'nwse-resize',
+    'zoom-in',
+    'zoom-out',
+    'grab',
+    'grabbing',
+  ].forEach((cursor) => {
+    const classNames = [`.cursor-${cursor}`, `.c-${cursor}`, `.cur-${cursor}`]
+
+    const classContent = `cursor: ${cursor};`
+    compileStyles(`Cursor ${cursor}`, `${classNames.join(',')} { ${classContent} }`)
+  })
+}
+buildCursor()
 
 console.log(output.join('\n'))
