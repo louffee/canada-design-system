@@ -68,6 +68,7 @@ const LouTheme = {
     small: '0.25rem',
     medium: '0.5rem',
     large: '1rem',
+    rounded: toRem(50),
   },
   spacing: {
     extraSmall: toRem(4),
