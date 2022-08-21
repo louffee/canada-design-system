@@ -235,6 +235,7 @@ const icons = {
   'power-input': MaterialIcon.MdPowerInput,
   'power-settings': MaterialIcon.MdPowerSettingsNew,
   'louffee-logo': Louffee,
+  search: MaterialIcon.MdSearch,
 }
 
 export default icons

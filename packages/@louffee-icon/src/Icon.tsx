@@ -7,7 +7,7 @@ import icons from './icons'
 import type IconProps from './IconProps'
 
 const Icon = React.memo<IconProps>(({ name, size, color }) => {
-  const Component = icons[name]
+  const Component = React.useMemo(() => icons[name], [name])
 
   useDeveloperChecks({ name }, (componentProps) => {
     if (!Object.keys(icons).includes(componentProps.name)) {

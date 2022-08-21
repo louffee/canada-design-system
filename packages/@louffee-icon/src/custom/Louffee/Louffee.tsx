@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import type LouffeeProps from './LouffeeProps'
 
-const Louffee: React.FC<LouffeeProps> = ({ color, label, size }) => (
+const Louffee: React.FC<LouffeeProps> = ({ color, 'aria-label': label, size }) => (
   <svg
     width={size}
     height={size}
