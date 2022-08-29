@@ -8194,10 +8194,10 @@ escodegen@^2.0.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-louffee@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-louffee/-/eslint-config-louffee-2.1.0.tgz#4723834ab55ee2553aa867ee84a3d03ade3b2adb"
-  integrity sha512-Z4Cn9zE/B/Nc94vwJh/MMKmueAZxgEN8eETMeH6abHd/46pNKVFysSqsfPPn5WrH50rgXP3AQObHAacSfFSC+g==
+eslint-config-louffee@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-louffee/-/eslint-config-louffee-2.2.0.tgz#51aa2c682490356460532d54d570f1a37cca3ff2"
+  integrity sha512-zWrf9+Z9dwIcVWdR+Rsg9PwQPfhileByL6eidIGETcYdcyrNoWFYpQaLT5uHpGlYepr9ijwm++0IZYejmiDNtg==
 
 eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
@@ -14543,6 +14543,11 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
   integrity sha512-s/46sYeylUfHNjI+sA/78FAHlmIuKqI9wNnzEOGehAlUUYeObv5C2mOinXBjyUyWmJ2SfcS2/ydApH4hTF4WXQ==
+
+prettier-config-louffee@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/prettier-config-louffee/-/prettier-config-louffee-0.1.0.tgz#ceb48f83aa8fbf6e0e894c0e1262e4a58eb23e1d"
+  integrity sha512-vqkzbcU4LFMmGjYGJe5fcA4PS35kc4qWi+8uhtuRgarob0qjMAfS8eIxjF+wO8cSn54RSdVJhFl+HQCEZkkXUA==
 
 prettier-linter-helpers@^1.0.0:
   version "1.0.0"
