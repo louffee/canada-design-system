@@ -1,3 +1,1 @@
-const styleConfig = require("./packages/@louffee-stylelint-config");
-
-module.exports = styleConfig;
+module.exports = require('stylelint-config-louffee')
