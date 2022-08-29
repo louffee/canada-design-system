@@ -8206,10 +8206,10 @@ escodegen@^2.0.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-louffee@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-louffee/-/eslint-config-louffee-2.2.2.tgz#c70d57f503208f0357287813bd4947411156eea4"
-  integrity sha512-aTV110ETGSQT20rPsp82zTzvVfVHjurPmTbWqixuYSTWjTVLBreNSkorWa73eMiRVKbtebcFnoRGG23UM9eIHg==
+eslint-config-louffee@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/eslint-config-louffee/-/eslint-config-louffee-2.2.3.tgz#03f1600ff95ce4cc4e92db826378299ed5470614"
+  integrity sha512-Um1QS0G+5hClZELHl7/dRnJ9PnbkdBb37Gt/Wzky8S3Zr099erAuj+FqVVPKUtYwv/Rv+4b2Bb4bFClLKL7Aqw==
 
 eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
