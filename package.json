@@ -84,7 +84,7 @@
     "postcss-syntax": "^0.36.2",
     "prettier": "^2.7.1",
     "prettier-config-louffee": "^0.1.0",
-    "quebec": "^0.1.3",
+    "quebec": "^0.3.0",
     "react-docgen": "^5.4.3",
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0",
