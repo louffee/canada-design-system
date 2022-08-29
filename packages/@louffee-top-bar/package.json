@@ -21,10 +21,7 @@
     "@louffee/canada-style-system": "*",
     "react": "^18.2.0"
   },
-  "bundledDependencies": [
-    "final-form",
-    "react-final-form"
-  ],
+  "bundledDependencies": [],
   "scripts": {
     "build": "rimraf build && rollup -c ../../rollup.config.js"
   },
