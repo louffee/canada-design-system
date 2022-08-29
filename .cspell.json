@@ -21,6 +21,7 @@
     "camelcase",
     "codeql",
     "commitlint",
+    "compat",
     "docgen",
     "endregion",
     "forin",
