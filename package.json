@@ -21,7 +21,8 @@
     "commit": "git-cz",
     "ci": "yarn run commit",
     "test": "jest",
-    "install:lint-dependencies": "node ./scripts/install-lint-related-dependencies.js"
+    "install:lint-dependencies": "node ./scripts/install-lint-related-dependencies.js",
+    "prepare": "./node_modules/.bin/husky install"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.9",
