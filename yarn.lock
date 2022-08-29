@@ -16610,7 +16610,7 @@ stylehacks@^5.1.0:
     browserslist "^4.16.6"
     postcss-selector-parser "^6.0.4"
 
-stylelint-config-louffee@^0.1.3:
+stylelint-config-louffee@^0.1.0:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/stylelint-config-louffee/-/stylelint-config-louffee-0.1.3.tgz#8a0ef4b8a7a05eff636a3eeea2ebcca51d0da256"
   integrity sha512-NQBBlg01wVH2YQ5CX25FCxjcFPZECRyoAQ6/iNfVDXlRPImOS1Qs6Xgm9pQzf5QN+33LivZeL+eYDODkwuNsEw==
