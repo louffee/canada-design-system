@@ -1,3 +1,1 @@
-const prettierConfig = require("./packages/@louffee-prettier-config");
-
-module.exports = prettierConfig;
+module.exports = require('prettier-config-louffee');
