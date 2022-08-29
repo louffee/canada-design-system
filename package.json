@@ -18,7 +18,7 @@
     "sb": "yarn run storybook",
     "publish": "npx lerna publish",
     "bootstrap": "npx lerna bootstrap && npx lerna link",
-    "commit": "git-cz",
+    "commit": "./node_modules/.bin/cz",
     "ci": "yarn run commit",
     "test": "jest",
     "install:lint-dependencies": "node ./scripts/install-lint-related-dependencies.js",
