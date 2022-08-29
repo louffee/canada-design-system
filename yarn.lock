@@ -16610,6 +16610,11 @@ stylehacks@^5.1.0:
     browserslist "^4.16.6"
     postcss-selector-parser "^6.0.4"
 
+stylelint-config-louffee@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-louffee/-/stylelint-config-louffee-0.1.0.tgz#6446f8005771e5f58a04c287106fdffbc166e6c2"
+  integrity sha512-2mtorRuQVzy8RTj/zaTp+dqxfUCkJu0bYrkhDILVFtGe6tWlU7XR3vublSgzzlAB6bUY2pmrvPAYd6Fv9tEN8A==
+
 stylelint-config-prettier@^9.0.3:
   version "9.0.3"
   resolved "https://registry.yarnpkg.com/stylelint-config-prettier/-/stylelint-config-prettier-9.0.3.tgz#0dccebeff359dcc393c9229184408b08964d561c"
