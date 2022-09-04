@@ -1,5 +1,6 @@
 import * as React from 'react'
 
+import * as masks from '@louffee/canada-masks'
 import { ThemeProvider } from '@louffee/canada-style-system'
 import Form from '@louffee/canada-form'
 
@@ -35,15 +36,6 @@ export const NumbersFormat: ComponentStory<typeof TextField> = () => (
   <TextField
     label='Please enter some numbers and try some letters (they will not work)'
     name='numberFormat'
-    format={(val) => {
-      if (!val) {
-        return ''
-      }
-
-      const str = String(val).replace(/[^0-9]/g, '')
-
-      return str
-    }}
-    parse={(val) => (val ? String(val).replace(/[^0-9]/g, '') : '')}
+    mask={masks.numbers}
   />
 )
