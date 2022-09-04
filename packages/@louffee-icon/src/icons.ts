@@ -236,6 +236,7 @@ const icons = {
   'power-settings': MaterialIcon.MdPowerSettingsNew,
   'louffee-logo': Louffee,
   search: MaterialIcon.MdSearch,
+  'exclamation-circle-outlined': MaterialIcon.MdOutlinePriorityHigh,
 }
 
 export default icons
