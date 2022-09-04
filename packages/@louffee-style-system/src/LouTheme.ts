@@ -65,9 +65,9 @@ const LouTheme = {
     black: '#141414',
   },
   radii: {
-    small: '0.25rem',
-    medium: '0.5rem',
-    large: '1rem',
+    small: 4,
+    medium: 7,
+    large: 12,
     rounded: toRem(50),
   },
   spacing: {
@@ -136,15 +136,15 @@ const LouTheme = {
       },
       labelLarge: {
         fontSize: 14,
-        fontWeight: FONT_WEIGHT_SEMIBOLD,
+        fontWeight: FONT_WEIGHT_REGULAR,
       },
       labelMedium: {
         fontSize: 12,
-        fontWeight: FONT_WEIGHT_SEMIBOLD,
+        fontWeight: FONT_WEIGHT_REGULAR,
       },
       labelSmall: {
         fontSize: 11,
-        fontWeight: FONT_WEIGHT_SEMIBOLD,
+        fontWeight: FONT_WEIGHT_REGULAR,
       },
       bodyLarge: {
         fontSize: 16,
