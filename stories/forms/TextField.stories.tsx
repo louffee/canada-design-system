@@ -1,11 +1,11 @@
 import * as React from 'react'
 
-import * as masks from '@louffee/canada-masks'
 import { ThemeProvider } from '@louffee/canada-style-system'
 import Form from '@louffee/canada-form'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
+import * as masks from '../../packages/@louffee-masks/src/index'
 import TextField from '../../packages/@louffee-text-field/src/TextField'
 
 export default {
@@ -14,14 +14,16 @@ export default {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <Form onSubmit={() => {}}>
-          {({ values }) => (
-            <>
-              <Story />
-              {JSON.stringify(values)}
-            </>
-          )}
-        </Form>
+        <main className='margin-x-auto max-width-800'>
+          <Form onSubmit={() => {}}>
+            {({ values }) => (
+              <>
+                <Story />
+                {JSON.stringify(values)}
+              </>
+            )}
+          </Form>
+        </main>
       </ThemeProvider>
     ),
   ],
@@ -38,4 +40,8 @@ export const NumbersFormat: ComponentStory<typeof TextField> = () => (
     name='numberFormat'
     mask={masks.numbers}
   />
+)
+
+export const PhoneCountryCode: ComponentStory<typeof TextField> = () => (
+  <TextField label='Please inform your phone country code' name='phoneCountryCode' mask={masks.phoneCountryCode} />
 )
