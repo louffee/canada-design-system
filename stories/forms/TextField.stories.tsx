@@ -45,3 +45,11 @@ export const NumbersFormat: ComponentStory<typeof TextField> = () => (
 export const PhoneCountryCode: ComponentStory<typeof TextField> = () => (
   <TextField label='Please inform your phone country code' name='phoneCountryCode' mask={masks.phoneCountryCode} />
 )
+
+export const PhoneBrazilPattern: ComponentStory<typeof TextField> = () => (
+  <TextField label='Please inform your phone number' name='phone' mask={masks.phone('+55')} />
+)
+
+export const Phone: ComponentStory<typeof TextField> = () => (
+  <TextField label='Please inform your phone number' name='phone' mask={masks.phone('+1')} />
+)
