@@ -6,7 +6,7 @@ import Input from '@louffee/canada-input'
 import type TextFieldProps from './TextFieldProps'
 
 const TextField = React.memo<TextFieldProps>(
-  ({ name, startAdornment, endAdornment, label, format, parse, mask, autoComplete = 'off', ...props }) => {
+  ({ name, startAdornment, endAdornment, label, format, parse, mask, autoComplete = 'off', onKeyDown, ...props }) => {
     const { attributes, meta } = useField(name, { parse: mask?.parse ?? parse, format: mask?.format ?? format })
 
     const shouldRenderError = React.useMemo<boolean>(
@@ -19,6 +19,19 @@ const TextField = React.memo<TextFieldProps>(
       [meta.touched, meta.error],
     )
 
+    const handleKeyDown = React.useCallback(
+      (event?: React.KeyboardEvent<HTMLInputElement>) => {
+        if (typeof onKeyDown === 'function') {
+          onKeyDown(event)
+        }
+
+        if (typeof mask?.customKeyDownHandler === 'function') {
+          mask.customKeyDownHandler(event)
+        }
+      },
+      [mask?.customKeyDownHandler, onKeyDown],
+    )
+
     return (
       <Input
         {...props}
@@ -27,6 +40,7 @@ const TextField = React.memo<TextFieldProps>(
         label={label}
         startAdornment={startAdornment}
         endAdornment={endAdornment}
+        onKeyDown={handleKeyDown}
         error={shouldRenderError ? meta.error : undefined}
       />
     )
