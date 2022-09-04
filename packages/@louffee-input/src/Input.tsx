@@ -1,106 +1,105 @@
 import * as React from 'react'
 
-import { styled, toRem } from '@louffee/canada-style-system'
-import { isReactElement } from '@louffee/canada-react-utils'
+import { styled, useTheme } from '@louffee/canada-style-system'
+import Icon from '@louffee/canada-icon'
 import Typography from '@louffee/canada-typography'
-
-import inputConstants from './inputConstants'
 
 import type InputProps from './InputProps'
 
-const InputWrapper = styled('div')<Pick<InputProps, 'size'> & { shouldPadLeft: boolean; shouldPadRight: boolean }>(
-  ({ theme, size, shouldPadLeft, shouldPadRight }) => ({
-    display: 'flex',
-    alignItems: 'center',
+const InputContainer = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+  flex: 1,
 
-    backgroundColor: theme.colors.white,
-    borderWidth: toRem(2),
-    borderRadius: theme.radii.medium,
-    borderStyle: 'solid',
-    borderColor: theme.colors.grey[99],
+  height: 'fit-content',
+})
 
-    paddingLeft: shouldPadLeft ? theme.spacing.extraSmall : theme.spacing.small,
-    paddingRight: shouldPadRight ? theme.spacing.extraSmall : theme.spacing.small,
-    paddingBlock: 0,
+const InputBody = styled('div')<{ hasError: boolean }>(({ theme, hasError }) => ({
+  display: 'flex',
+  flex: 1,
 
-    transition: 'all 0.2s ease-in-out',
+  boxSizing: 'border-box',
 
-    marginLeft: -3,
+  backgroundColor: theme.colors.white,
 
-    width: '100%',
-    height: inputConstants.HEIGHT_PER_SIZE[size],
+  height: 40,
 
-    '&:hover, &:active, &:focus, & > input:hover, & > input:active, & > input:focus': {
-      borderColor: theme.colors.primary[40],
-    },
+  borderWidth: 1,
+  borderStyle: 'solid',
+  borderColor: theme.colors.grey[70],
 
-    input: {
-      flex: 1,
-      border: 0,
-      outline: 0,
-      padding: 0,
-      margin: 0,
-      background: 'transparent',
+  borderRadius: 7,
+  padding: theme.spacing.medium,
 
-      color: theme.colors.black,
-      fontSize: theme.typography.variants.bodySmall.fontSize,
-      fontFamily: theme.typography.fontFamily,
-    },
-  })
-)
+  transition: '300ms',
 
-const Input: React.FC<InputProps> = ({
-  startAdornment,
-  endAdornment,
-  onFocus,
-  onBlur,
-  name,
-  label,
-  size = 'medium',
-  className = '',
-  ...props
-}) => {
-  const wrapperRef = React.useRef<HTMLDivElement>()
+  fontSize: 14,
+  lineHeight: '110%',
 
-  const handleFocus = React.useCallback(
-    (event?: React.FocusEvent<HTMLInputElement>) => {
-      wrapperRef.current?.focus()
+  input: {
+    flex: 1,
+    border: 'none !important',
+    outline: 'none !important',
+    fontSize: 'inherit',
+    fontFamily: 'inherit',
+    color: 'inherit',
+    background: 'transparent !important',
 
-      onBlur?.(event)
-    },
-    [onBlur]
-  )
+    height: '100%',
+  },
 
-  const handleBlur = React.useCallback(
-    (event?: React.FocusEvent<HTMLInputElement>) => {
-      wrapperRef.current?.blur()
+  'input::placeholder': {
+    color: theme.colors.grey[50],
+  },
 
-      onFocus?.(event)
-    },
-    [onFocus]
-  )
+  '&:focus, &:hover, &:active, &:focus-within': {
+    borderColor: theme.colors.primary[60],
+    backgroundColor: theme.colors.primary[95],
+  },
+
+  ...(hasError && {
+    borderColor: theme.colors.error.main,
+    backgroundColor: theme.colors.error.light,
+  }),
+}))
+
+const Input: React.FC<InputProps> = ({ name, startAdornment, endAdornment, placeholder, label, error, ...props }) => {
+  const { colors } = useTheme()
+  const hasError = React.useMemo(() => typeof error === 'string' && error.length > 0, [error])
 
   return (
-    <>
+    <InputContainer className='louffee-input'>
       {typeof label === 'string' ? (
-        <label htmlFor={name}>
-          <Typography variant="labelMedium">{label}</Typography>
+        <label htmlFor={name} className='louffee-input-label m-b-3 flex align-center justify-between'>
+          {typeof label === 'string' ? (
+            <Typography variant='labelLarge' color={hasError ? colors.error.main : colors.black}>
+              {label}
+            </Typography>
+          ) : (
+            label
+          )}
+          {hasError && (
+            <Typography variant='bodySmall' color={colors.error.main} className='louffee-input-error-message'>
+              {error}
+            </Typography>
+          )}
         </label>
       ) : (
         label
       )}
-      <InputWrapper
-        className={['louffee-input', className].join(' ')}
-        ref={wrapperRef}
-        size={size}
-        shouldPadLeft={typeof startAdornment === 'string' || isReactElement(startAdornment)}
-        shouldPadRight={typeof endAdornment === 'string' || isReactElement(endAdornment)}>
+      <InputBody hasError={hasError}>
         {startAdornment}
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        <input {...props} name={name} onFocus={handleFocus} onBlur={handleBlur} />
+        <input name={name} placeholder={placeholder} {...props} />
         {endAdornment}
-      </InputWrapper>
-    </>
+        {hasError && (
+          <i
+            className='border-2 border-solid border-error-main radii-50 h-18 w-18 flex align-center justify-center louffee-input-error-icon'
+            title='There is an error. Please read the information below the field'>
+            <Icon name='exclamation-circle-outlined' color={colors.error.main} size={14} />
+          </i>
+        )}
+      </InputBody>
+    </InputContainer>
   )
 }
 
