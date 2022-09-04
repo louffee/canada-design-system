@@ -1,6 +1,6 @@
 import TextField from './TextField'
-import type TextFieldProps from './TextFieldProps'
 
-export { TextFieldProps }
+export type { default as TextFieldProps } from './TextFieldProps'
+export type { default as FieldMaskObject } from './FieldMaskObject'
 
 export default TextField

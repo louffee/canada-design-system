@@ -6,8 +6,8 @@ import Input from '@louffee/canada-input'
 import type TextFieldProps from './TextFieldProps'
 
 const TextField = React.memo<TextFieldProps>(
-  ({ name, startAdornment, endAdornment, label, format, parse, autoComplete = 'off', ...props }) => {
-    const { attributes, meta } = useField(name, { parse, format })
+  ({ name, startAdornment, endAdornment, label, format, parse, mask, autoComplete = 'off', ...props }) => {
+    const { attributes, meta } = useField(name, { parse: mask?.parse ?? parse, format: mask?.format ?? format })
 
     const shouldRenderError = React.useMemo<boolean>(
       () =>
