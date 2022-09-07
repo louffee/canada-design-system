@@ -13,11 +13,32 @@ const Form = <FormValues extends object>({
   initialValuesDependencies = [],
   validate,
 }: FormProps<FormValues>): React.ReactElement | null => {
-  useDeveloperChecks({ children }, (componentProps) => {
+  useDeveloperChecks({ children, onSubmit }, (componentProps) => {
     if (typeof componentProps.children !== 'function') {
       return {
         type: 'error',
         message: 'Form children prop must be a FaCC (function as component child).',
+      }
+    }
+
+    if (typeof onSubmit !== 'function') {
+      return {
+        type: 'error',
+        message: 'Form onSubmit function prop must be a function.',
+      }
+    }
+
+    if (typeof initialValues !== 'object' || initialValues === null) {
+      return {
+        type: 'error',
+        message: 'Form initialValues prop must be an object.',
+      }
+    }
+
+    if (!Array.isArray(initialValuesDependencies)) {
+      return {
+        type: 'error',
+        message: 'Form initialValuesDependencies prop must be an array.',
       }
     }
   })
