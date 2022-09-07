@@ -5,7 +5,7 @@ const UNITED_STATES_COUNTRY_CODE = '1'
 const GREAT_BRITAIN_COUNTRY_CODE = '44'
 
 function phoneFieldMaskObject(phoneCountryCode: string): FieldMaskObject {
-  const countryCode = phoneCountryCode.replace('+', '').trim()
+  const countryCode = phoneCountryCode?.replace('+', '').trim() ?? ''
 
   switch (countryCode) {
     case BRAZIL_COUNTRY_CODE: {
@@ -46,7 +46,7 @@ function phoneFieldMaskObject(phoneCountryCode: string): FieldMaskObject {
           return String(value).replace(/[^\s0-9]/g, '')
         },
         parse(value) {
-          return value
+          return value ?? ''
         },
       }
     }
