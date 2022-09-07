@@ -33,18 +33,15 @@ const Form = <FormValues extends object>({
       onSubmit={onSubmit}
       initialValues={memoizedInitialValues}
       validate={validate}
-      render={({ errors, handleSubmit, validating, submitting, values }) => (
-        <form
-          onSubmit={handleSubmit}
-          noValidate={true}
-          children={children({
-            values,
-            errors: errors as unknown as FormErrorSchema<FormValues>,
-            isSubmitting: submitting,
-            isValidating: validating,
-          })}
-        />
-      )}
+      render={({ errors, handleSubmit, validating, submitting, values }) =>
+        children({
+          values,
+          errors: errors as unknown as FormErrorSchema<FormValues>,
+          isSubmitting: submitting,
+          isValidating: validating,
+          handleSubmit,
+        })
+      }
     />
   )
 }

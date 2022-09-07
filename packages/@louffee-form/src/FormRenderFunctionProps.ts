@@ -1,3 +1,5 @@
+import type * as React from 'react'
+
 import type FormErrorSchema from './FormErrorSchema'
 
 interface FormRenderFunctionProps<V extends object> {
@@ -6,6 +8,8 @@ interface FormRenderFunctionProps<V extends object> {
 
   isSubmitting?: boolean
   isValidating?: boolean
+
+  handleSubmit: (event?: Partial<Pick<React.SyntheticEvent, 'preventDefault' | 'stopPropagation'>>) => void
 }
 
 export default FormRenderFunctionProps
