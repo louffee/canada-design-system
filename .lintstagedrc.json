@@ -2,5 +2,5 @@
   "$schema": "https://json.schemastore.org/lintstagedrc.schema.json",
   "*.{ts,tsx}": ["eslint --fix"],
   "*.{css,scss}": ["stylelint --allow-empty-input --fix"],
-  "*": ["prettier --ignore-unknown --write", "cspell --no-must-find-files --no-progress"]
+  "*": ["prettier --ignore-unknown --write"]
 }
