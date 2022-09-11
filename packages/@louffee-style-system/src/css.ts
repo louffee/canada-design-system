@@ -1,3 +1,1 @@
-import { css } from '@emotion/react'
-
-export default css
+export { css as default } from '@emotion/react'

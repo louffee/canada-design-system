@@ -9,15 +9,15 @@ function useDeveloperChecks<P extends object>(componentProps: P, validate: UseDe
     if (validation) {
       switch (validation.type) {
         case 'error': {
-          console.error(validation.message)
+          console.error(validation.message) // eslint-disable-line no-console
           break
         }
         case 'warn': {
-          console.warn(validation.message)
+          console.warn(validation.message) // eslint-disable-line no-console
           break
         }
         case 'trace': {
-          console.trace(validation.message)
+          console.trace(validation.message) // eslint-disable-line no-console
           break
         }
         default:

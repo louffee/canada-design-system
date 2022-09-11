@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 import type TypographyVariant from './TypographyVariant'
 
 const elementsPerVariantMap: { [K in TypographyVariant]: React.ElementType } = {

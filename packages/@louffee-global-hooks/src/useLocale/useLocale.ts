@@ -2,7 +2,6 @@ import useState from '../useState/useState'
 import useMemo from '../useMemo/useMemo'
 
 import multiChannelLocaleSearch from './multiChannelLocaleSearch'
-
 import type SupportedLocale from './SupportedLocale'
 import type UseLocaleProps from './UseLocaleProps'
 

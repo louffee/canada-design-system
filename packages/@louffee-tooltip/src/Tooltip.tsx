@@ -1,12 +1,9 @@
 import * as React from 'react'
-
 import { keyframes, styled } from '@louffee/canada-style-system'
-
 import * as Primitives from '@radix-ui/react-tooltip'
 
 import tooltipConstants from './tooltipConstants'
 import renderTooltipChild from './renderTooltipChild'
-
 import type TooltipProps from './TooltipProps'
 
 //#region style
@@ -61,7 +58,7 @@ const Tooltip = React.memo<TooltipProps>(
           return
         }
 
-        onOpen({ openTooltipState: openState, origin: null })
+        onOpen({ openTooltipState: openState, origin: undefined })
       },
       [onOpen],
     )

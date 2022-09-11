@@ -3,13 +3,13 @@ import useEffect from '../useEffect/useEffect'
 
 import getValue from './getValue'
 
-function useSearchParam(param: string): string | null {
+function useSearchParameter(parameter: string): string | null {
   const location = window?.location
-  const [value, setValue] = useState<string | null>(() => getValue(location.search, param))
+  const [value, setValue] = useState<string | null>(() => getValue(location.search, parameter))
 
   useEffect(() => {
     const onChange = () => {
-      setValue(getValue(location.search, param))
+      setValue(getValue(location.search, parameter))
     }
 
     window.addEventListener('popstate', onChange)
@@ -27,4 +27,4 @@ function useSearchParam(param: string): string | null {
   return value
 }
 
-export default useSearchParam
+export default useSearchParameter

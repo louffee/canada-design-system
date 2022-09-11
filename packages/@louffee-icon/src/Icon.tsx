@@ -1,9 +1,7 @@
 import * as React from 'react'
-
 import { useDeveloperChecks } from '@louffee/canada-global-hooks'
 
 import icons from './icons'
-
 import type IconProps from './IconProps'
 
 const Icon = React.memo<IconProps>(({ name, size, color }) => {
@@ -19,7 +17,7 @@ const Icon = React.memo<IconProps>(({ name, size, color }) => {
   })
 
   if (!Component) {
-    return null
+    return
   }
 
   return <Component aria-label={name} color={color} size={size} />

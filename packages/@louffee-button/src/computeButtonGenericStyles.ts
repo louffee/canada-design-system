@@ -13,7 +13,7 @@ type Theme = typeof LouTheme
 
 const computeButtonGenericStyles = (
   theme: Theme,
-  { size, disabled, fullWidth }: Pick<ButtonProps, 'size' | 'disabled' | 'fullWidth'>
+  { size, disabled, fullWidth }: Pick<ButtonProps, 'size' | 'disabled' | 'fullWidth'>,
 ) => ({
   borderWidth: 1,
   borderRadius: theme.radii.small,

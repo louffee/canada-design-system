@@ -1,9 +1,7 @@
 import * as React from 'react'
-
 import { styled } from '@louffee/canada-style-system'
 
 import elementsPerVariantMap from './elementsPerVariantMap'
-
 import type TypographyProps from './TypographyProps'
 
 const Span = styled('span')<Required<Pick<TypographyProps, 'variant' | 'color'>>>(({ variant, theme, color }) => ({

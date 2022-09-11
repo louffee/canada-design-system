@@ -19,8 +19,8 @@ export { default as UseStateTuple } from './useState/UseStateTuple'
 
 export { default as useReducer } from './useReducer/useReducer'
 
-export { default as useRef } from './useRef/useRef'
-export { default as MutableRefObject } from './useRef/MutableRefObject'
+export { default as useRef } from './useReference/useReference'
+export { default as MutableRefObject } from './useReference/MutableReferenceObject'
 
 export { default as useFirstMountState } from './useFirstMountState/useFirstMountState'
 
@@ -47,6 +47,6 @@ export { default as MountLifecycleFunction } from './useLifecycle/MountLifecycle
 export { default as useDocumentTitle } from './useDocumentTitle/useDocumentTitle'
 export { default as UseDocumentTitleProps } from './useDocumentTitle/UseDocumentTitleProps'
 
-export { default as useSearchParam } from './useSearchParam/useSearchParam'
+export { default as useSearchParam } from './useSearchParameter/useSearchParameter'
 
 export { default as useClipboard } from './useClipboard/useClipboard'

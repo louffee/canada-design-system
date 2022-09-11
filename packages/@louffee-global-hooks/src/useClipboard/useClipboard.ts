@@ -12,10 +12,10 @@ function useClipboard() {
       const input = document.createElement('input')
       input.style.display = 'none'
       input.value = textClipboardContent
-      document.body.appendChild(input)
+      document.body.append(input)
       input.select()
       document.execCommand('copy')
-      document.body.removeChild(input)
+      input.remove()
     } else {
       await navigator.clipboard.writeText(textClipboardContent)
     }

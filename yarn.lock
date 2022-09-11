@@ -8206,10 +8206,10 @@ escodegen@^2.0.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-louffee@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/eslint-config-louffee/-/eslint-config-louffee-2.2.3.tgz#03f1600ff95ce4cc4e92db826378299ed5470614"
-  integrity sha512-Um1QS0G+5hClZELHl7/dRnJ9PnbkdBb37Gt/Wzky8S3Zr099erAuj+FqVVPKUtYwv/Rv+4b2Bb4bFClLKL7Aqw==
+eslint-config-louffee@^2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/eslint-config-louffee/-/eslint-config-louffee-2.3.6.tgz#8a04e25294f87d222f2d3714d2b9ca706660b8a4"
+  integrity sha512-PtfMjsKynPTfw6XvC9aTzSKekQ5y/sq03BqRax732Ny5K6dF1Kyk4r0+1SQXvBh6mgG3hTq1eg3d+yBTzlrshg==
 
 eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
@@ -8301,10 +8301,10 @@ eslint-plugin-prettier@^4.2.1:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-promise@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-6.0.0.tgz#017652c07c9816413a41e11c30adc42c3d55ff18"
-  integrity sha512-7GPezalm5Bfi/E22PnQxDWH2iW9GTvAlUNTztemeHb6c1BniSyoeTrM87JkC0wYdi6aQrZX9p2qEiAno8aTcbw==
+eslint-plugin-promise@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-6.0.1.tgz#a8cddf96a67c4059bdabf4d724a29572188ae423"
+  integrity sha512-uM4Tgo5u3UWQiroOyDEsYcVMOo7re3zmno0IZmB5auxoaQNIceAbXEkSt8RNrKtaYehARHG06pYK6K1JhtP0Zw==
 
 eslint-plugin-react-hooks@^4.6.0:
   version "4.6.0"

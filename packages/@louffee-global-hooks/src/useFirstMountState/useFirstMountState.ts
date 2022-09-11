@@ -1,7 +1,7 @@
-import useRef from '../useRef/useRef'
+import useReference from '../useReference/useReference'
 
 const useFirstMountState = () => {
-  const isFirst = useRef(true)
+  const isFirst = useReference(true)
 
   if (isFirst.current) {
     isFirst.current = false

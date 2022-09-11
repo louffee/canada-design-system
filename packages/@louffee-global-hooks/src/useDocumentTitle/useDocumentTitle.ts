@@ -1,12 +1,11 @@
-import useRef from '../useRef/useRef'
+import useReference from '../useReference/useReference'
 import useEffect from '../useEffect/useEffect'
 
 import defaultUseDocumentTitleProps from './defaultUseDocumentTitleProps'
-
 import type UseDocumentTitleProps from './UseDocumentTitleProps'
 
 function useDocumentTitle(title: string, options: UseDocumentTitleProps = defaultUseDocumentTitleProps) {
-  const previousTitleRef = useRef<string | undefined>(document.title)
+  const previousTitleReference = useReference<string | undefined>(document.title)
 
   if (document.title !== title) {
     document.title = title
@@ -14,13 +13,13 @@ function useDocumentTitle(title: string, options: UseDocumentTitleProps = defaul
 
   /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
-    if (options && options.restoreOnUnmount) {
-      return () => {
-        document.title = previousTitleRef.current
-      }
-    } else {
-      return
-    }
+    return options && options.restoreOnUnmount
+      ? /* eslint-disable indent */
+        () => {
+          document.title = previousTitleReference.current
+        }
+      : undefined
+    /* eslint-enable indent */
   }, [])
   /* eslint-enable react-hooks/exhaustive-deps */
 }

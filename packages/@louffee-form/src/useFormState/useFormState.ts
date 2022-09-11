@@ -1,13 +1,14 @@
 import * as React from 'react'
 import { useFormState as useFinalFormState, useForm as useFinalForm } from 'react-final-form'
 
+import type FormErrorSchema from '../FormErrorSchema'
+
 import type UseFormStateReturnType from './UseFormStateReturnType'
 import type UpdateFunction from './UpdateFunction'
 import type FocusFunction from './FocusFunction'
 import type ForceSubmitFunction from './ForceSubmitFunction'
 import type BatchUpdatesNextRenderFunction from './BatchUpdatesNextRenderFunction'
 import type BlurFunction from './BlurFunction'
-import type FormErrorSchema from '../FormErrorSchema'
 
 function useFormState<FormValues extends object>(): UseFormStateReturnType<FormValues> {
   const { errors, submitting, validating, values, modifiedSinceLastSubmit } = useFinalFormState<FormValues>()

@@ -1,5 +1,4 @@
 import * as React from 'react'
-
 import { styled, keyframes, LouTheme } from '@louffee/canada-style-system'
 
 import type CircularProgressProps from './CircularProgressProps'
@@ -64,7 +63,7 @@ const CircularProgress: React.FC<CircularProgressProps> = ({ thickness = 5, size
       r={radii}
       cx={size / 2}
       cy={size / 2}
-      fill="none"
+      fill='none'
       strokeWidth={thickness}
       strokeMiterlimit={thickness * 2}
     />

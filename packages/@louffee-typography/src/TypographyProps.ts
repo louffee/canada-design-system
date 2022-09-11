@@ -1,5 +1,4 @@
-import * as React from 'react'
-
+import type * as React from 'react'
 import { LouTheme } from '@louffee/canada-style-system'
 
 export default interface TypographyProps

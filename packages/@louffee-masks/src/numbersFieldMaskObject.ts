@@ -6,18 +6,18 @@ const numbersFieldMaskObject: FieldMaskObject = {
       return ''
     }
 
-    const str = String(value).replace(/[^0-9]/g, '')
+    const string_ = String(value).replace(/\D/g, '')
 
-    return str
+    return string_
   },
   parse(value) {
     if (!value) {
       return ''
     }
 
-    const str = String(value).replace(/[^0-9]/g, '')
+    const string_ = String(value).replace(/\D/g, '')
 
-    return str
+    return string_
   },
 }
 

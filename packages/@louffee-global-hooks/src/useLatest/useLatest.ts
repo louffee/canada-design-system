@@ -1,10 +1,10 @@
-import useRef from '../useRef/useRef'
+import useReference from '../useReference/useReference'
 
 const useLatest = <TReferenceValue>(value: TReferenceValue): { readonly current: TReferenceValue } => {
-  const ref = useRef(value)
-  ref.current = value
+  const reference = useReference(value)
+  reference.current = value
 
-  return ref
+  return reference
 }
 
 export default useLatest

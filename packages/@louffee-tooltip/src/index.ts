@@ -1,9 +1,6 @@
-import Tooltip from './Tooltip'
-
-export { default as TooltipProps } from './TooltipProps'
-export { default as TooltipAlign } from './TooltipAlign'
-export { default as TooltipAxis } from './TooltipAxis'
-export { default as TooltipNaturalEvent } from './TooltipNaturalEvent'
-export { default as TooltipNaturalEventHandler } from './TooltipNaturalEventHandler'
-
-export default Tooltip
+export type { default as TooltipProps } from './TooltipProps'
+export type { default as TooltipAlign } from './TooltipAlign'
+export type { default as TooltipAxis } from './TooltipAxis'
+export type { default as TooltipNaturalEvent } from './TooltipNaturalEvent'
+export type { default as TooltipNaturalEventHandler } from './TooltipNaturalEventHandler'
+export { default } from './Tooltip'

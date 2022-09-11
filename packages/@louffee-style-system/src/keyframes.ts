@@ -1,3 +1,1 @@
-import { keyframes } from '@emotion/css'
-
-export default keyframes
+export { keyframes as default } from '@emotion/css'
