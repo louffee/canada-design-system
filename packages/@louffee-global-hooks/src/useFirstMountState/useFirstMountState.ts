@@ -1,4 +1,4 @@
-import useReference from '../useRef/useRef'
+import useReference from '../useReference/useReference'
 
 const useFirstMountState = () => {
   const isFirst = useReference(true)

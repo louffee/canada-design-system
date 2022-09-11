@@ -1,4 +1,4 @@
-import useReference from '../useRef/useRef'
+import useReference from '../useReference/useReference'
 
 const useLatest = <TReferenceValue>(value: TReferenceValue): { readonly current: TReferenceValue } => {
   const reference = useReference(value)

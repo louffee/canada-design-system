@@ -1,4 +1,4 @@
-import useReference from '../useRef/useRef'
+import useReference from '../useReference/useReference'
 import useEffect from '../useEffect/useEffect'
 
 import defaultUseDocumentTitleProps from './defaultUseDocumentTitleProps'
