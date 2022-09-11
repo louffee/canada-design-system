@@ -3,10 +3,11 @@ import type SupportedLocale from './SupportedLocale'
 function fromLocationSearch(): SupportedLocale | undefined {
   let supportedLocale: SupportedLocale | undefined
 
-  const params = new URLSearchParams(window.location.search)
+  // eslint-disable-next-line compat/compat
+  const parameters = new URLSearchParams(window.location.search)
 
-  if (params.has('lang')) {
-    const lang = params.get('lang')
+  if (parameters.has('lang')) {
+    const lang = parameters.get('lang')
 
     if (lang) {
       supportedLocale = lang.replace('-', '_') as SupportedLocale
@@ -17,13 +18,13 @@ function fromLocationSearch(): SupportedLocale | undefined {
 }
 
 function fromNavigation(): SupportedLocale | undefined {
-  if (typeof window.navigator?.language === 'string' && window.navigator.language.length >= 1) {
+  if (typeof window.navigator?.language === 'string' && window.navigator.language.length > 0) {
     return window.navigator.language.replace('-', '_') as SupportedLocale
   }
 
   if (
     Array.isArray(window.navigator?.languages) &&
-    window.navigator.languages.length >= 1 &&
+    window.navigator.languages.length > 0 &&
     typeof window.navigator.languages[0] === 'string'
   ) {
     return window.navigator.languages[0].replace('-', '_') as SupportedLocale
