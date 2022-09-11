@@ -10,7 +10,7 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "eslint --ext .ts,.tsx packages/**/src/**/*.{ts,tsx}",
+    "lint": "eslint --ext .ts,.tsx",
     "build": "yarn run clean && node ./scripts/build.js",
     "clean": "rimraf packages/**/build",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006 --ci",
@@ -23,7 +23,8 @@
     "test": "jest",
     "install:lint-dependencies": "node ./scripts/install-lint-related-dependencies.js",
     "prepare": "./node_modules/.bin/husky install",
-    "lint:log": "yarn run lint > logs/$(date +'%Y-%m-%d_%H-%M-%S').log"
+    "lint:log": "yarn run lint > logs/$(date +'%Y-%m-%d_%H-%M-%S').log",
+    "lint:auto-fix": "yarn run lint --fix"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.9",
