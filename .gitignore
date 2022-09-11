@@ -15,3 +15,6 @@ storybook-static
 .env.development
 .env.production
 megalinter-reports/
+
+# Logs
+logs
