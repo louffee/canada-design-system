@@ -1,5 +1,4 @@
 import * as React from 'react'
-
 import { styled } from '@louffee/canada-style-system'
 import Typography from '@louffee/canada-typography'
 
@@ -31,6 +30,7 @@ const NativeButton = styled('button')(({ theme }) => ({
 }))
 
 const TopBarButton = React.memo<TopBarButtonProps>(({ children, className, ...props }) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
   <NativeButton {...props} className={['top-bar-button flex align-center', className].join(' ')}>
     <Typography variant='labelMedium' color='var(--primary-0)'>
       {children}
