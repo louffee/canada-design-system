@@ -5,6 +5,7 @@ updates:
     open-pull-requests-limit: 5
     rebase-strategy: auto
     assignees:
-      - "mrlemoos"
+      - 'mrlemoos'
+      - 'dependabot'
     schedule:
       interval: monthly
