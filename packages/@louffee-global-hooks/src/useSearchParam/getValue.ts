@@ -1,3 +1,3 @@
-const getValue = (search: string, param: string) => new URLSearchParams(search).get(param)
+const getValue = (search: string, parameter: string) => new URLSearchParams(search).get(parameter)
 
 export default getValue
