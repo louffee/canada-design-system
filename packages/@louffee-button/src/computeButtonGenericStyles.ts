@@ -1,4 +1,4 @@
-import { toRem, LouTheme } from '@louffee/canada-style-system'
+import { toRem, LouTheme, type CSSObject } from '@louffee/canada-style-system'
 
 import type ButtonSize from './ButtonSize'
 import type ButtonProps from './ButtonProps'
@@ -14,7 +14,7 @@ type Theme = typeof LouTheme
 const computeButtonGenericStyles = (
   theme: Theme,
   { size, disabled, fullWidth }: Pick<ButtonProps, 'size' | 'disabled' | 'fullWidth'>,
-) => ({
+): CSSObject => ({
   borderWidth: 1,
   borderRadius: theme.radii.small,
 
