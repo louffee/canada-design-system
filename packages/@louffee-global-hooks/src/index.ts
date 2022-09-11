@@ -47,6 +47,6 @@ export { default as MountLifecycleFunction } from './useLifecycle/MountLifecycle
 export { default as useDocumentTitle } from './useDocumentTitle/useDocumentTitle'
 export { default as UseDocumentTitleProps } from './useDocumentTitle/UseDocumentTitleProps'
 
-export { default as useSearchParam } from './useSearchParam/useSearchParam'
+export { default as useSearchParam } from './useSearchParameter/useSearchParameter'
 
 export { default as useClipboard } from './useClipboard/useClipboard'
