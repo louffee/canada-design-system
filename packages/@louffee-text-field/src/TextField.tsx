@@ -1,5 +1,4 @@
 import * as React from 'react'
-
 import { useField } from '@louffee/canada-form'
 import Input from '@louffee/canada-input'
 
@@ -29,13 +28,15 @@ const TextField = React.memo<TextFieldProps>(
           mask.customKeyDownHandler(event)
         }
       },
-      [mask?.customKeyDownHandler, onKeyDown],
+      [mask, onKeyDown],
     )
 
     return (
       <Input
+        /* eslint-disable react/jsx-props-no-spreading */
         {...props}
         {...attributes}
+        /* eslint-enable react/jsx-props-no-spreading */
         autoComplete={autoComplete}
         label={label}
         startAdornment={startAdornment}

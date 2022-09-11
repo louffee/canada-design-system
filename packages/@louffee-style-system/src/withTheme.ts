@@ -1,3 +1,1 @@
-import { withTheme } from '@emotion/react'
-
-export default withTheme
+export { withTheme as default } from '@emotion/react'

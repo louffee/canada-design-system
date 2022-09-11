@@ -1,5 +1,2 @@
-import TopBar from './TopBar'
-
-export { default as TopBarProps } from './TopBarProps'
-
-export default TopBar
+export type { default as TopBarProps } from './TopBarProps'
+export { default } from './TopBar'

@@ -1,7 +1,7 @@
 interface TooltipNaturalEvent<TVirtualEvent> {
   openTooltipState: boolean
 
-  origin: TVirtualEvent
+  origin?: TVirtualEvent
 }
 
 export default TooltipNaturalEvent

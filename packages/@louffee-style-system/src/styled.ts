@@ -1,3 +1,1 @@
-import styled from '@emotion/styled'
-
-export default styled
+export { default } from '@emotion/styled'

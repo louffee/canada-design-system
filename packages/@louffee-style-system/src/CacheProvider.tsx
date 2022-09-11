@@ -1,3 +1,1 @@
-import { CacheProvider } from '@emotion/react'
-
-export default CacheProvider
+export { CacheProvider as default } from '@emotion/react'

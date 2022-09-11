@@ -1,29 +1,26 @@
 import * as React from 'react'
-
 import { isReactComponent, isReactElement } from '@louffee/canada-react-utils'
 
 import type TooltipProps from './TooltipProps'
 
-function renderTooltipChild(renderProp: TooltipProps['render']): React.ReactElement | null {
-  if (isReactComponent(renderProp)) {
-    const Component = renderProp as React.ComponentType
+function renderTooltipChild(renderProperty: TooltipProps['render']): React.ReactElement | undefined {
+  if (isReactComponent(renderProperty)) {
+    const Component = renderProperty as React.ComponentType
 
     return <Component />
   }
 
-  if (isReactElement(renderProp)) {
-    const element = renderProp as React.ReactElement
+  if (isReactElement(renderProperty)) {
+    const element = renderProperty as React.ReactElement
 
     return <>{element}</>
   }
 
-  if (typeof renderProp === 'function') {
-    const renderFunc = renderProp as Function
+  if (typeof renderProperty === 'function') {
+    const renderFunction = renderProperty as Function
 
-    return renderFunc()
+    return renderFunction()
   }
-
-  return null
 }
 
 export default renderTooltipChild

@@ -1,5 +1,4 @@
 import * as React from 'react'
-
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
 
 import LouTheme from './LouTheme'

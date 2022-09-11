@@ -1,8 +1,4 @@
-import Icon from './Icon'
-import icons from './icons'
-
-export { default as IconProps } from './IconProps'
-export { default as IconName } from './IconName'
-
-export { icons }
-export default Icon
+export type { default as IconProps } from './IconProps'
+export type { default as IconName } from './IconName'
+export { default } from './Icon'
+export { default as icons } from './icons'

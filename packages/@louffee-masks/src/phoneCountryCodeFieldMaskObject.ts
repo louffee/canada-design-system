@@ -4,7 +4,7 @@ import emojiFlagsByPhoneCountryCode from './emojiFlagsByPhoneCountryCode'
 
 const phoneCountryCodeFieldMaskObject: FieldMaskObject = {
   parse(value) {
-    return String(value).replace(/[^0-9]/g, '')
+    return String(value).replace(/\D/g, '')
   },
 
   format(value) {
@@ -12,14 +12,14 @@ const phoneCountryCodeFieldMaskObject: FieldMaskObject = {
       return ''
     }
 
-    let str = String(value)
+    let string_ = String(value)
 
-    if (!str.startsWith('+')) {
-      str = `+${str}`
+    if (!string_.startsWith('+')) {
+      string_ = `+${string_}`
     }
 
-    const codeWithoutFlag = str.replace(/[^\+0-9]/g, '').trim()
-    const result = `${str} ${emojiFlagsByPhoneCountryCode[codeWithoutFlag] || ''}`.trim()
+    const codeWithoutFlag = string_.replace(/[^\d+]/g, '').trim()
+    const result = `${string_} ${emojiFlagsByPhoneCountryCode[codeWithoutFlag] || ''}`.trim()
 
     return result
   },
@@ -28,13 +28,13 @@ const phoneCountryCodeFieldMaskObject: FieldMaskObject = {
       return
     }
 
-    const inputEl = event.target as HTMLInputElement | undefined
+    const inputElement = event.target as HTMLInputElement | undefined
 
-    if (!inputEl.setSelectionRange) {
+    if (!inputElement.setSelectionRange) {
       return
     }
 
-    const value = inputEl?.value
+    const value = inputElement?.value
 
     if (!value) {
       return
@@ -47,7 +47,7 @@ const phoneCountryCodeFieldMaskObject: FieldMaskObject = {
     }
 
     if (!value?.endsWith(' ')) {
-      inputEl.setSelectionRange(blankIndex, blankIndex)
+      inputElement.setSelectionRange(blankIndex, blankIndex)
     }
   },
 }

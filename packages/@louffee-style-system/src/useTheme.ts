@@ -6,7 +6,7 @@ function useTheme(): typeof LouTheme {
   const context = useEmotionTheme()
 
   if (typeof context === 'undefined') {
-    throw new Error('useTheme(): no ThemeProvider could be found around the useTheme() call.')
+    throw new TypeError('useTheme(): no ThemeProvider could be found around the useTheme() call.')
   }
 
   return context

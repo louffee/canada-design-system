@@ -1,5 +1,4 @@
 import * as React from 'react'
-
 import { styled, useTheme } from '@louffee/canada-style-system'
 import Icon from '@louffee/canada-icon'
 import Typography from '@louffee/canada-typography'
@@ -89,6 +88,7 @@ const Input: React.FC<InputProps> = ({ name, startAdornment, endAdornment, place
       )}
       <InputBody hasError={hasError}>
         {startAdornment}
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <input name={name} placeholder={placeholder} {...props} />
         {endAdornment}
         {hasError && (

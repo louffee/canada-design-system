@@ -1,10 +1,8 @@
 import * as React from 'react'
-
 import { styled, toRem } from '@louffee/canada-style-system'
 import { useDeveloperChecks } from '@louffee/canada-global-hooks'
 
 import TopBarButton from './TopBarButton/TopBarButton'
-
 import type TopBarProps from './TopBarProps'
 
 const Container = styled('header')(({ theme: { colors, spacing, radii, shadows } }) => ({

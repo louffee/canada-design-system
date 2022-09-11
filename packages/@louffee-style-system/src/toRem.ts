@@ -1,4 +1,4 @@
-const toRem = (value: number, base: number = 16) => {
+function toRem(value: number, base: number = 16): string {
   return `${value / base}rem`
 }
 
