@@ -44,6 +44,23 @@ const getSoftButtonThemeColors = ({ colors, shadows }: LouThemeSchema): GetSoftB
       borderColor: colors.grey[80],
     },
   },
+  error: {
+    disabled: {
+      color: colors.grey[80],
+      backgroundColor: colors.grey[95],
+      borderColor: colors.grey[95],
+    },
+    enabled: {
+      color: colors.error.main,
+      backgroundColor: colors.error.light,
+      borderColor: colors.error.main,
+    },
+    hover: {
+      backgroundColor: colors.error.main,
+      borderColor: colors.error.main,
+      boxShadow: shadows.slight,
+    },
+  },
 })
 
 export default getSoftButtonThemeColors

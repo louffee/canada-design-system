@@ -1,16 +1,15 @@
 import * as React from 'react'
-
 import { styled, toRem } from '@louffee/canada-style-system'
 import { useDeveloperChecks } from '@louffee/canada-global-hooks'
 
 import SoftButton from '../SoftButton/SoftButton'
 import OutlinedButton from '../OutlinedButton/OutlinedButton'
 import NeutralButton from '../NeutralButton/NeutralButton'
-
-import type ButtonGroupProps from './ButtonGroupProps'
 import type ButtonProps from '../ButtonProps'
 
-const BUTTON_DISPLAY_NAMES = [SoftButton.displayName, OutlinedButton.displayName, NeutralButton.displayName]
+import type ButtonGroupProps from './ButtonGroupProps'
+
+const BUTTON_DISPLAY_NAMES = new Set([SoftButton.displayName, OutlinedButton.displayName, NeutralButton.displayName])
 
 const StyledGroup = styled('div')<ButtonGroupProps>(({ column }) => ({
   display: 'flex',
@@ -36,7 +35,7 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ children, column = false, cla
         // Check whether the exotic child has a string-type displayName
         typeof elementChild?.type?.displayName === 'string' &&
         // Verify if the exoticSecondChildInTree display name is neither SoftButton, OutlinedButton or NeutralButton
-        !BUTTON_DISPLAY_NAMES.includes(elementChild?.type?.displayName)
+        !BUTTON_DISPLAY_NAMES.has(elementChild?.type?.displayName)
       ) {
         return {
           type: 'error',
@@ -45,20 +44,20 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ children, column = false, cla
         }
       }
     })
-
-    return undefined
   })
 
   return (
     <StyledGroup className={`louffee-button-group ${className}`} column={column}>
       {React.Children.map(children, (child) => {
-        const elChild = child as React.ReactElement<{ children?: React.ReactNode }> & { type?: React.ComponentType }
-
-        if (BUTTON_DISPLAY_NAMES.includes(elChild?.type?.displayName)) {
-          return React.cloneElement<Pick<ButtonProps, 'fullWidth'>>(elChild as React.ReactElement, { fullWidth: true })
+        const elementChild = child as React.ReactElement<{ children?: React.ReactNode }> & {
+          type?: React.ComponentType
         }
 
-        return null
+        if (BUTTON_DISPLAY_NAMES.has(elementChild?.type?.displayName)) {
+          return React.cloneElement<Pick<ButtonProps, 'fullWidth'>>(elementChild as React.ReactElement, {
+            fullWidth: true,
+          })
+        }
       })}
     </StyledGroup>
   )

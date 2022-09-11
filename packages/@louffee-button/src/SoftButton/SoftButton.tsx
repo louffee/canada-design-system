@@ -1,15 +1,13 @@
 import * as React from 'react'
-
 import { styled, toRem } from '@louffee/canada-style-system'
 import { useDeveloperChecks } from '@louffee/canada-global-hooks'
 import Typography from '@louffee/canada-typography'
 import CircularProgress from '@louffee/canada-circular-progress'
 
-import getSoftButtonThemeColors from './getSoftButtonThemeColors'
-
 import buttonConstants from '../buttonConstants'
 import computeButtonGenericStyles from '../computeButtonGenericStyles'
 
+import getSoftButtonThemeColors from './getSoftButtonThemeColors'
 import type SoftButtonProps from './SoftButtonProps'
 
 const StyledButton = styled('button')<SoftButtonProps>(({ theme, disabled, size, isLoading, color, fullWidth }) => {
