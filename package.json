@@ -58,6 +58,7 @@
     "babel-loader": "^8.2.5",
     "babel-node": "^0.0.1-security",
     "commitizen": "^4.2.5",
+    "cspell": "^6.8.1",
     "eslint": "^8.20.0",
     "eslint-config-louffee": "^2.3.6",
     "eslint-plugin-compat": "^4.0.2",
