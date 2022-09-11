@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/louffee/canada-design-system/compare/v0.3.3...v0.4.0) (2022-09-11)
+
+
+### Performance Improvements
+
+* **button:** wrap OutlinedButton component with a memo high-order-component ([1e3649c](https://github.com/louffee/canada-design-system/commit/1e3649cda8c93b66f370f3e00ff279ea7b4fd6f0))
+* **button:** wrap SoftButton component within a memo hoc ([ea9e517](https://github.com/louffee/canada-design-system/commit/ea9e517fa276cc3ff9f0101bf53a22a59bb7b315))
+* **button:** wrap the NeutralButton component in a memo high-order component ([946c1c2](https://github.com/louffee/canada-design-system/commit/946c1c2ef4b3ef678352a56b17b44da8bf041382))
+
+
+
+
+
 # [0.3.0](https://github.com/louffee/canada-design-system/compare/v0.2.0...v0.3.0) (2022-08-08)
 
 **Note:** Version bump only for package @louffee/canada-button

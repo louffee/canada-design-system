@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/louffee/canada-design-system/compare/v0.3.3...v0.4.0) (2022-09-11)
+
+
+### Features
+
+* **global-hooks:** create useClipboard custom hook function ([fe2cc34](https://github.com/louffee/canada-design-system/commit/fe2cc340378790f3e36204067e683ef312d7dec6))
+
+
+
+
+
 ## [0.3.3](https://github.com/louffee/canada-design-system/compare/v0.3.2...v0.3.3) (2022-08-09)
 
 **Note:** Version bump only for package @louffee/canada-global-hooks

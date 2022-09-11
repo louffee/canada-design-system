@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/louffee/canada-design-system/compare/v0.3.3...v0.4.0) (2022-09-11)
+
+
+### Performance Improvements
+
+* **icon:** wrap the Icon component in a memo high-order component ([42e910d](https://github.com/louffee/canada-design-system/commit/42e910d2e6324d6f0924b61d41b312f9de692ec2))
+
+
+
+
+
 # [0.3.0](https://github.com/louffee/canada-design-system/compare/v0.2.0...v0.3.0) (2022-08-08)
 
 **Note:** Version bump only for package @louffee/canada-icon
