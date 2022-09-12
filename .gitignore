@@ -17,4 +17,4 @@ storybook-static
 megalinter-reports/
 
 # Logs
-logs
+logs/*.log
