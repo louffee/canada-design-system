@@ -25,7 +25,8 @@
     "prepare": "./node_modules/.bin/husky install",
     "lint:log": "yarn run lint > logs/$(date +'%Y-%m-%d_%H-%M-%S').log",
     "lint:auto-fix": "yarn run lint --fix",
-    "test-docs": "./node_modules/.bin/alex"
+    "test-docs": "./node_modules/.bin/alex",
+    "test-docs:diff": "./node_modules/.bin/alex --diff"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.9",
