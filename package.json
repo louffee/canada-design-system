@@ -24,7 +24,8 @@
     "install:lint-dependencies": "node ./scripts/install-lint-related-dependencies.js",
     "prepare": "./node_modules/.bin/husky install",
     "lint:log": "yarn run lint > logs/$(date +'%Y-%m-%d_%H-%M-%S').log",
-    "lint:auto-fix": "yarn run lint --fix"
+    "lint:auto-fix": "yarn run lint --fix",
+    "test-docs": "./node_modules/.bin/alex"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.9",
