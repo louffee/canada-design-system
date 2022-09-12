@@ -10,7 +10,6 @@ import type NeutralButtonProps from './NeutralButtonProps'
 // Unfortunately we've got an overlapping problem with the native attributes and
 // the OutlinedButtonProps we couldn't solve yet.
 // todo: fix this somehow =/
-// @ts-expect-error
 const StyledButton = styled('button')<NeutralButtonProps>(({ theme, size, disabled, fullWidth }) => {
   const genericStyles = computeButtonGenericStyles(theme, { size, disabled, fullWidth })
 
