@@ -1,5 +1,5 @@
 {
-  "name": "@louffee/canada-style-system",
+  "name": "@louffee/canada-media-query",
   "version": "0.4.0",
   "description": "The JSX-friendly media query component used @ Louffee.",
   "main": "build/cjs/index.js",
