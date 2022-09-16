@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { styled, keyframes, LouThemeSchema } from '@louffee/canada-style-system'
+import { styled, keyframes, type LouThemeSchema } from '@louffee/canada-style-system'
 
 import type CircularProgressProps from './CircularProgressProps'
 
