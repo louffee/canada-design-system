@@ -24,10 +24,15 @@ const StyledButton = styled('button')<ContainedButtonProps>(({ disabled, fullWid
       borderColor: theme.colors.primary[30],
     },
 
+    // For some reason, the disabled style state from computeButtonGenericStyles is not being applied
+    // to this case.
+    // todo: investigate why this is happening, then fix it.
     ...(disabled && {
       color: theme.colors.grey[80],
       backgroundColor: theme.colors.grey[95],
       borderColor: theme.colors.grey[90],
+      cursor: 'not-allowed',
+      pointerEvents: 'none',
     }),
   }
 })
