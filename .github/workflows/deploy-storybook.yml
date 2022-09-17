@@ -9,7 +9,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  install_dependencies:
+  build_and_deploy:
     name: Install Dependencies
     runs-on: ubuntu-latest
     steps:
@@ -25,19 +25,5 @@ jobs:
           node-version: 18
 
       - run: yarn install
-
-  build_storybook_static:
-    name: Build Storybook Static Site
-    runs-on: ubuntu-latest
-    needs: install_dependencies
-    steps:
-      - name: Build Process
-        run: yarn run build-storybook
-
-  deploy_storybook:
-    name: Deploy Storybook
-    runs-on: ubuntu-latest
-    needs: build_storybook_static
-    steps:
-      - name: Deploy Process
-        run: yarn run deploy-storybook
+      - run: yarn run build-storybook
+      - run: yarn run deploy-storybook
