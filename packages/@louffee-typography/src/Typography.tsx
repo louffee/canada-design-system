@@ -4,12 +4,14 @@ import { styled } from '@louffee/canada-style-system'
 import elementsPerVariantMap from './elementsPerVariantMap'
 import type TypographyProps from './TypographyProps'
 
+// MARK: - Styles
 const Span = styled('span')<Required<Pick<TypographyProps, 'variant' | 'color'>>>(({ variant, theme, color }) => ({
   ...theme.typography.variants[variant],
   fontFamily: theme.typography.fontFamily,
   color,
 }))
 
+// MARK: - JSX
 const Typography = React.memo<TypographyProps>(({ variant, children, className = '', color = 'inherit', ...props }) => {
   const elementType = React.useMemo<React.ElementType>(
     () => elementsPerVariantMap[variant] as React.ElementType,
