@@ -22,6 +22,7 @@
     "@louffee/canada-global-hooks": "*",
     "@louffee/canada-react-utils": "*",
     "@louffee/canada-style-system": "*",
+    "@louffee/canada-typography": "*",
     "react": "^18.2.0"
   },
   "bundledDependencies": [

@@ -6,7 +6,7 @@ import tooltipConstants from './tooltipConstants'
 import renderTooltipChild from './renderTooltipChild'
 import type TooltipProps from './TooltipProps'
 
-//#region style
+// MARK: - Keyframes
 const slideDown = keyframes({
   '0%': { opacity: 0, transform: 'translateY(-10px)' },
   '100%': { opacity: 1, transform: 'translateY(0)' },
@@ -17,6 +17,7 @@ const slideUp = keyframes({
   '100%': { opacity: 1, transform: 'translateY(0)' },
 })
 
+// MARK: - Styles
 const TooltipChild = styled('div')<Pick<TooltipProps, 'axis'>>(
   ({ theme: { radii, spacing, colors, shadows }, axis }) => ({
     animationDuration: tooltipConstants.CONTENT_ANIMATION_DURATION,
@@ -30,26 +31,29 @@ const TooltipChild = styled('div')<Pick<TooltipProps, 'axis'>>(
       animationName: slideDown,
     }),
 
-    borderRadius: radii.small,
-    padding: `${spacing.medium} ${spacing.large}`,
+    borderRadius: radii.medium,
+    paddingInline: spacing.extraLarge,
+    paddingBlock: spacing.extraSmall,
 
     backgroundColor: tooltipConstants.BACKGROUND_COLOR,
-    color: colors.white,
+    color: colors.black,
 
     boxShadow: shadows.slight,
   }),
 )
 
-//#endregion
+const TooltipArrow = styled(Primitives.Arrow)(({ theme: { shadows } }) => ({
+  fill: tooltipConstants.BACKGROUND_COLOR,
+  boxShadow: shadows.slight,
+}))
 
-//#region primitive components
+// MARK: - Primitives
 const TooltipRoot = Primitives.Root
 const TooltipTrigger = Primitives.Trigger
 const TooltipContent = Primitives.Content
 const TooltipProvider = Primitives.Provider
-const TooltipArrow = Primitives.Arrow
-//#endregion
 
+// MARK: - JSX
 const Tooltip = React.memo<TooltipProps>(
   ({ render, children, align, axis, alignOffset, axisOffset, open, defaultOpen, onOpen, arrow = false }) => {
     const handleOpenChange = React.useCallback(
@@ -80,7 +84,7 @@ const Tooltip = React.memo<TooltipProps>(
             <TooltipChild axis={axis}>
               <>
                 {renderTooltipChild(render)}
-                {arrow && <TooltipArrow width={11} height={8} fill={tooltipConstants.BACKGROUND_COLOR} />}
+                {arrow && <TooltipArrow width={11} height={8} />}
               </>
             </TooltipChild>
           </TooltipContent>

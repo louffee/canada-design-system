@@ -6,13 +6,13 @@ A **Design System** is a collection of components that can be used to build UIs,
 
 ## Overview
 
-Inside the folder **packages**, the **Design System** is divided into several folders, each one containing *one component* or purpose.
+Inside the folder **packages**, the **Design System** is divided into several folders, each one containing _one component_ or purpose.
 
 Inside the same folder also can be found the **variables** and **mixins** files, which are used to define the **tokens**. As well as the **global dev environment packages**, such as the configurations for ESLint, Prettier and StyleLint.
 
 ## Influences
 
-Of course we don’t know everything, also we’re not trying to reinvent the wheel, so surely we have some influences that can be found in the hyperlinks below.
+Sure we don’t know everything, also we’re not trying to reinvent the wheel, so surely we have some influences that can be found in the hyperlinks below.
 
 - [MUI](https://mui.com)
 - [Tomahawk UI](https://github.com/tomahawk-ui/tui)
