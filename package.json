@@ -6,6 +6,7 @@
   "author": "Louffee Dev. Team <team@louffee.dev>",
   "license": "MIT",
   "private": true,
+  "homepage": "https://louffee.github.io/canada-design-system",
   "workspaces": [
     "packages/*"
   ],
@@ -26,7 +27,8 @@
     "lint:log": "yarn run lint > logs/$(date +'%Y-%m-%d_%H-%M-%S').log",
     "lint:auto-fix": "yarn run lint --fix",
     "test-docs": "./node_modules/.bin/alex",
-    "test-docs:diff": "./node_modules/.bin/alex --diff"
+    "test-docs:diff": "./node_modules/.bin/alex --diff",
+    "deploy-storybook": "npx gh-pages -d storybook-static"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.9",
@@ -83,6 +85,7 @@
     "eslint-plugin-storybook": "^0.6.4",
     "eslint-plugin-testing-library": "^5.6.0",
     "eslint-plugin-unicorn": "^43.0.2",
+    "gh-pages": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
     "husky": "^8.0.1",
