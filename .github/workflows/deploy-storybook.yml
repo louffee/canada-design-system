@@ -24,6 +24,7 @@ jobs:
         with:
           node-version: 18
 
-      - run: yarn install
+      - run: yarn install && yarn run bootstrap
+      - run: yarn run build
       - run: yarn run build-storybook
       - run: yarn run deploy-storybook
