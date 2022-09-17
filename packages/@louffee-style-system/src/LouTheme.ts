@@ -91,7 +91,7 @@ const LouTheme = {
     xxl: 1600,
   },
   typography: {
-    fontFamily: '-apple-system, BlinkMacSystemFont, Inter, Helvetica, Arial, "Apple Color Emoji", sans-serif',
+    fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, Inter, Helvetica, Arial, "Apple Color Emoji", sans-serif',
     fontWeightBold: FONT_WEIGHT_BOLD,
     fontWeightMedium: FONT_WEIGHT_MEDIUM,
     fontWeightRegular: FONT_WEIGHT_REGULAR,
@@ -101,62 +101,77 @@ const LouTheme = {
       displayLarge: {
         fontSize: 57,
         fontWeight: FONT_WEIGHT_REGULAR,
+        lineHeight: '150%',
       },
       displayMedium: {
         fontSize: 45,
         fontWeight: FONT_WEIGHT_REGULAR,
+        lineHeight: '150%',
       },
       displaySmall: {
         fontSize: 36,
         fontWeight: FONT_WEIGHT_REGULAR,
+        lineHeight: '150%',
       },
       headlineLarge: {
         fontSize: 32,
         fontWeight: FONT_WEIGHT_SEMIBOLD,
+        lineHeight: '120%',
       },
       headlineMedium: {
         fontSize: 28,
         fontWeight: FONT_WEIGHT_SEMIBOLD,
+        lineHeight: '120%',
       },
       headlineSmall: {
         fontSize: 24,
         fontWeight: FONT_WEIGHT_SEMIBOLD,
+        lineHeight: '120%',
       },
       titleLarge: {
         fontSize: 22,
         fontWeight: FONT_WEIGHT_BOLD,
+        lineHeight: '110%',
       },
       titleMedium: {
         fontSize: 16,
         fontWeight: FONT_WEIGHT_BOLD,
+        lineHeight: '110%',
       },
       titleSmall: {
         fontSize: 14,
         fontWeight: FONT_WEIGHT_BOLD,
+        lineHeight: '110%',
       },
       labelLarge: {
         fontSize: 14,
         fontWeight: FONT_WEIGHT_REGULAR,
+        lineHeight: '110%',
       },
       labelMedium: {
         fontSize: 12,
         fontWeight: FONT_WEIGHT_REGULAR,
+        lineHeight: '110%',
       },
       labelSmall: {
         fontSize: 11,
         fontWeight: FONT_WEIGHT_REGULAR,
+        lineHeight: '110%',
       },
       bodyLarge: {
         fontSize: 16,
         fontWeight: FONT_WEIGHT_REGULAR,
+        lineHeight: '110%',
       },
       bodyMedium: {
         fontSize: 14,
         fontWeight: FONT_WEIGHT_REGULAR,
+        lineHeight: '110%',
       },
       bodySmall: {
         fontSize: 12,
         fontWeight: FONT_WEIGHT_REGULAR,
+        lineHeight: '110%',
       },
     },
   },
