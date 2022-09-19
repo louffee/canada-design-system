@@ -2,12 +2,9 @@ import * as React from 'react'
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
 
 import LouTheme from './LouTheme'
+import type ThemeProviderProps from './ThemeProviderProps'
 
-interface Props {
-  children: React.ReactNode
-}
-
-const ThemeProvider: React.FC<Props> = ({ children }) => (
+const ThemeProvider = ({ children }: ThemeProviderProps): React.ReactElement => (
   <EmotionThemeProvider theme={LouTheme}>{children}</EmotionThemeProvider>
 )
 
