@@ -7,7 +7,7 @@ import type UseFieldConfiguration from './UseFieldConfiguration'
 
 function useField<FieldValue>(
   fieldName: string,
-  configuration: UseFieldConfiguration<FieldValue> = {}
+  configuration: UseFieldConfiguration<FieldValue> = {},
 ): UseFieldReturnType {
   const { input, meta } = useFinalField<FieldValue>(fieldName, configuration)
 
