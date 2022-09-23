@@ -6,7 +6,7 @@ interface UseFieldConfiguration<FieldValue, NativeInputValue = any> {
   parse?: (value: NativeInputValue, name: string) => FieldValue
   type?: string
   multiple?: boolean
-  initialValues?: FieldValue
+  initialValue?: FieldValue
 }
 
 export default UseFieldConfiguration

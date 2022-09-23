@@ -1,8 +1,8 @@
 import { toRem, LouTheme, type CSSObject } from '@louffee/canada-style-system'
 
+import buttonConstants from './buttonConstants'
 import type ButtonSize from './ButtonSize'
 import type ButtonProps from './ButtonProps'
-import buttonConstants from './buttonConstants'
 
 const HEIGHT_PER_SIZE: { [K in ButtonSize]: string } = {
   small: toRem(24),
@@ -31,7 +31,7 @@ const computeButtonGenericStyles = (
   alignItems: 'center',
   justifyContent: 'center',
 
-  transition: 'all 300ms ease-in-out',
+  transition: theme.transitions.smooth,
 
   paddingInline: toRem(16),
   paddingBlock: toRem(10),
@@ -51,11 +51,11 @@ const computeButtonGenericStyles = (
   },
 
   [`.${buttonConstants.START_ICON_CLASS_NAME}`]: {
-    marginRight: toRem(4),
+    marginRight: theme.spacing.extraSmall,
   },
 
   [`.${buttonConstants.END_ICON_CLASS_NAME}`]: {
-    marginLeft: toRem(4),
+    marginLeft: theme.spacing.extraSmall,
   },
 })
 

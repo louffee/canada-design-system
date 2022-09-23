@@ -52,7 +52,7 @@ const OutlinedButton = React.memo<OutlinedButtonProps>(
       fullWidth={fullWidth}
       disabled={disabled}
       aria-disabled={disabled}>
-      <Typography variant='bodySmall' aria-label={children?.toString()}>
+      <Typography variant='bodySmall'>
         <i className={buttonConstants.START_ICON_CLASS_NAME}>{startIcon}</i>
         {children}
         <i className={buttonConstants.END_ICON_CLASS_NAME}>{endIcon}</i>

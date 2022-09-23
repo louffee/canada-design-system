@@ -91,6 +91,10 @@ const LouTheme = {
     xl: 1200,
     xxl: 1600,
   },
+  transitions: {
+    smooth: 'all 300ms ease-in-out',
+    timing: '200ms',
+  },
   typography: {
     fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, Inter, Helvetica, Arial, "Apple Color Emoji", sans-serif',
     fontWeightBold: FONT_WEIGHT_BOLD,
@@ -146,12 +150,12 @@ const LouTheme = {
       },
       labelLarge: {
         fontSize: 14,
-        fontWeight: FONT_WEIGHT_REGULAR,
+        fontWeight: FONT_WEIGHT_SEMIBOLD,
         lineHeight: '110%',
       },
       labelMedium: {
         fontSize: 12,
-        fontWeight: FONT_WEIGHT_REGULAR,
+        fontWeight: FONT_WEIGHT_SEMIBOLD,
         lineHeight: '110%',
       },
       labelSmall: {

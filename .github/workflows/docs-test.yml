@@ -25,5 +25,5 @@ jobs:
         with:
           node-version: 18
 
-      - run: yarn add -DW alex
-      - run: yarn run test-docs:diff
+      - run: yarn install
+      - run: yarn run test-docs

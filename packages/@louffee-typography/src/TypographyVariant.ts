@@ -1,5 +1,5 @@
-import TypographyProps from './TypographyProps'
+import type { LouThemeSchema } from '@louffee/canada-style-system'
 
-type TypographyVariant = TypographyProps['variant']
+type TypographyVariant = keyof LouThemeSchema['typography']['variants']
 
 export default TypographyVariant

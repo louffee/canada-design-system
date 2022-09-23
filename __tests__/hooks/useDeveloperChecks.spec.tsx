@@ -1,7 +1,5 @@
 import * as React from 'react'
-
 import { useDeveloperChecks } from '@louffee/canada-global-hooks'
-
 import { render } from '@testing-library/react'
 
 beforeEach(() => {
@@ -14,10 +12,12 @@ describe('Test useDeveloperChecks', () => {
   it('should NOT log anything', () => {
     const spy = jest.spyOn(console, 'warn')
 
-    const SUT: React.FC = () => {
-      useDeveloperChecks({ prop: undefined }, () => undefined)
+    const validateFunction = jest.fn()
 
-      return null
+    const SUT = () => {
+      useDeveloperChecks({ prop: undefined }, validateFunction)
+
+      return <React.Fragment />
     }
 
     render(<SUT />)
@@ -28,7 +28,7 @@ describe('Test useDeveloperChecks', () => {
   it('should log a warn type', () => {
     const spy = jest.spyOn(console, 'warn')
 
-    const SUT: React.FC = () => {
+    const SUT = () => {
       useDeveloperChecks({ prop: 'i-am-a-prop' }, (componentProps) => {
         if (componentProps.prop) {
           return {
@@ -38,7 +38,7 @@ describe('Test useDeveloperChecks', () => {
         }
       })
 
-      return null
+      return <React.Fragment />
     }
 
     render(<SUT />)
@@ -49,7 +49,7 @@ describe('Test useDeveloperChecks', () => {
   it('should log a error type', () => {
     const spy = jest.spyOn(console, 'error')
 
-    const SUT: React.FC = () => {
+    const SUT = () => {
       useDeveloperChecks({ prop: 'i-am-a-prop' }, (componentProps) => {
         if (componentProps.prop) {
           return {
@@ -59,7 +59,7 @@ describe('Test useDeveloperChecks', () => {
         }
       })
 
-      return null
+      return <React.Fragment />
     }
 
     render(<SUT />)
@@ -70,17 +70,17 @@ describe('Test useDeveloperChecks', () => {
   it('should log a debug', () => {
     const spy = jest.spyOn(console, 'debug')
 
-    const SUT: React.FC = () => {
+    const SUT = () => {
       useDeveloperChecks({ prop: 'i-am-a-prop' }, (componentProps) => {
         if (componentProps.prop) {
           return {
-            type: 'debug',
-            message: 'Just a debug thing',
+            type: 'error',
+            message: 'Just an error thing',
           }
         }
       })
 
-      return null
+      return <React.Fragment />
     }
 
     render(<SUT />)
