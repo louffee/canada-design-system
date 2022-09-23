@@ -1,0 +1,36 @@
+{
+  "name": "@louffee/canada-range-selection",
+  "version": "0.4.0",
+  "description": "The range selection component related to the form package used @ Louffee.",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
+  "types": "build/types/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "repository": "git@github.com:louffee/canada-design-system.git",
+  "author": "Louffee Dev. Team <team@louffee.dev>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@emotion/cache": "^11.9.3",
+    "@emotion/css": "^11.9.0",
+    "@emotion/react": "^11.9.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15"
+  },
+  "peerDependencies": {
+    "@louffee/canada-form": "*",
+    "@louffee/canada-global-hooks": "*",
+    "@louffee/canada-react-utils": "*",
+    "react": "^18.2.0"
+  },
+  "scripts": {
+    "build": "rimraf build && rollup -c ../../rollup.config.js"
+  },
+  "dependencyLevel": 4,
+  "publishConfig": {
+    "access": "public"
+  }
+}

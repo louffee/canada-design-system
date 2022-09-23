@@ -1,0 +1,5 @@
+export { default } from './RangeSlider'
+export { default as RangeSliderProps } from './RangeSliderProps'
+export { default as RangeSliderLegendComponentType } from './RangeSliderLegendComponentType'
+export { default as RangeSliderLegendProps } from './RangeSliderLegendProps'
+export { default as RangeSliderLegendRenderFunction } from './RangeSliderLegendRenderFunction'
