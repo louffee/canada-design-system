@@ -50,3 +50,5 @@ export { default as UseDocumentTitleProps } from './useDocumentTitle/UseDocument
 export { default as useSearchParam } from './useSearchParameter/useSearchParameter'
 
 export { default as useClipboard } from './useClipboard/useClipboard'
+
+export { default as useClasses } from './useClasses/useClasses'
