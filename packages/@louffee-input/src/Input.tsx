@@ -1,10 +1,12 @@
 import * as React from 'react'
 import { styled, useTheme } from '@louffee/canada-style-system'
+import { useMemo } from '@louffee/canada-global-hooks'
 import Icon from '@louffee/canada-icon'
 import Typography from '@louffee/canada-typography'
 
 import type InputProps from './InputProps'
 
+// MARK: - Styles
 const InputContainer = styled('div')({
   display: 'flex',
   flexDirection: 'column',
@@ -62,14 +64,29 @@ const InputBody = styled('div')<{ hasError: boolean }>(({ theme, hasError }) => 
   }),
 }))
 
-const Input: React.FC<InputProps> = ({ name, startAdornment, endAdornment, placeholder, label, error, ...props }) => {
+// MARK: - JSX
+const Input = ({
+  name,
+  startAdornment,
+  endAdornment,
+  placeholder,
+  label,
+  error,
+  ...props
+}: InputProps): React.ReactElement | undefined => {
   const { colors } = useTheme()
-  const hasError = React.useMemo(() => typeof error === 'string' && error.length > 0, [error])
+
+  const hasError = useMemo(() => typeof error === 'string' && error.length > 0, [error])
+  const labelID = useMemo(() => `${name}-label`, [name])
 
   return (
     <InputContainer className='louffee-input'>
       {typeof label === 'string' ? (
-        <label htmlFor={name} className='louffee-input-label m-b-3 flex align-center justify-between'>
+        <label
+          htmlFor={name}
+          id={labelID}
+          className='louffee-input-label m-b-3 flex align-center justify-between'
+          aria-label={label?.toString()}>
           {typeof label === 'string' ? (
             <Typography variant='labelLarge' color={hasError ? colors.error.main : colors.black}>
               {label}
@@ -89,7 +106,7 @@ const Input: React.FC<InputProps> = ({ name, startAdornment, endAdornment, place
       <InputBody hasError={hasError}>
         {startAdornment}
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        <input name={name} placeholder={placeholder} {...props} />
+        <input name={name} aria-labelledby={labelID} placeholder={placeholder} {...props} />
         {endAdornment}
         {hasError && (
           <i
