@@ -76,7 +76,7 @@ const SoftButton = React.memo<SoftButtonProps>(
       }
 
       if (
-        // Validate whether the children is either a string or a React element
+        // Validate whether the children are either a string or a React element
         typeof componentProps.children !== 'string' &&
         !React.isValidElement(componentProps.children)
       ) {
