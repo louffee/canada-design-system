@@ -7,6 +7,9 @@ interface GeneratedFieldProps {
   name: string
   multiple?: boolean
   checked?: boolean
+  onChange?: Function
+  onBlur?: Function
+  onFocus?: Function
 }
 
 export default GeneratedFieldProps
