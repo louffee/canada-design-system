@@ -2,8 +2,7 @@ name: Publish
 
 on:
   push:
-    tags:
-      - '*'
+    branches: [main]
   pull_request:
     types: [closed]
     branches:
