@@ -68,11 +68,19 @@ export const Default: ComponentStory<typeof Form> = () => {
     <div>
       <fieldset>
         <label>First name</label>
-        <input {...firstNameField.attributes} value={firstNameField.attributes.value ?? ''} />
+        <input
+          name={firstNameField.attributes.name}
+          value={firstNameField.attributes.value}
+          onChange={firstNameField.attributes.onChange as unknown as React.ChangeEventHandler<HTMLElement>}
+        />
       </fieldset>
       <fieldset>
         <label>Last name</label>
-        <input {...lastNameField.attributes} value={lastNameField.attributes.value ?? ''} />
+        <input
+          name={lastNameField.attributes.name}
+          value={lastNameField.attributes.value}
+          onChange={firstNameField.attributes.onChange as unknown as React.ChangeEventHandler<HTMLElement>}
+        />
       </fieldset>
     </div>
   )
