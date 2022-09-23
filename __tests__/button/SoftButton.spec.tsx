@@ -1,7 +1,5 @@
 import * as React from 'react'
-
 import { render, fireEvent } from '@testing-library/react'
-
 import { ThemeProvider, LouTheme, toRem } from '@louffee/canada-style-system'
 
 import SoftButton from '../../packages/@louffee-button/src/SoftButton/SoftButton'
@@ -11,12 +9,12 @@ describe('Test SoftButton', () => {
     const { findByRole } = render(
       <ThemeProvider>
         <SoftButton>My button</SoftButton>
-      </ThemeProvider>
+      </ThemeProvider>,
     )
 
-    const buttonEl = await findByRole('button')
+    const buttonElement = await findByRole('button')
 
-    expect(buttonEl).toBeInTheDocument()
+    expect(buttonElement).toBeInTheDocument()
   })
 
   it('should listen to onClick event handler', async () => {
@@ -25,11 +23,11 @@ describe('Test SoftButton', () => {
     const { findByRole } = render(
       <ThemeProvider>
         <SoftButton onClick={handleClick}>My button</SoftButton>
-      </ThemeProvider>
+      </ThemeProvider>,
     )
-    const buttonEl = await findByRole('button')
+    const buttonElement = await findByRole('button')
 
-    fireEvent.click(buttonEl)
+    fireEvent.click(buttonElement)
     expect(handleClick).toHaveBeenCalled()
   })
 
@@ -39,11 +37,11 @@ describe('Test SoftButton', () => {
     const { findByRole } = render(
       <ThemeProvider>
         <SoftButton onMouseEnter={handleMouseEnter}>My button</SoftButton>
-      </ThemeProvider>
+      </ThemeProvider>,
     )
-    const buttonEl = await findByRole('button')
+    const buttonElement = await findByRole('button')
 
-    fireEvent.mouseEnter(buttonEl)
+    fireEvent.mouseEnter(buttonElement)
     expect(handleMouseEnter).toHaveBeenCalled()
   })
 
@@ -53,11 +51,11 @@ describe('Test SoftButton', () => {
     const { findByRole } = render(
       <ThemeProvider>
         <SoftButton onMouseLeave={handleMouseLeave}>My button</SoftButton>
-      </ThemeProvider>
+      </ThemeProvider>,
     )
-    const buttonEl = await findByRole('button')
+    const buttonElement = await findByRole('button')
 
-    fireEvent.mouseLeave(buttonEl)
+    fireEvent.mouseLeave(buttonElement)
     expect(handleMouseLeave).toHaveBeenCalled()
   })
 
@@ -67,11 +65,11 @@ describe('Test SoftButton', () => {
     const { findByRole } = render(
       <ThemeProvider>
         <SoftButton onFocus={handleFocus}>My button</SoftButton>
-      </ThemeProvider>
+      </ThemeProvider>,
     )
-    const buttonEl = await findByRole('button')
+    const buttonElement = await findByRole('button')
 
-    fireEvent.focus(buttonEl)
+    fireEvent.focus(buttonElement)
     expect(handleFocus).toHaveBeenCalled()
   })
 
@@ -81,11 +79,11 @@ describe('Test SoftButton', () => {
     const { findByRole } = render(
       <ThemeProvider>
         <SoftButton onBlur={handleBlur}>My button</SoftButton>
-      </ThemeProvider>
+      </ThemeProvider>,
     )
-    const buttonEl = await findByRole('button')
+    const buttonElement = await findByRole('button')
 
-    fireEvent.blur(buttonEl)
+    fireEvent.blur(buttonElement)
     expect(handleBlur).toHaveBeenCalled()
   })
 
@@ -95,11 +93,11 @@ describe('Test SoftButton', () => {
     const { findByRole } = render(
       <ThemeProvider>
         <SoftButton onKeyDown={handleKeyDown}>My button</SoftButton>
-      </ThemeProvider>
+      </ThemeProvider>,
     )
-    const buttonEl = await findByRole('button')
+    const buttonElement = await findByRole('button')
 
-    fireEvent.keyDown(buttonEl)
+    fireEvent.keyDown(buttonElement)
     expect(handleKeyDown).toHaveBeenCalled()
   })
 
@@ -109,23 +107,23 @@ describe('Test SoftButton', () => {
     const { findByRole } = render(
       <ThemeProvider>
         <SoftButton onKeyUp={handleKeyUp}>My button</SoftButton>
-      </ThemeProvider>
+      </ThemeProvider>,
     )
-    const buttonEl = await findByRole('button')
+    const buttonElement = await findByRole('button')
 
-    fireEvent.keyUp(buttonEl)
+    fireEvent.keyUp(buttonElement)
     expect(handleKeyUp).toHaveBeenCalled()
   })
 
   it('should render with "small" size', async () => {
     const { findByRole } = render(
       <ThemeProvider>
-        <SoftButton size="small">My button</SoftButton>
-      </ThemeProvider>
+        <SoftButton size='small'>My button</SoftButton>
+      </ThemeProvider>,
     )
-    const buttonEl = await findByRole('button')
+    const buttonElement = await findByRole('button')
 
-    expect(buttonEl).toHaveStyle({
+    expect(buttonElement).toHaveStyle({
       height: toRem(24),
     })
   })
@@ -133,12 +131,12 @@ describe('Test SoftButton', () => {
   it('should render with "medium" (default) size', async () => {
     const { findByRole } = render(
       <ThemeProvider>
-        <SoftButton size="medium">My button</SoftButton>
-      </ThemeProvider>
+        <SoftButton size='medium'>My button</SoftButton>
+      </ThemeProvider>,
     )
-    const buttonEl = await findByRole('button')
+    const buttonElement = await findByRole('button')
 
-    expect(buttonEl).toHaveStyle({
+    expect(buttonElement).toHaveStyle({
       height: toRem(32),
     })
   })
@@ -146,12 +144,12 @@ describe('Test SoftButton', () => {
   it('should render with "large" size', async () => {
     const { findByRole } = render(
       <ThemeProvider>
-        <SoftButton size="large">My button</SoftButton>
-      </ThemeProvider>
+        <SoftButton size='large'>My button</SoftButton>
+      </ThemeProvider>,
     )
-    const buttonEl = await findByRole('button')
+    const buttonElement = await findByRole('button')
 
-    expect(buttonEl).toHaveStyle({
+    expect(buttonElement).toHaveStyle({
       height: toRem(40),
     })
   })
@@ -162,12 +160,12 @@ describe('Test SoftButton', () => {
     const { findByRole } = render(
       <ThemeProvider>
         <SoftButton>My button</SoftButton>
-      </ThemeProvider>
+      </ThemeProvider>,
     )
 
-    const buttonEl = await findByRole('button')
+    const buttonElement = await findByRole('button')
 
-    expect(buttonEl).toHaveStyle({ 'background-color': expectedBackgroundColor })
+    expect(buttonElement).toHaveStyle({ 'background-color': expectedBackgroundColor })
   })
 
   it('should have the correct foreground color', async () => {
@@ -176,12 +174,12 @@ describe('Test SoftButton', () => {
     const { findByRole } = render(
       <ThemeProvider>
         <SoftButton>My button</SoftButton>
-      </ThemeProvider>
+      </ThemeProvider>,
     )
 
-    const buttonEl = await findByRole('button')
+    const buttonElement = await findByRole('button')
 
-    expect(buttonEl).toHaveStyle({ color: expectedForegroundColor })
+    expect(buttonElement).toHaveStyle({ color: expectedForegroundColor })
   })
 
   it('should have matching background and border colors', async () => {
@@ -190,12 +188,12 @@ describe('Test SoftButton', () => {
     const { findByRole } = render(
       <ThemeProvider>
         <SoftButton>My button</SoftButton>
-      </ThemeProvider>
+      </ThemeProvider>,
     )
 
-    const buttonEl = await findByRole('button')
+    const buttonElement = await findByRole('button')
 
-    expect(buttonEl).toHaveStyle({
+    expect(buttonElement).toHaveStyle({
       'background-color': expectedBackgroundAndBorderColor,
       'border-color': expectedBackgroundAndBorderColor,
     })
