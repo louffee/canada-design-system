@@ -10,6 +10,13 @@ Inside the folder **packages**, the **Design System** is divided into several fo
 
 Inside the same folder also can be found the **variables** and **mixins** files, which are used to define the **tokens**. As well as the **global dev environment packages**, such as the configurations for ESLint, Prettier and StyleLint.
 
+**Our status ⚙️**
+
+| Environment       | Latest Status                                                                                                                                                                                                                    |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Production        | [![Publish Production-Ready](https://github.com/louffee/canada-design-system/actions/workflows/publish.yml/badge.svg?branch=main&event=push)](https://github.com/louffee/canada-design-system/actions/workflows/publish.yml)     |
+| Release Candidate | [![Publish Release Candidate](https://github.com/louffee/canada-design-system/actions/workflows/publish.yml/badge.svg?branch=develop&event=push)](https://github.com/louffee/canada-design-system/actions/workflows/publish.yml) |
+
 ## Influences
 
 Sure we don’t know everything, also we’re not trying to reinvent the wheel, so surely we have some influences that can be found in the hyperlinks below.
