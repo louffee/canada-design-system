@@ -136,17 +136,17 @@ const LouTheme = {
       titleLarge: {
         fontSize: 22,
         fontWeight: FONT_WEIGHT_BLACK,
-        lineHeight: '110%',
+        lineHeight: '100%',
       },
       titleMedium: {
         fontSize: 16,
         fontWeight: FONT_WEIGHT_BOLD,
-        lineHeight: '110%',
+        lineHeight: '100%',
       },
       titleSmall: {
         fontSize: 14,
         fontWeight: FONT_WEIGHT_BOLD,
-        lineHeight: '110%',
+        lineHeight: '100%',
       },
       labelLarge: {
         fontSize: 14,
