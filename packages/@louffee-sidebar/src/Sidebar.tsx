@@ -61,7 +61,10 @@ const Sidebar = ({
     // eslint-disable-next-line react/jsx-props-no-spreading
     <Column className={rootClasses} {...attributes}>
       {typeof title === 'string' ? <Typography variant='titleSmall'>{title}</Typography> : title}
-      {items.map(({ label }, index) => renderSidebarItem({ selectedItem, index, label, onSelect }))}
+      {items.map((contentItem, index) =>
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        renderSidebarItem({ selectedItem, index, onSelect: onSelect as any, ...contentItem }),
+      )}
     </Column>
   )
 }

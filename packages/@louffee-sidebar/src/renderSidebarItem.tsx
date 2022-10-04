@@ -8,19 +8,21 @@ import type SidebarContentItem from './SidebarContentItem'
 import type SidebarProps from './SidebarProps'
 
 function renderSidebarItem({
-  label,
   selectedItem,
   index,
-  icon,
-}: Pick<SidebarContentItem, 'label' | 'icon'> & { index: number } & Pick<SidebarProps, 'selectedItem'>):
+  onSelect,
+  ...contentItem
+}: SidebarContentItem & { index: number } & Pick<SidebarProps, 'selectedItem' | 'onSelect'>):
   | React.ReactElement
   | undefined {
+  const { icon, label } = contentItem
+
   const renderKey = JSON.stringify(label)
   const selected = index === selectedItem
 
   return (
     <Tooltip render={selected ? <></> : false} align='center' axis='bottom'>
-      <SidebarItem selected={selected} key={renderKey}>
+      <SidebarItem selected={selected} key={renderKey} contentItem={contentItem} onSelect={onSelect}>
         {__determineSidebarItemIcon({ icon, selected })}
         {__determineSidebarItemContent({ label, selected })}
       </SidebarItem>
