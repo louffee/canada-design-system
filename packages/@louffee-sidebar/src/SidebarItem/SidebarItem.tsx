@@ -52,28 +52,29 @@ const ListItem = styled('li')<ListItemProps>(({ theme, selected }) => ({
   cursor: selected ? 'default' : 'pointer',
 
   ...(selected
-    ? {
-      backgroundColor: theme.colors.primary[40],
-      color: theme.colors.white,
+    ? /* eslint-disable indent */
+      {
+        backgroundColor: theme.colors.primary[40],
+        color: theme.colors.white,
 
-      cursor: 'default',
+        cursor: 'default',
 
-      position: 'relative',
-      '&::before': {
-        ...createSidebarActiveIndication(theme),
-        backgroundColor: theme.colors.white,
-      },
-    }
-    : {
-      backgroundColor: theme.colors.grey[95],
-
-      cursor: 'pointer',
-
-      '&:hover': {
         position: 'relative',
-        '&::before': createSidebarActiveIndication(theme),
-      },
-    }),
+        '&::before': {
+          ...createSidebarActiveIndication(theme),
+          backgroundColor: theme.colors.white,
+        },
+      }
+    : {
+        backgroundColor: theme.colors.grey[95],
+
+        cursor: 'pointer',
+
+        '&:hover': {
+          position: 'relative',
+          '&::before': createSidebarActiveIndication(theme),
+        },
+      }) /** eslint-enable indent */,
 
   minWidth: toRem(100),
 
