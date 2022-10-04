@@ -35,7 +35,10 @@ const createSidebarActiveIndication = (theme: LouThemeSchema): CSSObject => ({
   borderBottomRightRadius: theme.radii.small,
 })
 
-const ListItem = styled('li')<{ selected: boolean }>(({ theme, selected }) => ({
+interface ListItemProps {
+  selected: boolean
+}
+const ListItem = styled('li')<ListItemProps>(({ theme, selected }) => ({
   padding: theme.spacing.medium,
   borderRadius: theme.radii.small,
   borderWidth: 1,
