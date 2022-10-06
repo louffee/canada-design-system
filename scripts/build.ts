@@ -1,9 +1,17 @@
-const { exec } = require('child_process')
-const filesystem = require('fs')
+#!/usr/bin/env node
 
-const packageNamesByDependencyLevel = {}
+import { exec } from 'child_process'
+import * as filesystem from 'fs'
 
-const scanPackages = async (callback) => {
+const packageNamesByDependencyLevel: Record<
+  string,
+  {
+    folderPackageName?: string
+    packageName?: string
+  }[]
+> = {}
+
+const scanPackages = async (callback: () => void | Promise<void>) => {
   const baseFolderPath = `${process.cwd()}/packages`
   const metaPathname = `${baseFolderPath}/{{PACKAGE_META_NAME}}/package.json`
 
@@ -26,7 +34,7 @@ const scanPackages = async (callback) => {
 
       if (typeof packageMetadata?.dependencyLevel === 'number' && !packageMetadata?.scripts?.build) {
         console.log(
-          `🪣 The package "${folderName}" has a dependencyLevel field but no "build" script. Either declare a build script or remove the dependencyLevel field from its package.json file. We will ignore this package.`
+          `🪣 The package "${folderName}" has a dependencyLevel field but no "build" script. Either declare a build script or remove the dependencyLevel field from its package.json file. We will ignore this package.`,
         )
         continue
       }
@@ -34,7 +42,7 @@ const scanPackages = async (callback) => {
       if (packageMetadata?.scripts?.build) {
         if (typeof packageMetadata?.dependencyLevel !== 'number') {
           console.log(
-            `🪣 The package "${folderName}" has a "build" script but its dependencyLevel field is not a number. Either declare a valid dependencyLevel value (1-10) or remove the "build" script from its package.json file. We will ignore this package.`
+            `🪣 The package "${folderName}" has a "build" script but its dependencyLevel field is not a number. Either declare a valid dependencyLevel value (1-10) or remove the "build" script from its package.json file. We will ignore this package.`,
           )
           continue
         }
@@ -44,7 +52,7 @@ const scanPackages = async (callback) => {
 
         if (typeof packageName !== 'string') {
           console.log(
-            `🪣 The package in the folder "packages/${folderName}" does not have a name. Please declare it in order to build and publish it.`
+            `🪣 The package in the folder "packages/${folderName}" does not have a name. Please declare it in order to build and publish it.`,
           )
           continue
         }
@@ -64,8 +72,12 @@ const scanPackages = async (callback) => {
   })
 }
 
-const buildPackage = async ({ folderPackageName, packageName } = {}) => {
-  return new Promise((resolve) => {
+interface BuildPackageProps {
+  packageName?: string
+  folderPackageName?: string
+}
+const buildPackage = async ({ folderPackageName, packageName }: BuildPackageProps = {}) => {
+  return new Promise<void>((resolve) => {
     if (folderPackageName && packageName) {
       console.log(`\n🎁 Building ${packageName} package...`)
 
@@ -81,12 +93,12 @@ const buildPackage = async ({ folderPackageName, packageName } = {}) => {
   })
 }
 
-const buildPackages = async () => {
+const buildPackages = async (): Promise<void> => {
   const dependencyLevels = Object.keys(packageNamesByDependencyLevel)
 
   if (dependencyLevels.length === 0) {
     console.log(
-      '\n🪣 No package could have been found inside the "packages" folder. Was the function scanPackages() invoked? We need it :/'
+      '\n🪣 No package could have been found inside the "packages" folder. Was the function scanPackages() invoked? We need it :/',
     )
     return
   }
@@ -105,3 +117,5 @@ const buildPackages = async () => {
 }
 
 scanPackages(buildPackages)
+
+export {}
