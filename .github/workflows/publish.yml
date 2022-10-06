@@ -2,12 +2,7 @@ name: Publish
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    types: [closed]
-    branches:
-      - main
-      - development
+    branches: [main, develop]
 
 jobs:
   publish:
@@ -39,7 +34,7 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
 
-          if [ ${{ github.base_ref }} = development ]; then
+          if [ ${{ github.base_ref }} = develop ]; then
             npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
           else
             npx lerna version --conventional-commits --yes
