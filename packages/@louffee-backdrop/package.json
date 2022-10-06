@@ -1,0 +1,29 @@
+{
+  "name": "@louffee/canada-backdrop",
+  "version": "0.4.0",
+  "description": "The backdrop component designed and used @ Louffee.",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
+  "types": "build/types/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "repository": "git@github.com:louffee/canada-design-system.git",
+  "author": "Louffee Dev. Team <team@louffee.dev>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/react": "^18.0.15"
+  },
+  "peerDependencies": {
+    "@louffee/canada-style-system": "*",
+    "react": "^18.2.0"
+  },
+  "scripts": {
+    "build": "rollup -c ../../rollup.config.js"
+  },
+  "dependencyLevel": 3,
+  "publishConfig": {
+    "access": "public"
+  }
+}
