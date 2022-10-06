@@ -1,0 +1,30 @@
+{
+  "name": "@louffee/canada-card",
+  "version": "0.4.0",
+  "description": "The card component designed and used @ Louffee.",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
+  "types": "build/types/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "repository": "git@github.com:louffee/canada-design-system.git",
+  "author": "Louffee Dev. Team <team@louffee.dev>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/react": "^18.0.15"
+  },
+  "peerDependencies": {
+    "@louffee/canada-style-system": "*",
+    "@louffee/canada-typography": "*",
+    "react": "^18.2.0"
+  },
+  "scripts": {
+    "build": "rollup -c ../../rollup.config.js"
+  },
+  "dependencyLevel": 4,
+  "publishConfig": {
+    "access": "public"
+  }
+}
