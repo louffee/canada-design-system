@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-is-ci || npx lint-staged
+npx is-ci || npx lint-staged
