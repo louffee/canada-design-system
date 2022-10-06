@@ -6,7 +6,6 @@ on:
 
 jobs:
   publish:
-    if: github.event.pull_request.merged == true
     environment: Production
     name: Publish
     runs-on: ubuntu-latest
