@@ -1,6 +1,6 @@
 {
   "name": "@louffee/canada-divider",
-  "version": "0.4.0",
+  "version": "0.6.0",
   "description": "The divider component designed and used @ Louffee.",
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",
@@ -16,8 +16,8 @@
     "@types/react": "^18.0.15"
   },
   "peerDependencies": {
-    "@louffee/canada-style-system": "*",
     "@louffee/canada-global-hooks": "*",
+    "@louffee/canada-style-system": "*",
     "react": "^18.2.0"
   },
   "scripts": {

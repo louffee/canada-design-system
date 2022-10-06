@@ -1,6 +1,6 @@
 {
   "name": "@louffee/canada-sidebar",
-  "version": "0.4.0",
+  "version": "0.6.0",
   "description": "The sidebar component used @ Louffee.",
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",
@@ -19,8 +19,8 @@
     "@louffee/canada-global-hooks": "*",
     "@louffee/canada-react-utils": "*",
     "@louffee/canada-style-system": "*",
-    "@louffee/canada-typography": "*",
     "@louffee/canada-tooltip": "*",
+    "@louffee/canada-typography": "*",
     "react": "^18.2.0"
   },
   "bundledDependencies": [],

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/louffee/canada-design-system/compare/v0.5.0...v0.6.0) (2022-10-06)
+
+
+### Features
+
+* **global-hooks:** create hook to memo and concat class names ([33dbe13](https://github.com/louffee/canada-design-system/commit/33dbe133aa8fc1e497730be9042c18557b914462))
+
+
+
+
+
 # [0.4.0](https://github.com/louffee/canada-design-system/compare/v0.3.3...v0.4.0) (2022-09-11)
 
 

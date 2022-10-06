@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/louffee/canada-design-system/compare/v0.5.0...v0.6.0) (2022-10-06)
+
+
+### Features
+
+* create a new component: Card ([f841076](https://github.com/louffee/canada-design-system/commit/f841076b34606cbc1da4f5b4bf0da823911c18ee))
+* create component Popover ([313eece](https://github.com/louffee/canada-design-system/commit/313eece38bd35adbcb46302395254eb16211b1d9))
+* create component RangeSlider 🎉 ([0d1986b](https://github.com/louffee/canada-design-system/commit/0d1986b8d9dbd7331ce6b3bd88a2c0ac82a12fa1))
+* create Divider component ([01e0ae8](https://github.com/louffee/canada-design-system/commit/01e0ae83d203ac0cc6926389f2f70124ab59474f))
+* create new component: Backdrop ([a5ba398](https://github.com/louffee/canada-design-system/commit/a5ba39812c989c1ddbd7d1b69ec451fc332ad7ed))
+* create Sidebar component ([7a14195](https://github.com/louffee/canada-design-system/commit/7a1419552b46c6d223bb151ca722b44dd716eb0d))
+* **global-hooks:** create hook to memo and concat class names ([33dbe13](https://github.com/louffee/canada-design-system/commit/33dbe133aa8fc1e497730be9042c18557b914462))
+
+
+
+
+
 ## [0.4.1](https://github.com/louffee/canada-design-system/compare/v0.4.0...v0.4.1) (2022-09-11)
 
 **Note:** Version bump only for package canada
