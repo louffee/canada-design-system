@@ -1,13 +1,11 @@
 import * as React from 'react'
 import { styled } from '@louffee/canada-style-system'
 
-import elementsPerVariantMap from './elementsPerVariantMap'
 import type TypographyProps from './TypographyProps'
 
 // MARK: - Styles
-const Span = styled('span')<
-  Required<Pick<TypographyProps, 'variant' | 'color'>> & Partial<Pick<TypographyProps, 'weight'>>
->(({ variant, theme, color, weight }) => {
+type TextProps = Required<Pick<TypographyProps, 'variant' | 'color'>> & Partial<Pick<TypographyProps, 'weight'>>
+const Text = styled('span')<TextProps>(({ variant, theme, color, weight }) => {
   const { fontWeight, ...settings } = theme.typography.variants[variant]
 
   return {
@@ -20,23 +18,18 @@ const Span = styled('span')<
 
 // MARK: - JSX
 const Typography = React.memo<TypographyProps>(
-  ({ variant, children, className = '', color = 'inherit', weight = 400, ...props }) => {
-    const elementType = React.useMemo<React.ElementType>(
-      () => elementsPerVariantMap[variant] as React.ElementType,
-      [variant],
-    )
-
+  ({ variant, children, className = '', color = 'inherit', weight, as = 'span', ...props }) => {
     return (
-      <Span
+      <Text
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...props}
         weight={weight}
-        as={elementType}
+        as={as}
         variant={variant}
         className={`louffee-typography-${variant} ${className}`}
         color={color}>
         {children}
-      </Span>
+      </Text>
     )
   },
 )

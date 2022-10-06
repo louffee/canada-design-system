@@ -3,7 +3,6 @@ import { ThemeProvider, styled } from '@louffee/canada-style-system'
 import { ComponentStory, type ComponentMeta } from '@storybook/react'
 
 import Typography from '../../packages/@louffee-typography/src/Typography'
-import elementsPerVariantMap from '../../packages/@louffee-typography/src/elementsPerVariantMap'
 import type TypographyVariant from '../../packages/@louffee-typography/src/TypographyVariant'
 
 import '@louffee/canada-utility-classes'
@@ -20,7 +19,23 @@ export default {
   ],
 } as ComponentMeta<typeof Typography>
 
-const VARIANTS = Object.keys(elementsPerVariantMap) as TypographyVariant[]
+const VARIANTS: TypographyVariant[] = [
+  'bodyLarge',
+  'bodyMedium',
+  'bodySmall',
+  'displayLarge',
+  'displayMedium',
+  'displaySmall',
+  'headlineLarge',
+  'headlineMedium',
+  'headlineSmall',
+  'labelLarge',
+  'labelMedium',
+  'labelSmall',
+  'titleLarge',
+  'titleMedium',
+  'titleSmall',
+]
 
 const Snippet = styled('div')(({ theme }) => ({
   backgroundColor: theme.colors.grey[99],

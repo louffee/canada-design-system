@@ -1,0 +1,17 @@
+{
+  "configurations": [
+    {
+      "name": "Launch Storybook on Chrome",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:6006",
+      "webRoot": "${workspaceFolder}",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "outputCapture": "console",
+      "preLaunchTask": "Launch Storybook"
+    }
+  ]
+}

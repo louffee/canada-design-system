@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "command": "yarn run storybook",
+      "label": "Launch Storybook",
+      "type": "shell",
+      "icon": {
+        "color": "terminal.ansiCyan",
+        "id": "book"
+      }
+    }
+  ]
+}

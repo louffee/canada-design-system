@@ -3,6 +3,7 @@ import { styled, keyframes, type LouThemeSchema } from '@louffee/canada-style-sy
 
 import type CircularProgressProps from './CircularProgressProps'
 
+// MARK: - Styles
 const rotateKeyframes = keyframes({
   '100%': {
     transform: 'rotate(360deg)',
@@ -62,6 +63,7 @@ const Circle = styled('circle')(({ theme }) => {
   }
 })
 
+// MARK: - JSX
 const CircularProgress: React.FC<CircularProgressProps> = ({ thickness = 5, size = 100, radii = 20 }) => (
   <Loader size={size}>
     <Circle
