@@ -1,5 +1,7 @@
 import { exec } from 'child_process'
-import metadata from '../package.json'
+import * as chalk from 'chalk'
+
+const metadata = require('../package.json')
 
 const { devDependencies } = metadata
 
@@ -14,7 +16,9 @@ const dependenciesWithFixedVersion = dependencies.map(
 
 const listedDependencies = dependenciesWithFixedVersion.join(' ')
 
-console.log(`The lint-related dependencies are ${listedDependencies}`)
+console.log(
+  `The lint-related dependencies are ${listedDependencies.split(' ').join('\n').split('@').join(' @ version of ')}`,
+)
 const installationCommand = `yarn add -DW ${listedDependencies} --no-lockfile`
 
 exec(installationCommand, (error) => {
@@ -24,6 +28,5 @@ exec(installationCommand, (error) => {
     console.error(errorMessage.join('\n'))
     process.exit(1)
   }
-
-  console.log('Lint-related dependencies installed successfully')
 })
+console.log(`\n${chalk.magenta.bold(listedDependencies.length)} lint-related dependencies installed successfully 🎉`)
