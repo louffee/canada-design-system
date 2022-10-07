@@ -23,7 +23,7 @@ const installationCommand = `yarn add -DW ${listedDependencies} --no-lockfile`
 
 exec(installationCommand, (error) => {
   if (error) {
-    const errorMessage = ['Could not install lint-related  dependencies due to the following error', error]
+    const errorMessage = ['Could not install lint-related dependencies due to the following error', error]
 
     console.error(errorMessage.join('\n'))
     process.exit(1)
