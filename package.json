@@ -13,6 +13,8 @@
   "scripts": {
     "lint": "eslint --ext .ts,.tsx",
     "build": "yarn run clean && tsc ./scripts/build.ts && node ./scripts/build.js && rimraf ./scripts/build.js",
+    "transform-tokens-to-scss": "tsc scripts/transform_tokens_to_scss.ts && node ./scripts/transform_tokens_to_scss.js && rimraf ./scripts/transform_tokens_to_scss.js",
+    "postbuild": "yarn run transform-tokens-to-scss",
     "clean": "rimraf packages/**/build",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006 --ci",
     "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
