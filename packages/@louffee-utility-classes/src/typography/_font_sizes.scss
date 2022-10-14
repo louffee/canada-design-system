@@ -1,0 +1,29 @@
+@use "../tokens";
+
+$font_sizes: (
+  "display-large": tokens.$font-size-display-large,
+  "display-medium": tokens.$font-size-display-medium,
+  "display-small": tokens.$font-size-display-small,
+  
+  "headline-large": tokens.$font-size-headline-large,
+  "headline-medium": tokens.$font-size-headline-medium,
+  "headline-small": tokens.$font-size-headline-small,
+  
+  "title-large": tokens.$font-size-title-large,
+  "title-medium": tokens.$font-size-title-medium,
+  "title-small": tokens.$font-size-title-small,
+  
+  "label-large": tokens.$font-size-label-large,
+  "label-medium": tokens.$font-size-label-medium,
+  "label-small": tokens.$font-size-label-small,
+  
+  "body-large": tokens.$font-size-body-large,
+  "body-medium": tokens.$font-size-body-medium,
+  "body-small": tokens.$font-size-body-small,
+);
+
+@each $name, $size in $font_sizes {
+  .font-size-#{$name}, .font-#{$name} {
+    font-size: $size;
+  }
+}

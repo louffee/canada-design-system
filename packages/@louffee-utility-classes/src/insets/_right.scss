@@ -1,0 +1,28 @@
+$right_range: 1000;
+
+@for $i from 1 through $right_range {
+  @at-root .right-#{$i} {
+    right: $i * 1px;
+  }
+
+  @at-root .hover\@right-#{$i}:hover {
+    right: $i * 1px;
+  }
+
+  @at-root .focus\@right-#{$i}:focus {
+    right: $i * 1px;
+  }
+
+  // Negative number statement
+  @at-root .right-\!#{$i} {
+    right: $i * -1px;
+  }
+
+  @at-root .hover\@right-\!#{$i}:hover {
+    right: $i * -1px;
+  }
+
+  @at-root .focus\@right-\!#{$i}:focus {
+    right: $i * -1px;
+  }
+}

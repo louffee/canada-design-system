@@ -1,0 +1,69 @@
+@use "../to_rem" as *;
+
+$padding_max_generated: 1000;
+
+@for $i from 1 through $padding_max_generated {
+  .p-b-#{$i}, .padding-bottom-#{$i} {
+    padding-bottom: toRem($i);
+  }
+
+  .p-b-#{$i}\%, .padding-bottom-#{$i}\% {
+    padding-bottom: calc($i * 1%);
+  }
+
+  .p-b-#{$i}px, .padding-bottom-#{$i}px {
+    padding-bottom: calc($i * 1px);
+  }
+
+  .p-b-#{$i}em, .padding-bottom-#{$i}em {
+    padding-bottom: calc($i * 1em);
+  }
+
+  .p-b-#{$i}rem, .padding-bottom-#{$i}rem {
+    padding-bottom: calc($i * 1rem);
+  }
+
+  .p-b-#{$i}vh, .padding-bottom-#{$i}vh {
+    padding-bottom: calc($i * 1vh);
+  }
+
+  .p-b-#{$i}vw, .padding-bottom-#{$i}vw {
+    padding-bottom: calc($i * 1vw);
+  }
+
+  .p-b-#{$i}vmin, .padding-bottom-#{$i}vmin {
+    padding-bottom: calc($i * 1vmin);
+  }
+
+  .p-b-#{$i}vmax, .padding-bottom-#{$i}vmax {
+    padding-bottom: calc($i * 1vmax);
+  }
+
+  .p-b-#{$i}pt, .padding-bottom-#{$i}pt {
+    padding-bottom: calc($i * 1pt);
+  }
+
+  .p-b-#{$i}pc, .padding-bottom-#{$i}pc {
+    padding-bottom: calc($i * 1pc);
+  }
+
+  .p-b-#{$i}in, .padding-bottom-#{$i}in {
+    padding-bottom: calc($i * 1in);
+  }
+
+  .p-b-#{$i}cm, .padding-bottom-#{$i}cm {
+    padding-bottom: calc($i * 1cm);
+  }
+
+  .p-b-#{$i}mm, .padding-bottom-#{$i}mm {
+    padding-bottom: calc($i * 1mm);
+  }
+
+  .p-b-#{$i}ex, .padding-bottom-#{$i}ex {
+    padding-bottom: calc($i * 1ex);
+  }
+
+  .p-b-#{$i}ch, .padding-bottom-#{$i}ch {
+    padding-bottom: calc($i * 1ch);
+  }
+}

@@ -1,0 +1,92 @@
+
+@at-root .justify-start {
+  justify-content: flex-start;
+}
+
+@at-root .justify-end {
+  justify-content: flex-end;
+}
+
+@at-root .justify-center {
+  justify-content: center;
+}
+
+@at-root .justify-between {
+  justify-content: space-between;
+}
+
+@at-root .justify-around {
+  justify-content: space-around;
+}
+
+@at-root .justify-evenly {
+  justify-content: space-evenly;
+}
+
+@at-root .align-start {
+  align-items: flex-start;
+}
+
+@at-root .align-end {
+  align-items: flex-end;
+}
+
+@at-root .align-center {
+  align-items: center;
+}
+
+@at-root .align-baseline {
+  align-items: baseline;
+}
+
+@at-root .align-stretch {
+  align-items: stretch;
+}
+
+@at-root .align-content-start {
+  align-content: flex-start;
+}
+
+@at-root .align-content-end {
+  align-content: flex-end;
+}
+
+@at-root .align-content-center {
+  align-content: center;
+}
+
+@at-root .align-content-between {
+  align-content: space-between;
+}
+
+@at-root .align-content-around {
+  align-content: space-around;
+}
+
+@at-root .align-content-stretch {
+  align-content: stretch;
+}
+
+@at-root .align-self-auto {
+  align-self: auto;
+}
+
+@at-root .align-self-start {
+  align-self: flex-start;
+}
+
+@at-root .align-self-end {
+  align-self: flex-end;
+}
+
+@at-root .align-self-center {
+  align-self: center;
+}
+
+@at-root .align-self-baseline {
+  align-self: baseline;
+}
+
+@at-root .align-self-stretch {
+  align-self: stretch;
+}

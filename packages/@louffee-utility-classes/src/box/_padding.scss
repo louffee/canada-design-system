@@ -1,0 +1,69 @@
+@use "../to_rem" as *;
+
+$padding_max_generated: 1000;
+
+@for $i from 1 through $padding_max_generated {
+  .p-#{$i}, .padding-#{$i} {
+    padding: toRem($i);
+  }
+
+  .p-#{$i}\%, .padding-#{$i}\% {
+    padding: calc($i * 1%);
+  }
+
+  .p-#{$i}px, .padding-#{$i}px {
+    padding: calc($i * 1px);
+  }
+
+  .p-#{$i}em, .padding-#{$i}em {
+    padding: calc($i * 1em);
+  }
+
+  .p-#{$i}rem, .padding-#{$i}rem {
+    padding: calc($i * 1rem);
+  }
+
+  .p-#{$i}vh, .padding-#{$i}vh {
+    padding: calc($i * 1vh);
+  }
+
+  .p-#{$i}vw, .padding-#{$i}vw {
+    padding: calc($i * 1vw);
+  }
+
+  .p-#{$i}vmin, .padding-#{$i}vmin {
+    padding: calc($i * 1vmin);
+  }
+
+  .p-#{$i}vmax, .padding-#{$i}vmax {
+    padding: calc($i * 1vmax);
+  }
+
+  .p-#{$i}pt, .padding-#{$i}pt {
+    padding: calc($i * 1pt);
+  }
+
+  .p-#{$i}pc, .padding-#{$i}pc {
+    padding: calc($i * 1pc);
+  }
+
+  .p-#{$i}in, .padding-#{$i}in {
+    padding: calc($i * 1in);
+  }
+
+  .p-#{$i}cm, .padding-#{$i}cm {
+    padding: calc($i * 1cm);
+  }
+
+  .p-#{$i}mm, .padding-#{$i}mm {
+    padding: calc($i * 1mm);
+  }
+
+  .p-#{$i}ex, .padding-#{$i}ex {
+    padding: calc($i * 1ex);
+  }
+
+  .p-#{$i}ch, .padding-#{$i}ch {
+    padding: calc($i * 1ch);
+  }
+}

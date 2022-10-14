@@ -1,0 +1,19 @@
+@at-root .flex-column, .flex-col {
+  flex-direction: column;
+}
+
+@at-root .flex-row {
+  flex-direction: row;
+}
+
+@at-root .flex-wrap {
+  flex-wrap: wrap;
+}
+
+@at-root .flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+@at-root .flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}

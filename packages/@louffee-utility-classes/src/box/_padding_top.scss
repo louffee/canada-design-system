@@ -1,0 +1,69 @@
+@use "../to_rem" as *;
+
+$padding_max_generated: 1000;
+
+@for $i from 1 through $padding_max_generated {
+  .p-t-#{$i}, .padding-top-#{$i} {
+    padding-top: toRem($i);
+  }
+
+  .p-t-#{$i}\%, .padding-top-#{$i}\% {
+    padding-top: calc($i * 1%);
+  }
+
+  .p-t-#{$i}px, .padding-top-#{$i}px {
+    padding-top: calc($i * 1px);
+  }
+
+  .p-t-#{$i}em, .padding-top-#{$i}em {
+    padding-top: calc($i * 1em);
+  }
+
+  .p-t-#{$i}rem, .padding-top-#{$i}rem {
+    padding-top: calc($i * 1rem);
+  }
+
+  .p-t-#{$i}vh, .padding-top-#{$i}vh {
+    padding-top: calc($i * 1vh);
+  }
+
+  .p-t-#{$i}vw, .padding-top-#{$i}vw {
+    padding-top: calc($i * 1vw);
+  }
+
+  .p-t-#{$i}vmin, .padding-top-#{$i}vmin {
+    padding-top: calc($i * 1vmin);
+  }
+
+  .p-t-#{$i}vmax, .padding-top-#{$i}vmax {
+    padding-top: calc($i * 1vmax);
+  }
+
+  .p-t-#{$i}pt, .padding-top-#{$i}pt {
+    padding-top: calc($i * 1pt);
+  }
+
+  .p-t-#{$i}pc, .padding-top-#{$i}pc {
+    padding-top: calc($i * 1pc);
+  }
+
+  .p-t-#{$i}in, .padding-top-#{$i}in {
+    padding-top: calc($i * 1in);
+  }
+
+  .p-t-#{$i}cm, .padding-top-#{$i}cm {
+    padding-top: calc($i * 1cm);
+  }
+
+  .p-t-#{$i}mm, .padding-top-#{$i}mm {
+    padding-top: calc($i * 1mm);
+  }
+
+  .p-t-#{$i}ex, .padding-top-#{$i}ex {
+    padding-top: calc($i * 1ex);
+  }
+
+  .p-t-#{$i}ch, .padding-top-#{$i}ch {
+    padding-top: calc($i * 1ch);
+  }
+}

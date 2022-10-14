@@ -11,10 +11,13 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "node ./scripts/build_utility_classes.js > ./index.css"
+    "build": "npx sass src/_index.scss build/index.css"
   },
-  "dependencyLevel": 2,
+  "dependencyLevel": 3,
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "sass": "^1.55.0"
   }
 }

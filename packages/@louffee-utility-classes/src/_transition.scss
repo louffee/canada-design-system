@@ -1,0 +1,55 @@
+@at-root .transition {
+  transition: all 0.3s ease-in-out;
+}
+
+@at-root .transition-none {
+  transition: none;
+}
+
+@at-root .transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+@at-root .transition-colors {
+  transition: color 0.3s ease-in-out;
+}
+
+@at-root .transition-opacity {
+  transition: opacity 0.3s ease-in-out;
+}
+
+@at-root .transition-shadow {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+@at-root .transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+@at-root .hover\@transition:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+@at-root .hover\@transition-none:hover {
+  transition: none;
+}
+
+@at-root .hover\@transition-all:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+@at-root .hover\@transition-colors:hover {
+  transition: color 0.3s ease-in-out;
+}
+
+@at-root .hover\@transition-opacity:hover {
+  transition: opacity 0.3s ease-in-out;
+}
+
+@at-root .hover\@transition-shadow:hover {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+@at-root .hover\@transition-transform:hover {
+  transition: transform 0.3s ease-in-out;
+}

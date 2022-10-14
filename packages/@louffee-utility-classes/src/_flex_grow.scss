@@ -1,0 +1,13 @@
+@at-root .grow {
+  flex-grow: 1; 
+}
+
+@at-root .grow-auto {
+  flex-grow: auto; 
+}
+
+@for $i from 1 through 10 {
+  @at-root .grow-#{$i} {
+    flex-grow: $i; 
+  }
+}

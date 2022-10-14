@@ -1,0 +1,65 @@
+@use "../to_rem" as *;
+
+$max_generated_max_width: 1000;
+
+@for $i from 1 through $max_generated_max_width {
+  .max-width-#{$i} {
+    max-width: toRem($i);
+  }
+
+  .max-width-#{$i}\% {
+    max-width: $i * 1%;
+  }
+
+  .max-width-#{$i}vw {
+    max-width: $i * 1vw;
+  }
+
+  .max-width-#{$i}vmin {
+    max-width: $i * 1vmin;
+  }
+
+  .max-width-#{$i}vmax {
+    max-width: $i * 1vmax;
+  }
+
+  .max-width-#{$i}rem {
+    max-width: $i * 1rem;
+  }
+
+  .max-width-#{$i}em {
+    max-width: $i * 1em;
+  }
+
+  .max-width-#{$i}ch {
+    max-width: $i * 1ch;
+  }
+
+  .max-width-#{$i}ex {
+    max-width: $i * 1ex;
+  }
+
+  .max-width-#{$i}cm {
+    max-width: $i * 1cm;
+  }
+
+  .max-width-#{$i}mm {
+    max-width: $i * 1mm;
+  }
+
+  .max-width-#{$i}in {
+    max-width: $i * 1in;
+  }
+
+  .max-width-#{$i}pt {
+    max-width: $i * 1pt;
+  }
+
+  .max-width-#{$i}pc {
+    max-width: $i * 1pc;
+  }
+
+  .max-width-#{$i}px {
+    max-width: $i * 1px;
+  }
+}

@@ -1,0 +1,41 @@
+@use "to_rem" as *;
+
+@for $i from 1 through 20 {
+  @at-root .gap-#{$i} {
+    gap: toRem($i);
+  }
+
+  @at-root .hover\@gap-#{$i}:hover {
+    gap: toRem($i);
+  }
+
+  @at-root .focus\@gap-#{$i}:focus {
+    gap: toRem($i);
+  }
+
+  // Row-specific
+  @at-root .row-gap-#{$i} {
+    row-gap: toRem($i);
+  }
+
+  @at-root .hover\@row-gap-#{$i}:hover {
+    row-gap: toRem($i);
+  }
+
+  @at-root .focus\@row-gap-#{$i}:focus {
+    row-gap: toRem($i);
+  }
+
+  // Column-specific
+  @at-root .column-gap-#{$i} {
+    column-gap: toRem($i);
+  }
+
+  @at-root .hover\@column-gap-#{$i}:hover {
+    column-gap: toRem($i);
+  }
+
+  @at-root .focus\@column-gap-#{$i}:focus {
+    column-gap: toRem($i);
+  }
+}

@@ -1,0 +1,65 @@
+@use "../to_rem" as *;
+
+$max_generated_height: 1000;
+
+@for $i from 1 through $max_generated_height {
+  .height-#{$i} {
+    height: toRem($i);
+  }
+
+  .height-#{$i}\% {
+    height: $i * 1%;
+  }
+
+  .height-#{$i}vw {
+    height: $i * 1vw;
+  }
+
+  .height-#{$i}vmin {
+    height: $i * 1vmin;
+  }
+
+  .height-#{$i}vmax {
+    height: $i * 1vmax;
+  }
+
+  .height-#{$i}rem {
+    height: $i * 1rem;
+  }
+
+  .height-#{$i}em {
+    height: $i * 1em;
+  }
+
+  .height-#{$i}ch {
+    height: $i * 1ch;
+  }
+
+  .height-#{$i}ex {
+    height: $i * 1ex;
+  }
+
+  .height-#{$i}cm {
+    height: $i * 1cm;
+  }
+
+  .height-#{$i}mm {
+    height: $i * 1mm;
+  }
+
+  .height-#{$i}in {
+    height: $i * 1in;
+  }
+
+  .height-#{$i}pt {
+    height: $i * 1pt;
+  }
+
+  .height-#{$i}pc {
+    height: $i * 1pc;
+  }
+
+  .height-#{$i}px {
+    height: $i * 1px;
+  }
+}

@@ -1,0 +1,42 @@
+$displays: (
+  block,
+  inline-block,
+  inline,
+  flex,
+  inline-flex,
+  table,
+  table-cell,
+  table-row,
+  table-caption,
+  table-column,
+  table-column-group,
+  table-footer-group,
+  table-header-group,
+  table-row-group,
+);
+
+@at-root .hidden {
+  display: none;
+}
+
+@at-root .hover\@hidden:hover {
+  display: none;
+}
+
+@at-root .hover\@hidden:focus {
+  display: none;
+}
+
+@each $display in $displays {
+  @at-root .#{$display} {
+    display: $display;
+  }
+
+  @at-root .hover\@#{$display}:hover {
+    display: $display;
+  }
+
+  @at-root .focus\@#{$display}:focus {
+    display: $display;
+  }
+}

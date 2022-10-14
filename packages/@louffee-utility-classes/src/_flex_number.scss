@@ -1,0 +1,13 @@
+@for $i from 1 through 10 {
+  @at-root .flex-#{$i} {
+    flex: $i;
+  }
+
+  @at-root .hover\@flex-#{$i}:hover {
+    flex: $i;
+  }
+
+  @at-root .focus\@flex-#{$i}:focus {
+    flex: $i;
+  }
+}

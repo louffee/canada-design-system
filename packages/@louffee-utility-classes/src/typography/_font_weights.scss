@@ -1,0 +1,14 @@
+@use "../tokens";
+
+$font_weights: (
+  "bold": tokens.$font-weight-bold,
+  "medium": tokens.$font-weight-medium,
+  "regular": tokens.$font-weight-regular,
+  "light": tokens.$font-weight-light,
+);
+
+@each $name, $value in $font_weights {
+  .font-weight-#{$name}, .font-#{$name}, .#{$name} {
+    font-weight: $value;
+  }
+}

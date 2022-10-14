@@ -1,0 +1,69 @@
+@use "../to_rem" as *;
+
+$padding_max_generated: 1000;
+
+@for $i from 1 through $padding_max_generated {
+  .p-r-#{$i}, .padding-right-#{$i} {
+    padding-right: toRem($i);
+  }
+
+  .p-r-#{$i}\%, .padding-right-#{$i}\% {
+    padding-right: ($i * 1%);
+  }
+
+  .p-r-#{$i}px, .padding-right-#{$i}px {
+    padding-right: ($i * 1px);
+  }
+
+  .p-r-#{$i}em, .padding-right-#{$i}em {
+    padding-right: ($i * 1em);
+  }
+
+  .p-r-#{$i}rem, .padding-right-#{$i}rem {
+    padding-right: ($i * 1rem);
+  }
+
+  .p-r-#{$i}vh, .padding-right-#{$i}vh {
+    padding-right: ($i * 1vh);
+  }
+
+  .p-r-#{$i}vw, .padding-right-#{$i}vw {
+    padding-right: ($i * 1vw);
+  }
+
+  .p-r-#{$i}vmin, .padding-right-#{$i}vmin {
+    padding-right: ($i * 1vmin);
+  }
+
+  .p-r-#{$i}vmax, .padding-right-#{$i}vmax {
+    padding-right: ($i * 1vmax);
+  }
+
+  .p-r-#{$i}pt, .padding-right-#{$i}pt {
+    padding-right: ($i * 1pt);
+  }
+
+  .p-r-#{$i}pc, .padding-right-#{$i}pc {
+    padding-right: ($i * 1pc);
+  }
+
+  .p-r-#{$i}in, .padding-right-#{$i}in {
+    padding-right: ($i * 1in);
+  }
+
+  .p-r-#{$i}cm, .padding-right-#{$i}cm {
+    padding-right: ($i * 1cm);
+  }
+
+  .p-r-#{$i}mm, .padding-right-#{$i}mm {
+    padding-right: ($i * 1mm);
+  }
+
+  .p-r-#{$i}ex, .padding-right-#{$i}ex {
+    padding-right: ($i * 1ex);
+  }
+
+  .p-r-#{$i}ch, .padding-right-#{$i}ch {
+    padding-right: ($i * 1ch);
+  }
+}
