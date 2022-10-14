@@ -69,7 +69,7 @@ const LouTheme = {
     small: 4,
     medium: 7,
     large: 12,
-    rounded: toRem(50),
+    rounded: 9999,
   },
   spacing: {
     extraSmall: toRem(4),
