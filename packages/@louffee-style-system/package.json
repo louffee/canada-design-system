@@ -1,6 +1,6 @@
 {
   "name": "@louffee/canada-style-system",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "The system for handling the Styles @ Louffee.",
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@louffee/canada-tooltip",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "The tooltip component used @ Louffee.",
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",
