@@ -18,6 +18,7 @@ const BackdropRoot = styled('div')<BackdropRootProps>(({ isBlurry, zIndex, blur 
   }),
 }))
 
+// MARK: - JSX
 const Backdrop = React.memo<BackdropProps>(({ isBlurry = false, zIndex = 'auto', blur = 2, className }) => {
   const classes = useClasses('louffee-backdrop', className)
 
