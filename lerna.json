@@ -1,27 +1,17 @@
 {
   "$schema": "https://json.schemastore.org/lerna.json",
-  "workspaces": [
-    "packages/*"
-  ],
-  "version": "0.7.0",
+  "workspaces": ["packages/*"],
+  "version": "0.7.1",
   "useWorkspaces": true,
   "npmClient": "yarn",
   "command": {
     "publish": {
-      "ignoreChanges": [
-        "package.json",
-        "yarn.lock",
-        "lerna.json"
-      ],
+      "ignoreChanges": ["package.json", "yarn.lock", "lerna.json"],
       "registry": "https://registry.npmjs.org",
       "access": "public"
     },
     "version": {
-      "ignoreChanges": [
-        "package.json",
-        "yarn.lock",
-        "lerna.json"
-      ]
+      "ignoreChanges": ["package.json", "yarn.lock", "lerna.json"]
     }
   },
   "useNx": true
