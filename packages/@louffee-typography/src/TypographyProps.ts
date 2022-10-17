@@ -4,8 +4,10 @@ import type TypographyWeight from './TypographyWeight'
 import type TypographyVariant from './TypographyVariant'
 import type TypographyElementTypeAs from './TypographyElementTypeAs'
 
-interface TypographyProps
-  extends Omit<React.HTMLAttributes<HTMLElement>, 'style' | 'className' | 'color' | 'children'> {
+type HTMLElementAttributes = React.HTMLAttributes<HTMLElement>
+type OmittedHTMLElementAttributes = Omit<HTMLElementAttributes, 'style' | 'className' | 'color' | 'children'>
+
+interface TypographyProps extends OmittedHTMLElementAttributes {
   variant: TypographyVariant
   children: React.ReactNode
   weight?: TypographyWeight
