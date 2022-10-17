@@ -11,7 +11,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "npx sass src/_index.scss build/index.css"
+    "build": "npx sass src/_index.scss index.css"
   },
   "dependencyLevel": 3,
   "publishConfig": {
