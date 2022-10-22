@@ -1,6 +1,6 @@
 {
   "name": "@louffee/canada-card",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "The card component designed and used @ Louffee.",
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",

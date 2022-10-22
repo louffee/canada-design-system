@@ -1,6 +1,6 @@
 {
   "name": "@louffee/canada-utility-classes",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "description": "The utility classes used to build wonderful layouts @ Louffee.",
   "main": "index.css",
   "files": [
