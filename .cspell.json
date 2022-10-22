@@ -23,6 +23,7 @@
     "camelcase",
     "codeql",
     "Colour",
+    "Colours",
     "commitlint",
     "compat",
     "docgen",
