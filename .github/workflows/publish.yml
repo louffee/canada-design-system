@@ -33,7 +33,7 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
 
-          if [ ${{ github.base_ref }} = develop ]; then
+          if [ ${{ steps.branch-name.outputs.current_branch }} = develop ]; then
             npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
           else
             npx lerna version --conventional-commits --yes
