@@ -1,10 +1,20 @@
 import * as React from 'react'
 import { styled, useTheme } from '@louffee/canada-style-system'
-import { useMemo } from '@louffee/canada-global-hooks'
+import { useMemo, useClasses } from '@louffee/canada-global-hooks'
 import Icon from '@louffee/canada-icon'
 import Typography from '@louffee/canada-typography'
 
 import type InputProps from './InputProps'
+
+// MARK: - Constants
+const classes = {
+  root: 'louffee-input',
+  labelRoot: 'louffee-input-label m-b-3 flex align-center justify-between',
+  labelPresentation: 'louffee-input-label-presentation flelx align-center gap-3',
+  errorMessage: 'louffee-input-error-message',
+  errorIconContainer:
+    'louffee-input-error-icon border-2 border-solid border-error-main radii-50 h-18 w-18 flex align-center justify-center',
+}
 
 // MARK: - Styles
 const InputContainer = styled('div')({
@@ -15,7 +25,10 @@ const InputContainer = styled('div')({
   height: 'fit-content',
 })
 
-const InputBody = styled('div')<{ hasError: boolean }>(({ theme, hasError }) => ({
+interface InputBodyProps {
+  hasError: boolean
+}
+const InputBody = styled('div')<InputBodyProps>(({ theme, hasError }) => ({
   display: 'flex',
   flex: 1,
 
@@ -72,33 +85,33 @@ const Input = ({
   placeholder,
   label,
   error,
+  className,
   ...props
 }: InputProps): React.ReactElement | undefined => {
   const { colors } = useTheme()
+  const rootClasses = useClasses(classes.root, className)
 
   const hasError = useMemo(() => typeof error === 'string' && error.length > 0, [error])
   const labelID = useMemo(() => `${name}-label`, [name])
 
   return (
-    <InputContainer className='louffee-input'>
-      {typeof label === 'string' ? (
-        <label
-          htmlFor={name}
-          id={labelID}
-          className='louffee-input-label m-b-3 flex align-center justify-between'
-          aria-label={label?.toString()}>
-          <Typography variant='labelLarge' color={hasError ? colors.error.main : colors.black}>
-            {label}
+    <InputContainer className={rootClasses}>
+      <div className={classes.labelRoot}>
+        {typeof label === 'string' ? (
+          <label htmlFor={name} id={labelID} className={classes.labelPresentation} aria-label={label?.toString()}>
+            <Typography variant='labelLarge' color={hasError ? colors.error.main : colors.black}>
+              {label}
+            </Typography>
+          </label>
+        ) : (
+          label
+        )}
+        {hasError && (
+          <Typography variant='bodySmall' color={colors.error.main} className={classes.errorMessage}>
+            {error}
           </Typography>
-        </label>
-      ) : (
-        label
-      )}
-      {hasError && (
-        <Typography variant='bodySmall' color={colors.error.main} className='louffee-input-error-message'>
-          {error}
-        </Typography>
-      )}
+        )}
+      </div>
       <InputBody hasError={hasError}>
         {startAdornment}
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
@@ -106,7 +119,7 @@ const Input = ({
         {endAdornment}
         {hasError && (
           <i
-            className='border-2 border-solid border-error-main radii-50 h-18 w-18 flex align-center justify-center louffee-input-error-icon'
+            className={classes.errorIconContainer}
             title='There is an error. Please read the information below the field'>
             <Icon name='exclamation-circle-outlined' color={colors.error.main} size={14} />
           </i>
