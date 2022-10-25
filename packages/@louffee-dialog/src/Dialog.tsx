@@ -4,6 +4,7 @@ import { useClasses } from '@louffee/canada-global-hooks'
 
 import useBackdropControls from './useBackdropControls/useBackdropControls'
 import CloseButton from './CloseButton/CloseButton'
+import DialogTitle from './DialogTitle/DialogTitle'
 import DialogContent from './DialogContent/DialogContent'
 import DialogFooter from './DialogFooter/DialogFooter'
 import type DialogProps from './DialogProps'
@@ -46,26 +47,6 @@ const DialogCloseButton = styled('button')({
   right: 6,
 })
 
-const DialogTitleRoot = styled('div')(
-  ({
-    theme: {
-      typography: {
-        variants: {
-          headlineSmall: { fontSize, fontWeight },
-        },
-      },
-      spacing,
-    },
-  }) => ({
-    fontSize,
-    fontWeight,
-    margin: spacing.medium,
-  }),
-)
-DialogTitleRoot.defaultProps = {
-  className: classes.title,
-}
-
 // MARK: - JSX
 const Dialog = <TElement extends HTMLElement = HTMLDivElement>({
   open,
@@ -83,6 +64,9 @@ const Dialog = <TElement extends HTMLElement = HTMLDivElement>({
     return
   }
 
+  const closeButtonCastToComponent = closeButton as DialogProps<HTMLButtonElement>['closeButton']
+  const onCloseCastToComponent = onClose as unknown as DialogCloseEventHandler<HTMLButtonElement>
+
   return (
     <>
       <DialogBackdrop
@@ -94,17 +78,12 @@ const Dialog = <TElement extends HTMLElement = HTMLDivElement>({
         {children}
 
         <DialogCloseButton className={classes.closeButton}>
-          <CloseButton
-            closeButton={closeButton as DialogProps<HTMLButtonElement>['closeButton']}
-            onClose={onClose as unknown as DialogCloseEventHandler<HTMLButtonElement>}
-          />
+          <CloseButton closeButton={closeButtonCastToComponent} onClose={onCloseCastToComponent} />
         </DialogCloseButton>
       </DialogRoot>
     </>
   )
 }
-
-const DialogTitle = DialogTitleRoot as (props: Required<React.PropsWithChildren<{}>>) => React.ReactElement
 
 Dialog.Content = DialogContent
 Dialog.Title = DialogTitle
