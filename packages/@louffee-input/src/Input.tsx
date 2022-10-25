@@ -87,21 +87,17 @@ const Input = ({
           id={labelID}
           className='louffee-input-label m-b-3 flex align-center justify-between'
           aria-label={label?.toString()}>
-          {typeof label === 'string' ? (
-            <Typography variant='labelLarge' color={hasError ? colors.error.main : colors.black}>
-              {label}
-            </Typography>
-          ) : (
-            label
-          )}
-          {hasError && (
-            <Typography variant='bodySmall' color={colors.error.main} className='louffee-input-error-message'>
-              {error}
-            </Typography>
-          )}
+          <Typography variant='labelLarge' color={hasError ? colors.error.main : colors.black}>
+            {label}
+          </Typography>
         </label>
       ) : (
         label
+      )}
+      {hasError && (
+        <Typography variant='bodySmall' color={colors.error.main} className='louffee-input-error-message'>
+          {error}
+        </Typography>
       )}
       <InputBody hasError={hasError}>
         {startAdornment}
