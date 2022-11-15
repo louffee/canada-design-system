@@ -3,7 +3,7 @@ const stylelint = require('stylelint')
 const syntax = require('postcss-syntax')
 const fs = require('fs')
 
-const source = fs.readFileSync('./packages/@louffee-utility-classes/index.css', 'utf8')
+const source = fs.readFileSync('./packages/@louffee-utility-classes/build/index.css', 'utf8')
 
 postcss([stylelint({ fix: true })])
   .process(source, { syntax })

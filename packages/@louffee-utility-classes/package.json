@@ -2,16 +2,16 @@
   "name": "@louffee/canada-utility-classes",
   "version": "0.8.0",
   "description": "The utility classes used to build wonderful layouts @ Louffee.",
-  "main": "index.css",
+  "main": "build/index.css",
   "files": [
-    "index.css"
+    "build"
   ],
   "repository": "git@github.com:louffee/canada-design-system.git",
   "author": "Louffee Dev. Team <team@louffee.dev>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "npx sass src/_index.scss index.css"
+    "build": "npx sass src/_index.scss build/index.css"
   },
   "dependencyLevel": 3,
   "publishConfig": {
