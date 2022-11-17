@@ -69,6 +69,7 @@
     "babel-jest": "^28.1.3",
     "babel-loader": "^8.2.5",
     "babel-node": "^0.0.1-security",
+    "colors": "^1.4.0",
     "commitizen": "^4.2.5",
     "cspell": "^6.8.1",
     "eslint": "^8.20.0",
