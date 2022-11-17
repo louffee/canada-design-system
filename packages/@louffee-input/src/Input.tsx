@@ -10,7 +10,7 @@ import type InputProps from './InputProps'
 const classes = {
   root: 'louffee-input',
   labelRoot: 'louffee-input-label m-b-3 flex align-center justify-between',
-  labelPresentation: 'louffee-input-label-presentation flelx align-center gap-3',
+  labelPresentation: 'louffee-input-label-presentation flex align-center gap-3',
   errorMessage: 'louffee-input-error-message',
   errorIconContainer:
     'louffee-input-error-icon border-2 border-solid border-error-main radii-50 h-18 w-18 flex align-center justify-center',
@@ -99,7 +99,7 @@ const Input = ({
       <div className={classes.labelRoot}>
         {typeof label === 'string' ? (
           <label htmlFor={name} id={labelID} className={classes.labelPresentation} aria-label={label?.toString()}>
-            <Typography variant='labelLarge' color={hasError ? colors.error.main : colors.black}>
+            <Typography variant='labelMedium' color={hasError ? colors.error.main : colors.black}>
               {label}
             </Typography>
           </label>

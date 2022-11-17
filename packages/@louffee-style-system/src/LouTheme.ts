@@ -155,7 +155,7 @@ const LouTheme = {
       },
       labelMedium: {
         fontSize: 12,
-        fontWeight: FONT_WEIGHT_SEMIBOLD,
+        fontWeight: FONT_WEIGHT_REGULAR,
         lineHeight: '110% !important',
       },
       labelSmall: {
