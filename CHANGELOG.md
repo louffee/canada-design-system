@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.3](https://github.com/louffee/canada-design-system/compare/v0.8.2...v0.8.3) (2022-11-15)
+
+**Note:** Version bump only for package canada
+
 ## [0.8.2](https://github.com/louffee/canada-design-system/compare/v0.8.1...v0.8.2) (2022-11-15)
 
 ### Bug Fixes

@@ -1,6 +1,6 @@
 {
   "name": "@louffee/canada-dialog",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "The dialog component designed and used @ Louffee.",
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",
